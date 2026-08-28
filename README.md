@@ -28,3 +28,4 @@ Funcionalidades:
 7:Salva o registro do Usuario
 8:Lista os Usuarios
 9:Valida os dados inseridos
+10:Deleta dados 
