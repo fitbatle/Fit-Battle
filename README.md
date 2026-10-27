@@ -2,22 +2,6 @@
 
 #Bernardo Nardelli, Cauã Gomes, João Paulo Costa, João Pedro Braga, Miguel Assunção, Henrique Vale.
 
-Fitbattle/
-├── frontend/
-│   └── index.html
-└── backend/
-    ├── app.py
-    ├── controllers/
-    │   └── user_controller.py
-    ├── models/
-    │   └── user_model.py
-    ├── repositories/
-    │   └── user_repository.py
-    ├── services/
-    │   └── user_service.py
-    └── database/
-        └── create_database.sql
-        
 Funcionalidades:
 1:Cadastro(nome, data de nascimento, e-mail, senha)
 
