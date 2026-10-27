@@ -1,0 +1,245 @@
+Fitbattle/
+├── backend/
+│   ├── controllers/
+│   │   ├── __init__.py
+│   │   └── controller.py
+│   ├── database/
+│   │   ├── create_database.sql
+│   │   ├── migracao_data_nascimento.sql
+│   │   ├── migracao_desafio_metrica.sql
+│   │   ├── migracao_medalha.sql
+│   │   ├── migracao_meta.sql
+│   │   ├── migracao_notificacao_alvo.sql
+│   │   └── migracao_ranking_maiores.sql
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── model.py
+│   ├── repositories/
+│   │   ├── __init__.py
+│   │   └── repository.py
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   └── routers.py
+│   ├── services/
+│   │   ├── atividade/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── consultar_atividade.py
+│   │   │   ├── consultar_historico_treinos.py
+│   │   │   ├── excluir_atividade.py
+│   │   │   └── registrar_treino.py
+│   │   ├── comentario/
+│   │   │   ├── __init__.py
+│   │   │   ├── criar_comentario.py
+│   │   │   ├── excluir_comentario.py
+│   │   │   └── listar_comentarios.py
+│   │   ├── compartilhamento/
+│   │   │   ├── __init__.py
+│   │   │   └── registrar_compartilhamento.py
+│   │   ├── convite/
+│   │   │   ├── __init__.py
+│   │   │   ├── listar_convites_recebidos.py
+│   │   │   └── responder_convite.py
+│   │   ├── curtida/
+│   │   │   ├── __init__.py
+│   │   │   └── alternar_curtida.py
+│   │   ├── dashboard/
+│   │   │   ├── __init__.py
+│   │   │   └── consultar_dashboard.py
+│   │   ├── desafio/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── atualizar_desafio.py
+│   │   │   ├── avaliar_desafios_do_usuario.py
+│   │   │   ├── consultar_desafio.py
+│   │   │   ├── criar_desafio.py
+│   │   │   ├── desistir_desafio.py
+│   │   │   ├── encerrar_desafio.py
+│   │   │   ├── listar_desafios_ativos.py
+│   │   │   └── participar_desafio.py
+│   │   ├── feed/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   └── listar_feed.py
+│   │   ├── grupo/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── buscar_usuarios_para_convidar.py
+│   │   │   ├── consultar_codigo_convite.py
+│   │   │   ├── consultar_grupo.py
+│   │   │   ├── consultar_ranking_grupo.py
+│   │   │   ├── convidar_para_grupo.py
+│   │   │   ├── criar_grupo.py
+│   │   │   ├── entrar_grupo_por_codigo.py
+│   │   │   ├── listar_membros_grupo.py
+│   │   │   ├── listar_meus_grupos.py
+│   │   │   └── regenerar_codigo_convite.py
+│   │   ├── medalha/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── avisar_medalhas_novas.py
+│   │   │   └── listar_medalhas.py
+│   │   ├── meta/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── atualizar_meta.py
+│   │   │   ├── consultar_meta.py
+│   │   │   ├── criar_meta.py
+│   │   │   ├── excluir_meta.py
+│   │   │   └── listar_metas.py
+│   │   ├── notificacao/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── contar_notificacoes_nao_lidas.py
+│   │   │   ├── listar_notificacoes.py
+│   │   │   ├── marcar_notificacao_lida.py
+│   │   │   └── marcar_todas_notificacoes_lidas.py
+│   │   ├── postagem/
+│   │   │   ├── __init__.py
+│   │   │   ├── criar_postagem.py
+│   │   │   └── excluir_postagem.py
+│   │   ├── privacidade/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── atualizar_consentimento.py
+│   │   │   └── listar_consentimentos.py
+│   │   ├── ranking/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── consultar_ranking_global.py
+│   │   │   ├── consultar_ranking_por_exercicio.py
+│   │   │   ├── consultar_ranking_regional.py
+│   │   │   └── consultar_resumo_ranking_usuario.py
+│   │   ├── usuario/
+│   │   │   ├── __init__.py
+│   │   │   ├── apoio.py
+│   │   │   ├── atualizar_foto_perfil.py
+│   │   │   ├── atualizar_perfil.py
+│   │   │   ├── autenticar_usuario.py
+│   │   │   ├── buscar_perfis.py
+│   │   │   ├── buscar_usuario.py
+│   │   │   ├── cadastrar_usuario.py
+│   │   │   ├── consultar_estatisticas.py
+│   │   │   ├── consultar_perfil.py
+│   │   │   ├── excluir_conta.py
+│   │   │   ├── limitador_login.py
+│   │   │   └── verificar_admin.py
+│   │   ├── __init__.py
+│   │   └── comum.py
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── apoio.py
+│   │   ├── servidor_dev.py
+│   │   ├── test_arquitetura.py
+│   │   ├── test_busca_limite.py
+│   │   ├── test_cabecalhos.py
+│   │   ├── test_compartilhamento.py
+│   │   ├── test_configuracao_banco.py
+│   │   ├── test_cors.py
+│   │   ├── test_csp.py
+│   │   ├── test_dashboard.py
+│   │   ├── test_desafio.py
+│   │   ├── test_entradas.py
+│   │   ├── test_grupos.py
+│   │   ├── test_icones.py
+│   │   ├── test_medalhas.py
+│   │   ├── test_metas.py
+│   │   ├── test_notificacao.py
+│   │   ├── test_ranking.py
+│   │   ├── test_ranking_regional.py
+│   │   ├── test_robustez.py
+│   │   ├── test_seguranca.py
+│   │   ├── test_sem_emoji.py
+│   │   ├── test_sessao.py
+│   │   └── test_visibilidade.py
+│   ├── .env.example
+│   ├── app.py
+│   ├── auth.py
+│   ├── database.py
+│   ├── gerar_csp.py
+│   ├── gunicorn.conf.py
+│   ├── politica_csp.py
+│   ├── requirements.txt
+│   └── utils.py
+├── docs/
+│   ├── diagrama_de_classes_dominio.png
+│   ├── diagrama_de_classes_dominio.svg
+│   ├── estrutura_de_diretorios.png
+│   ├── estrutura_de_diretorios.svg
+│   ├── figura_arquitetura.png
+│   ├── figura_arquitetura.svg
+│   ├── fluxograma_entrada_registrar_treino.png
+│   ├── fluxograma_entrada_registrar_treino.svg
+│   ├── fluxograma_recuperacao_ranking.png
+│   └── fluxograma_recuperacao_ranking.svg
+├── frontend/
+│   ├── mockups/
+│   │   ├── perfil-A.html
+│   │   ├── perfil-B.html
+│   │   └── perfil-C.html
+│   ├── api.js
+│   ├── app-shell.css
+│   ├── auth-comum.js
+│   ├── auth.css
+│   ├── base.css
+│   ├── busca.css
+│   ├── busca.html
+│   ├── busca.js
+│   ├── compartilhar.js
+│   ├── config.js
+│   ├── dashboard.css
+│   ├── dashboard.html
+│   ├── dashboard.js
+│   ├── desafio-detalhes.html
+│   ├── desafio-detalhes.js
+│   ├── entrar-grupo.html
+│   ├── entrar-grupo.js
+│   ├── feed.css
+│   ├── feed.html
+│   ├── feed.js
+│   ├── grupo-convidar.html
+│   ├── grupo-convidar.js
+│   ├── grupo-criar.html
+│   ├── grupo-criar.js
+│   ├── grupo-detalhes.html
+│   ├── grupo-detalhes.js
+│   ├── grupo.css
+│   ├── grupo.html
+│   ├── grupo.js
+│   ├── icones.js
+│   ├── index.html
+│   ├── login.html
+│   ├── login.js
+│   ├── medalhas.css
+│   ├── medalhas.js
+│   ├── metas-criar.html
+│   ├── metas-criar.js
+│   ├── metas-detalhes.html
+│   ├── metas-detalhes.js
+│   ├── metas.css
+│   ├── metas.html
+│   ├── metas.js
+│   ├── notificacoes.css
+│   ├── notificacoes.html
+│   ├── notificacoes.js
+│   ├── perfil-publico.css
+│   ├── perfil-publico.html
+│   ├── perfil-publico.js
+│   ├── perfil.css
+│   ├── perfil.html
+│   ├── perfil.js
+│   ├── privacidade.css
+│   ├── privacidade.html
+│   ├── privacidade.js
+│   ├── ranking.css
+│   ├── ranking.html
+│   ├── ranking.js
+│   ├── registrar-treino.css
+│   ├── registrar-treino.html
+│   ├── registrar-treino.js
+│   ├── script.js
+│   ├── shell.js
+│   ├── termos.html
+│   └── tokens.css
+├── .gitignore
+└── README.md
