@@ -2,7 +2,7 @@
 
 #Bernardo Nardelli, Cauã Gomes, João Paulo Costa, João Pedro Braga, Miguel Assunção, Henrique Vale.
 
-nome-do-projeto/
+Fitbattle/
 ├── frontend/
 │   └── index.html
 └── backend/
