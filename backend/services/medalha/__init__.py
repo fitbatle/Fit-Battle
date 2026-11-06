@@ -1,0 +1,2 @@
+from services.medalha.avisar_medalhas_novas import AvisarMedalhasNovasService
+from services.medalha.listar_medalhas import ListarMedalhasService

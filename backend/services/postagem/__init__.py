@@ -1,0 +1,2 @@
+from services.postagem.criar_postagem import CriarPostagemService
+from services.postagem.excluir_postagem import ExcluirPostagemService

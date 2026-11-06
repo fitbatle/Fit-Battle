@@ -1,0 +1,1 @@
+from services.compartilhamento.registrar_compartilhamento import RegistrarCompartilhamentoService

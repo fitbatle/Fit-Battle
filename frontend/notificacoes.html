@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBattle - Notificações</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="app-shell.css">
+  <link rel="stylesheet" href="notificacoes.css">
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="shell.js" defer></script>
+  <script src="notificacoes.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body data-pagina="notificacoes">
+<main>
+
+  <section class="card card--interno">
+    <div class="notificacoes-pagina__cabecalho">
+      <h1>Notificações</h1>
+      <button type="button" class="btn btn--secundario btn--pequeno" id="btnMarcarTodasLidas">Marcar todas como lidas</button>
+    </div>
+    <div id="listaNotificacoes">
+      <p class="estado-vazio">Carregando...</p>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitBattle - Perfil</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="app-shell.css">
+<link rel="stylesheet" href="perfil.css">
+<link rel="stylesheet" href="medalhas.css">
+<script src="config.js" defer></script>
+<script src="api.js" defer></script>
+<script src="shell.js" defer></script>
+<script src="icones.js" defer></script>
+<script src="compartilhar.js" defer></script>
+<script src="medalhas.js" defer></script>
+<script src="perfil.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body data-pagina="perfil">
+
+<main>
+
+    <section class="card card--interno perfil-topo">
+        <div class="perfil-identidade">
+            <button type="button" class="avatar avatar--grande perfil-foto" id="avatarLarge" aria-label="Ver ou trocar a foto de perfil"></button>
+            <div class="perfil-texto">
+                <h1 class="perfil-nome">
+                    <span id="pNome">—</span>
+                    <button type="button" class="botao-icone" id="btnEditarPerfil" aria-label="Editar perfil">
+                        <span class="perfil-icone" id="iconeEditar" aria-hidden="true"></span>
+                    </button>
+                </h1>
+                <p class="rotulo-mini"><span id="pHandle">—</span> &middot; <span id="pLocal">—</span></p>
+                <p class="perfil-bio" id="pBio"></p>
+                <p class="perfil-dados">
+                    <span>Peso: <strong id="pPeso">—</strong></span>
+                    <span>Altura: <strong id="pAltura">—</strong></span>
+                    <span>Idade: <strong id="pIdade">—</strong></span>
+                </p>
+            </div>
+        </div>
+
+        <dl class="perfil-estatisticas">
+            <div>
+                <dt>Treinos</dt>
+                <dd id="statTreinos">0</dd>
+            </div>
+            <div>
+                <dt>Ranking local</dt>
+                <dd id="statRanking">—</dd>
+            </div>
+            <div>
+                <dt>Sequência</dt>
+                <dd id="statSequencia">0d</dd>
+            </div>
+        </dl>
+
+        <div class="perfil-acoes">
+            <button type="button" class="btn btn--secundario btn--pequeno" id="btnVerRanking">Ver ranking</button>
+            <a class="btn btn--fantasma btn--pequeno" href="privacidade.html">Privacidade e consentimentos</a>
+        </div>
+    </section>
+
+    <section class="card card--interno">
+        <h2 class="perfil-secao-titulo">Medalhas</h2>
+        <ul class="medalhas-lista" id="listaMedalhas"></ul>
+    </section>
+
+    <section class="card card--interno">
+        <h2 class="perfil-secao-titulo">Nível <span id="levelNome">—</span></h2>
+        <div class="barra">
+            <div class="barra__preenchimento" id="levelBar"></div>
+        </div>
+        <p class="rotulo-mini" id="levelFooter">—</p>
+    </section>
+
+    <section class="card card--interno">
+        <h2 class="perfil-secao-titulo">Alterar senha</h2>
+        <form id="formSenha" novalidate>
+            <div class="campo">
+                <label class="campo__rotulo" for="senhaAtual">Senha atual</label>
+                <input type="password" id="senhaAtual" class="input" autocomplete="current-password" required>
+            </div>
+            <div class="campo">
+                <label class="campo__rotulo" for="senhaNova">Nova senha</label>
+                <input type="password" id="senhaNova" class="input" autocomplete="new-password" minlength="8" required>
+                <span class="campo__auxiliar">Mínimo de 8 caracteres.</span>
+            </div>
+            <div class="campo">
+                <label class="campo__rotulo" for="senhaConfirmacao">Confirmar nova senha</label>
+                <input type="password" id="senhaConfirmacao" class="input" autocomplete="new-password" required>
+            </div>
+            <p class="mensagem-form" id="erroSenha" role="alert"></p>
+            <button type="submit" class="btn btn--primario" id="btnAlterarSenha">Alterar senha</button>
+        </form>
+    </section>
+
+    <section class="card card--interno">
+        <div class="perfil-secao-cabecalho">
+            <h2 class="perfil-secao-titulo">Meus treinos</h2>
+            <button type="button" class="btn btn--primario btn--pequeno" id="btnNovoTreino">Novo treino</button>
+        </div>
+        <div id="listaTreinos">
+            <p class="estado-vazio" id="listaVazia" hidden>Nenhum treino ainda. Clique em "Novo treino" para registrar o primeiro.</p>
+        </div>
+    </section>
+
+</main>
+
+<div class="overlay" id="overlayTreino">
+    <div class="modal-termo modal-termo--estreito">
+        <button type="button" class="modal-close" id="closeTreino" aria-label="Fechar"></button>
+        <h2 class="modal-title">Novo treino</h2>
+        <form id="formTreino" novalidate>
+            <div class="campo">
+                <label class="campo__rotulo" for="treinoTipo">Tipo</label>
+                <select id="treinoTipo" class="select">
+                    <option value="musculacao">Musculação</option>
+                    <option value="cardio">Cardio</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label class="campo__rotulo" for="treinoTitulo">Título / grupo</label>
+                <input type="text" id="treinoTitulo" class="input" placeholder="Ex: Peito, Corrida" required>
+            </div>
+            <div class="campo">
+                <label class="campo__rotulo" for="treinoDesc">Descrição</label>
+                <textarea id="treinoDesc" class="input perfil-textarea" placeholder="Como foi o treino?"></textarea>
+            </div>
+            <div class="campo">
+                <span class="campo__rotulo">Duração</span>
+                <div class="campo-duplo">
+                    <input type="number" id="treinoHoras" class="input" min="0" max="23" placeholder="0" aria-label="Horas">
+                    <span>h</span>
+                    <input type="number" id="treinoMinutos" class="input" min="0" max="59" placeholder="0" aria-label="Minutos">
+                    <span>min</span>
+                </div>
+            </div>
+            <div class="campo-linha" id="linhaForca">
+                <div class="campo">
+                    <label class="campo__rotulo" for="treinoCarga">Carga máx. (kg)</label>
+                    <input type="number" id="treinoCarga" class="input" min="0" step="0.1">
+                </div>
+                <div class="campo">
+                    <label class="campo__rotulo" for="treinoReps">Séries / repetições</label>
+                    <input type="number" id="treinoReps" class="input" min="0">
+                </div>
+            </div>
+            <div class="campo" id="campoDist">
+                <span class="campo__rotulo">Distância</span>
+                <div class="campo-duplo">
+                    <input type="number" id="treinoKm" class="input" min="0" placeholder="0" aria-label="Quilômetros">
+                    <span>km</span>
+                    <input type="number" id="treinoMetros" class="input" min="0" max="999" placeholder="0" aria-label="Metros">
+                    <span>m</span>
+                </div>
+            </div>
+            <p class="mensagem-form" id="erroTreino" role="alert"></p>
+            <button type="submit" class="btn btn--primario btn--bloco">Registrar treino</button>
+        </form>
+    </div>
+</div>
+
+<div class="overlay" id="overlayPerfil">
+    <div class="modal-termo">
+        <button type="button" class="modal-close" id="closePerfil" aria-label="Fechar"></button>
+        <h2 class="modal-title">Editar perfil</h2>
+        <form id="formPerfil">
+            <div class="perfil-foto-edicao">
+                <div class="avatar avatar--grande" id="avatarPreview"></div>
+                <div>
+                    <input type="file" id="fotoInput" accept="image/png,image/jpeg,image/webp" hidden>
+                    <button type="button" class="btn btn--secundario btn--pequeno" id="fotoBtn">Escolher foto</button>
+                    <span class="rotulo-mini" id="fotoNome">JPG, PNG ou WEBP (até 3 MB)</span>
+                </div>
+            </div>
+            <div class="campo">
+                <label class="campo__rotulo" for="editNome">Nome</label>
+                <input type="text" id="editNome" class="input" required>
+            </div>
+            <div class="campo">
+                <label class="campo__rotulo" for="editEmail">E-mail</label>
+                <input type="email" id="editEmail" class="input" required>
+            </div>
+            <div class="campo" id="campoSenhaAtual" hidden>
+                <label class="campo__rotulo" for="editSenhaAtual">Senha atual</label>
+                <input type="password" id="editSenhaAtual" class="input" autocomplete="current-password">
+                <span class="campo__auxiliar">Necessária para trocar o e-mail.</span>
+            </div>
+            <div class="campo">
+                <label class="campo__rotulo" for="editBio">Bio</label>
+                <textarea id="editBio" class="input perfil-textarea" placeholder="Fale um pouco sobre você"></textarea>
+            </div>
+            <div class="campo-linha">
+                <div class="campo">
+                    <label class="campo__rotulo" for="editDataNascimento">Data de nascimento</label>
+                    <input type="date" id="editDataNascimento" class="input">
+                    <span class="campo__auxiliar" id="editIdadeAtual"></span>
+                </div>
+                <div class="campo">
+                    <label class="campo__rotulo" for="editCidade">Cidade</label>
+                    <input type="text" id="editCidade" class="input" placeholder="Cidade, UF">
+                </div>
+            </div>
+            <div class="campo-linha">
+                <div class="campo">
+                    <label class="campo__rotulo" for="editPeso">Peso (kg)</label>
+                    <input type="number" id="editPeso" class="input" min="20" max="400" step="0.1">
+                </div>
+                <div class="campo">
+                    <label class="campo__rotulo" for="editAltura">Altura (m)</label>
+                    <input type="number" id="editAltura" class="input" min="0.5" max="2.7" step="0.01">
+                </div>
+            </div>
+            <p class="mensagem-form" id="erroPerfil" role="alert"></p>
+            <button type="submit" class="btn btn--primario btn--bloco">Salvar alterações</button>
+        </form>
+    </div>
+</div>
+
+<div class="overlay" id="overlayRanking">
+    <div class="modal-termo">
+        <button type="button" class="modal-close" id="closeRanking" aria-label="Fechar"></button>
+        <h2 class="modal-title">Ranking</h2>
+        <div class="perfil-abas">
+            <button type="button" class="btn btn--secundario btn--pequeno ranking-aba ativa" data-escopo="regional">Minha cidade</button>
+            <button type="button" class="btn btn--secundario btn--pequeno ranking-aba" data-escopo="global">Global</button>
+        </div>
+        <div id="rankingLista"></div>
+    </div>
+</div>
+
+<div class="overlay" id="overlayFoto">
+    <div class="perfil-visor">
+        <button type="button" class="modal-close" id="closeFoto" aria-label="Fechar"></button>
+        <img id="fotoAmpliada" src="" alt="Foto de perfil">
+        <button type="button" class="btn btn--primario" id="btnTrocarFoto">Trocar foto</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+USE fitbattle;
+
+-- Guarda microssegundos nas colunas de data e hora, como a aplicacao grava.
+-- Sem isso o MySQL arredonda para o segundo e a ordem de registros criados no mesmo segundo muda.
+ALTER TABLE usuario MODIFY responsavel_autorizado_em DATETIME(6) NULL;
+ALTER TABLE usuario MODIFY criado_em DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE atividade MODIFY data_registro DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE postagem MODIFY data_registro DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE curtida MODIFY data_registro DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE comentario MODIFY data_registro DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE consentimento MODIFY data_registro DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE consentimento MODIFY data_atualizacao DATETIME(6) NULL;
+ALTER TABLE grupo MODIFY data_criacao DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE grupo_membro MODIFY entrou_em DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE convite MODIFY data_envio DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE convite MODIFY data_resposta DATETIME(6) NULL;
+ALTER TABLE meta MODIFY concluida_em DATETIME(6) NULL;
+ALTER TABLE desafio_usuario MODIFY concluido_em DATETIME(6) NULL;
+ALTER TABLE notificacao MODIFY data_envio DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
+ALTER TABLE compartilhamento MODIFY data_comp DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);

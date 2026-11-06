@@ -1,0 +1,32 @@
+.perfil-publico-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+  margin-bottom: var(--esp-5);
+}
+
+.perfil-publico-stats {
+  margin: 0 0 var(--esp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+}
+
+.perfil-publico-stats > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-3);
+}
+
+.perfil-publico-stats dt {
+  color: var(--cor-texto-2);
+  font-size: var(--texto-sm);
+}
+
+.perfil-publico-stats dd {
+  margin: 0;
+  font-weight: var(--peso-forte);
+  font-size: var(--texto-sm);
+  text-align: right;
+}

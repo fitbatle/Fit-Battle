@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBattle - Buscar</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="app-shell.css">
+  <link rel="stylesheet" href="grupo.css">
+  <link rel="stylesheet" href="busca.css">
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="shell.js" defer></script>
+  <script src="busca.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body data-pagina="busca">
+<main>
+
+  <section class="card card--interno">
+    <h1>Buscar</h1>
+    <div class="abas busca-abas" role="tablist" aria-label="O que buscar">
+      <button type="button" class="aba aba--ativa" id="abaPerfis" role="tab" aria-selected="true">Perfis</button>
+      <button type="button" class="aba" id="abaGrupos" role="tab" aria-selected="false">Meus Grupos</button>
+    </div>
+  </section>
+
+  <section class="card card--interno" id="painelPerfis">
+    <div class="campo">
+      <input class="input" type="search" id="campoBuscaPerfis" placeholder="Buscar por nome ou cidade..." autocomplete="off" minlength="2">
+    </div>
+    <ul class="busca__resultados" id="resultadosPerfis"></ul>
+  </section>
+
+  <section class="card card--interno" id="painelGrupos" hidden>
+    <div class="campo">
+      <input class="input" type="search" id="campoBuscaGrupos" placeholder="Buscar nos seus grupos..." autocomplete="off">
+    </div>
+    <div class="grupos-grade" id="resultadosGrupos"></div>
+
+    <div class="grupo-entrar-codigo">
+      <h3>Entrar com código de convite</h3>
+      <form id="formEntrarCodigo">
+        <input class="input" type="text" id="campoCodigoConvite" placeholder="Código do convite" maxlength="10" required>
+        <button type="submit" class="btn btn--primario">Entrar</button>
+      </form>
+      <p class="mensagem-form" id="erroEntrarCodigo" role="alert" aria-live="polite"></p>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

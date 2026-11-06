@@ -1,0 +1,76 @@
+.medalhas-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--esp-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.medalha {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: start;
+  gap: var(--esp-3);
+  padding: var(--esp-3);
+  border: 1px solid var(--cor-borda-suave);
+  border-radius: var(--raio-md);
+  background: var(--cor-superficie-2);
+}
+
+.medalha--bloqueada {
+  opacity: 0.75;
+}
+
+.medalha__icone {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--cor-destaque-suave);
+  color: var(--cor-destaque);
+}
+
+.medalha--bloqueada .medalha__icone {
+  background: var(--cor-superficie);
+  color: var(--cor-texto-3);
+}
+
+.medalha__icone svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.medalha__texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  min-width: 0;
+}
+
+.medalha__nome {
+  font-weight: var(--peso-forte);
+}
+
+.medalha__criterio,
+.medalha__progresso {
+  color: var(--cor-texto-2);
+  font-size: var(--texto-xs);
+}
+
+.medalha__progresso {
+  color: var(--cor-texto-3);
+}
+
+.medalha .btn {
+  grid-column: 1 / -1;
+  justify-self: start;
+}

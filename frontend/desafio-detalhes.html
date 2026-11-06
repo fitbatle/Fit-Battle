@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBattle - Detalhes do Desafio</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="app-shell.css">
+  <link rel="stylesheet" href="grupo.css">
+  <link rel="stylesheet" href="metas.css">
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="icones.js" defer></script>
+  <script src="shell.js" defer></script>
+  <script src="desafio-detalhes.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body data-pagina="metas">
+<main>
+
+  <div class="meta-detalhe-topo">
+    <a class="link-voltar" href="metas.html">&larr; Voltar para Metas e Desafios</a>
+    <span class="rotulo-mini">Desafio sazonal · Proposto pela administração</span>
+  </div>
+
+  <section class="card card--interno meta-detalhe-cabecalho">
+    <div class="meta-detalhe-cabecalho__texto">
+      <div class="meta-detalhe-tags" id="desafioTags"></div>
+      <h1 id="desafioTitulo">Carregando...</h1>
+      <span class="rotulo-mini" id="desafioInfo"></span>
+      <p id="desafioDescricao"></p>
+    </div>
+    <div class="meta-detalhe-cabecalho__acoes">
+      <button type="button" class="btn btn--primario btn--pequeno" id="btnParticiparDetalhe" hidden>Participar</button>
+      <button type="button" class="btn btn--secundario btn--pequeno" id="btnDesistirDetalhe" hidden>Desistir</button>
+      <button type="button" class="btn btn--secundario btn--pequeno" id="btnEncerrarDetalhe" hidden>Encerrar desafio</button>
+    </div>
+  </section>
+
+  <div class="meta-stats">
+    <div class="card card--interno meta-stats__item">
+      <span class="rotulo-mini" id="statAtualRotuloDesafio">Valor Atual</span>
+      <div class="meta-stats__valor" id="statAtualDesafio">—</div>
+    </div>
+    <div class="card card--interno meta-stats__item">
+      <span class="rotulo-mini">Objetivo</span>
+      <div class="meta-stats__valor" id="statObjetivoDesafio">—</div>
+    </div>
+    <div class="card card--interno meta-stats__item">
+      <span class="rotulo-mini">Recompensa</span>
+      <div class="meta-stats__valor" id="statRecompensaDesafio">—</div>
+    </div>
+    <div class="card card--interno meta-stats__item">
+      <span class="rotulo-mini">Status</span>
+      <div class="meta-stats__valor" id="statStatusDesafio">—</div>
+    </div>
+  </div>
+
+  <section class="card card--interno meta-progresso">
+    <h2>Meu Progresso</h2>
+    <div class="meta-progresso__topo">
+      <span id="progressoPercentualTextoDesafio"></span>
+    </div>
+    <div class="barra meta-progresso__barra">
+      <div class="barra__preenchimento" id="barraProgressoDesafio"></div>
+    </div>
+    <p class="meta-progresso__callout" id="calloutProgressoDesafio"></p>
+  </section>
+
+</main>
+</body>
+</html>

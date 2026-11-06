@@ -1,0 +1,28 @@
+.busca-abas {
+  margin-top: var(--esp-4);
+}
+
+.busca__resultados {
+  position: static;
+  margin: var(--esp-4) 0 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.grupo-entrar-codigo {
+  margin-top: var(--esp-5);
+  padding-top: var(--esp-5);
+  border-top: 1px solid var(--cor-borda);
+}
+
+.grupo-entrar-codigo form {
+  display: flex;
+  gap: var(--esp-3);
+  margin-top: var(--esp-3);
+}
+
+.grupo-entrar-codigo form .input {
+  flex: 1;
+}

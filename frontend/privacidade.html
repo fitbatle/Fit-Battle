@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitBattle - Privacidade</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="app-shell.css">
+<link rel="stylesheet" href="privacidade.css">
+<script src="config.js" defer></script>
+<script src="api.js" defer></script>
+<script src="shell.js" defer></script>
+<script src="privacidade.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body data-pagina="perfil">
+
+<main>
+
+    <a class="link-voltar" href="perfil.html">&larr; Voltar ao perfil</a>
+
+    <div class="privacidade-cabecalho">
+        <h1>Privacidade e Consentimentos</h1>
+        <p>
+            Aqui você gerencia as permissões dadas no cadastro, conforme o
+            <a href="termos.html#termo-consentimento">Termo de Consentimento</a> (LGPD).
+            Cada alteração é salva na hora, sem precisar confirmar nada.
+        </p>
+    </div>
+
+    <section class="card card--interno privacidade-grupo">
+        <h2>Obrigatórios</h2>
+        <p class="privacidade-grupo-nota">
+            Necessários para a conta existir. Não podem ser desligados por aqui.
+        </p>
+        <div id="listaObrigatorios"></div>
+    </section>
+
+    <section class="card card--interno privacidade-grupo">
+        <h2>Opcionais</h2>
+        <p class="privacidade-grupo-nota">
+            Você pode ligar ou desligar quando quiser, sem perder o uso do app.
+        </p>
+        <div id="listaOpcionais"></div>
+    </section>
+
+    <p class="privacidade-erro" id="erroPrivacidade" role="alert" aria-live="polite"></p>
+
+</main>
+
+</body>
+</html>

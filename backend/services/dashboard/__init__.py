@@ -1,0 +1,1 @@
+from services.dashboard.consultar_dashboard import ConsultarDashboardService

@@ -1,0 +1,2 @@
+from services.privacidade.atualizar_consentimento import AtualizarConsentimentoService
+from services.privacidade.listar_consentimentos import ListarConsentimentosService

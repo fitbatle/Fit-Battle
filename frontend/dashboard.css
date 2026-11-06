@@ -1,0 +1,114 @@
+.dashboard-totais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-5);
+  margin-top: var(--esp-4);
+}
+
+.dashboard-stat dt {
+  color: var(--cor-texto-2);
+  font-size: var(--texto-sm);
+  margin-bottom: var(--esp-1);
+}
+
+.dashboard-stat dd {
+  margin: 0;
+  font-size: var(--texto-xl);
+  font-weight: var(--peso-forte);
+}
+
+.dashboard-grade {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--esp-5);
+  margin-top: var(--esp-5);
+}
+
+.dashboard-cartao-compacto {
+  align-self: start;
+}
+
+#blocoEmAndamentoDashboard {
+  margin-top: var(--esp-5);
+}
+
+#blocoEmAndamentoDashboard h2,
+.dashboard-grade h2 {
+  margin-bottom: var(--esp-4);
+}
+
+@media (max-width: 720px) {
+  .dashboard-grade {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grafico-svg {
+  width: 100%;
+  height: auto;
+}
+
+.grafico-barra {
+  fill: var(--cor-destaque);
+}
+
+.grafico-rotulo {
+  fill: var(--cor-texto-3);
+  font-size: 9px;
+}
+
+.grafico-linha {
+  fill: none;
+  stroke: var(--cor-destaque);
+  stroke-width: 2;
+}
+
+.grafico-ponto {
+  fill: var(--cor-destaque);
+}
+
+.grafico-distribuicao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  margin-top: var(--esp-3);
+}
+
+.grafico-distribuicao__linha {
+  display: grid;
+  grid-template-columns: 90px 1fr 32px;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+.grafico-distribuicao__rotulo {
+  font-size: var(--texto-sm);
+  color: var(--cor-texto-2);
+}
+
+.grafico-distribuicao__fundo {
+  height: 10px;
+  border-radius: var(--raio-sm);
+  background: var(--cor-superficie-2);
+  overflow: hidden;
+}
+
+.grafico-distribuicao__barra {
+  height: 100%;
+}
+
+.grafico-distribuicao__barra--destaque { background: var(--cor-destaque); }
+.grafico-distribuicao__barra--sucesso { background: var(--cor-sucesso); }
+.grafico-distribuicao__barra--aviso { background: var(--cor-aviso); }
+.grafico-distribuicao__barra--ouro { background: var(--cor-ouro); }
+.grafico-distribuicao__barra--perigo { background: var(--cor-perigo); }
+
+.grafico-distribuicao__valor {
+  font-size: var(--texto-sm);
+  text-align: right;
+  font-weight: var(--peso-forte);
+}
+
+#seletorExercicio {
+  margin-bottom: var(--esp-3);
+}

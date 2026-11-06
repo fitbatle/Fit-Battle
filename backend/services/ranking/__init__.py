@@ -1,0 +1,4 @@
+from services.ranking.consultar_ranking_global import ConsultarRankingGlobalService
+from services.ranking.consultar_ranking_por_exercicio import ConsultarRankingPorExercicioService
+from services.ranking.consultar_ranking_regional import ConsultarRankingRegionalService
+from services.ranking.consultar_resumo_ranking_usuario import ConsultarResumoRankingUsuarioService

@@ -1,0 +1,3 @@
+from services.comentario.criar_comentario import CriarComentarioService
+from services.comentario.excluir_comentario import ExcluirComentarioService
+from services.comentario.listar_comentarios import ListarComentariosService

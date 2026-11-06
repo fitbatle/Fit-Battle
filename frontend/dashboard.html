@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBattle - Dashboard</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="app-shell.css">
+  <link rel="stylesheet" href="metas.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="shell.js" defer></script>
+  <script src="dashboard.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body data-pagina="dashboard">
+<main>
+
+  <section class="card card--interno">
+    <h1>Dashboard</h1>
+    <div class="dashboard-totais" id="dashboardTotais">
+      <div class="dashboard-stat"><dt>Treinos</dt><dd id="statTreinos">—</dd></div>
+      <div class="dashboard-stat"><dt>Tempo Total</dt><dd id="statTempo">—</dd></div>
+      <div class="dashboard-stat"><dt>XP Total</dt><dd id="statXp">—</dd></div>
+      <div class="dashboard-stat"><dt>Sequência Atual</dt><dd id="statSequenciaAtual">—</dd></div>
+      <div class="dashboard-stat"><dt>Melhor Sequência</dt><dd id="statMelhorSequencia">—</dd></div>
+    </div>
+  </section>
+
+  <section class="card card--interno" id="blocoEmAndamentoDashboard">
+    <h2>Em Andamento</h2>
+    <div id="listaEmAndamentoDashboard"><p class="estado-vazio">Carregando...</p></div>
+  </section>
+
+  <div class="dashboard-grade">
+    <section class="card card--interno">
+      <h2>XP por Semana</h2>
+      <div id="graficoXp"></div>
+    </section>
+
+    <section class="card card--interno">
+      <h2>Treinos por Semana</h2>
+      <div id="graficoTreinos"></div>
+    </section>
+
+    <section class="card card--interno dashboard-cartao-compacto">
+      <h2>Distribuição por Tipo de Treino</h2>
+      <div id="graficoDistribuicao"></div>
+    </section>
+
+    <section class="card card--interno">
+      <h2>Evolução da Carga Máxima</h2>
+      <select class="input" id="seletorExercicio" hidden></select>
+      <div id="graficoCarga"></div>
+    </section>
+  </div>
+
+</main>
+</body>
+</html>

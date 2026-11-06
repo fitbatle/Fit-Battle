@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBattle - Minhas Metas</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="app-shell.css">
+  <link rel="stylesheet" href="grupo.css">
+  <link rel="stylesheet" href="ranking.css">
+  <link rel="stylesheet" href="metas.css">
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="icones.js" defer></script>
+  <script src="shell.js" defer></script>
+  <script src="metas.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body data-pagina="metas">
+<main>
+
+  <section class="grupos-cabecalho">
+    <div>
+      <span class="rotulo-mini rotulo-mini--destaque">Desempenho Individual</span>
+      <h1>Minhas Metas</h1>
+      <p>Acompanhe suas metas pessoais e os desafios sazonais da comunidade.</p>
+    </div>
+    <button type="button" class="btn btn--primario" id="btnCriarMeta">+ Criar nova meta</button>
+  </section>
+
+  <div class="abas" id="abasSecoes">
+    <button type="button" class="aba aba--ativa" id="abaSecaoMetas">Metas</button>
+    <button type="button" class="aba" id="abaSecaoDesafios">Desafios <span class="contador-aba" id="contadorDesafios"></span></button>
+  </div>
+
+  <div id="secaoMetas">
+
+    <div class="metas-resumo">
+      <div class="card card--interno metas-resumo__card">
+        <div>
+          <span class="rotulo-mini">Metas Ativas</span>
+          <div class="metas-resumo__valor" id="totalAtivas">—</div>
+          <span class="rotulo-mini" id="detalheAtivas"></span>
+        </div>
+      </div>
+      <div class="card card--interno metas-resumo__card">
+        <div>
+          <span class="rotulo-mini">Metas Concluídas</span>
+          <div class="metas-resumo__valor" id="totalConcluidas">—</div>
+          <span class="rotulo-mini" id="detalheConcluidas"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="abas">
+      <button type="button" class="aba aba--ativa" id="abaEmAndamento">Em andamento <span class="contador-aba" id="contadorEmAndamento"></span></button>
+      <button type="button" class="aba" id="abaConcluidas">Concluídas <span class="contador-aba" id="contadorConcluidasAba"></span></button>
+    </div>
+
+    <div class="metas-grade" id="metasGrade">
+      <p class="estado-vazio">Carregando suas metas...</p>
+    </div>
+
+    <div class="estado-vazio-grupo" id="estadoVazioMetas" hidden>
+      <p class="estado-vazio-grupo__titulo">Você ainda não tem metas ativas</p>
+      <p class="estado-vazio-grupo__texto">Defina metas de carga ou frequência de treinos para acompanhar seu foco e evolução individual.</p>
+      <button type="button" class="btn btn--primario" id="btnCriarPrimeiraMeta">+ Criar minha primeira meta</button>
+    </div>
+
+    <section class="metas-recentes" id="secaoRecentes" hidden>
+      <div class="metas-recentes__cabecalho">
+        <h2>Metas Concluídas Recentemente</h2>
+        <span class="rotulo-mini">Histórico</span>
+      </div>
+      <ul class="metas-recentes__lista" id="listaRecentes"></ul>
+    </section>
+
+  </div>
+
+  <div id="secaoDesafios" hidden>
+
+    <section class="card card--interno" id="blocoEmAndamentoGeral">
+      <h2>Em Andamento</h2>
+      <div id="listaEmAndamentoGeral"><p class="estado-vazio">Carregando...</p></div>
+    </section>
+
+    <section class="card card--interno" id="formDesafioContainer" hidden>
+      <h2 id="tituloFormDesafio">Criar novo desafio</h2>
+      <form id="formDesafio" novalidate>
+        <div class="campo">
+          <label class="campo__rotulo" for="desafioNome">Nome *</label>
+          <input class="input" type="text" id="desafioNome" name="nome" maxlength="120" required>
+        </div>
+        <div class="campo">
+          <label class="campo__rotulo" for="desafioDescricao">Descrição</label>
+          <input class="input" type="text" id="desafioDescricao" name="descricao" maxlength="500">
+        </div>
+        <div class="campo-linha">
+          <div class="campo">
+            <label class="campo__rotulo" for="desafioTipoMetrica">Métrica *</label>
+            <select class="input select" id="desafioTipoMetrica" name="tipo_metrica" required>
+              <option value="treinos">Quantidade de treinos</option>
+              <option value="carga_maxima">Carga máxima (kg)</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label class="campo__rotulo" for="desafioExercicio">Exercício</label>
+            <input class="input" type="text" id="desafioExercicio" name="exercicio" placeholder="livre = qualquer treino">
+          </div>
+        </div>
+        <div class="campo-linha">
+          <div class="campo">
+            <label class="campo__rotulo" for="desafioValorObjetivo">Valor objetivo *</label>
+            <input class="input" type="number" id="desafioValorObjetivo" name="valor_objetivo" min="0.01" step="0.01" required>
+          </div>
+          <div class="campo">
+            <label class="campo__rotulo" for="desafioRecompensaXp">Recompensa em XP</label>
+            <input class="input" type="number" id="desafioRecompensaXp" name="recompensa_xp" min="0" step="1" value="0">
+          </div>
+        </div>
+        <div class="campo-linha">
+          <div class="campo">
+            <label class="campo__rotulo" for="desafioDataInicio">Data de início *</label>
+            <input class="input" type="date" id="desafioDataInicio" name="data_inicio" required>
+          </div>
+          <div class="campo">
+            <label class="campo__rotulo" for="desafioDataFim">Data de fim *</label>
+            <input class="input" type="date" id="desafioDataFim" name="data_fim" required>
+          </div>
+        </div>
+        <p class="mensagem-form" id="erroFormDesafio" role="alert" aria-live="polite"></p>
+        <div class="form-grupo__acoes">
+          <button type="button" class="btn btn--secundario" id="btnCancelarEdicaoDesafio" hidden>Cancelar edição</button>
+          <button type="submit" class="btn btn--primario" id="btnSalvarDesafio"><span data-icone="check"></span> Criar desafio</button>
+        </div>
+      </form>
+    </section>
+
+    <div class="metas-grade" id="desafiosGrade">
+      <p class="estado-vazio">Carregando desafios...</p>
+    </div>
+
+    <div class="estado-vazio-grupo" id="estadoVazioDesafios" hidden>
+      <p class="estado-vazio-grupo__titulo">Nenhum desafio ativo agora</p>
+      <p class="estado-vazio-grupo__texto">Quando a administração publicar um novo desafio sazonal, ele aparece aqui.</p>
+    </div>
+
+  </div>
+
+</main>
+</body>
+</html>

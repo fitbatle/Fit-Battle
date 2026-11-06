@@ -1,0 +1,6 @@
+from services.atividade.consultar_atividade import ConsultarAtividadeService
+from services.atividade.consultar_historico_treinos import ConsultarHistoricoTreinosService
+from services.atividade.consultar_progresso_nivel import ConsultarProgressoNivelService
+from services.atividade.excluir_atividade import ExcluirAtividadeService
+from services.atividade.prever_treino import PreverTreinoService
+from services.atividade.registrar_treino import RegistrarTreinoService

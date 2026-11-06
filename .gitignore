@@ -1,0 +1,17 @@
+.claude/
+FitBattle-2026-09-21.zip
+RELATORIO_2026-09-21.md
+capturas/
+telas-para-redesign/
+telas-para-redesign.zip
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+backend/.secret_key
+backend/uploads/
+backend/dev.db
+backend/instance/
+*.db

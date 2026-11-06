@@ -1,0 +1,1 @@
+from services.curtida.alternar_curtida import AlternarCurtidaService

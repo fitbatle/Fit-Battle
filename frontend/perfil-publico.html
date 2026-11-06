@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http://*:5000; connect-src 'self' http://*:5000; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBattle - Perfil</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="app-shell.css">
+  <link rel="stylesheet" href="ranking.css">
+  <link rel="stylesheet" href="perfil-publico.css">
+<link rel="stylesheet" href="medalhas.css">
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="shell.js" defer></script>
+  <script src="medalhas.js" defer></script>
+<script src="perfil-publico.js" defer></script>
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body data-pagina="perfil-publico">
+<main>
+
+  <a class="link-voltar" href="busca.html">&larr; Voltar para a busca</a>
+
+  <section class="card card--interno" id="cartaoPerfilPublico" hidden>
+    <div class="perfil-publico-cabecalho">
+      <span class="avatar avatar--grande" id="avatarPublico" aria-hidden="true"></span>
+      <div>
+        <h1 id="nomePublico">Carregando...</h1>
+        <span class="rotulo-mini" id="cidadePublica"></span>
+      </div>
+    </div>
+    <dl class="perfil-publico-stats">
+      <div><dt>Nível</dt><dd id="nivelPublico">—</dd></div>
+      <div><dt>XP</dt><dd id="xpPublico">—</dd></div>
+      <div><dt>Posição Global</dt><dd id="posicaoGlobalPublica">—</dd></div>
+      <div><dt>Posição Regional</dt><dd id="posicaoRegionalPublica">—</dd></div>
+    </dl>
+    <p id="descricaoPublica"></p>
+  </section>
+
+  <section class="card card--interno" id="cartaoMedalhas" hidden>
+    <h2 class="perfil-secao-titulo">Medalhas</h2>
+    <ul class="medalhas-lista" id="listaMedalhasPublicas"></ul>
+  </section>
+
+  <section class="card card--interno" id="cartaoNaoEncontrado" hidden>
+    <p class="estado-vazio">Perfil não encontrado.</p>
+  </section>
+
+</main>
+</body>
+</html>

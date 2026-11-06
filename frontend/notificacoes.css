@@ -1,0 +1,27 @@
+.notificacoes-pagina__cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--esp-4);
+}
+
+.notificacao-card {
+  padding: var(--esp-3);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  margin-bottom: var(--esp-3);
+  cursor: pointer;
+}
+
+.notificacao-card:hover {
+  background: var(--cor-superficie-2);
+}
+
+.notificacao-card--nao-lida {
+  border-color: var(--cor-destaque-borda);
+  background: var(--cor-destaque-suave);
+}
+
+.notificacao-card p {
+  margin: 0 0 var(--esp-2);
+}
