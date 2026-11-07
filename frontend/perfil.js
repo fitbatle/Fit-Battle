@@ -22,6 +22,7 @@ let fotoSelecionada = null;
 let treinosDoPerfil = [];
 const TAMANHO_PAGINA_TREINOS = 5;
 let quantidadeTreinosVisiveis = TAMANHO_PAGINA_TREINOS;
+const PALAVRA_CONFIRMACAO_EXCLUSAO = 'EXCLUIR';
 
 function dataDeHoje() {
   const hoje = new Date();
@@ -335,6 +336,11 @@ function configurarModais() {
   document.querySelectorAll('.modal-close').forEach(function (botao) { botao.innerHTML = ICONE_FECHAR; });
   ligar('closePerfil', 'click', function () { fecharOverlay('overlayPerfil'); });
   ligar('btnMostrarMais', 'click', mostrarMaisTreinos);
+  ligar('btnExcluirConta', 'click', abrirExclusaoDeConta);
+  ligar('closeExcluirConta', 'click', function () { fecharOverlay('overlayExcluirConta'); });
+  ligar('btnCancelarExclusao', 'click', function () { fecharOverlay('overlayExcluirConta'); });
+  ligar('confirmacaoExclusao', 'input', atualizarBotaoExclusao);
+  document.getElementById('formExcluirConta').addEventListener('submit', excluirMinhaConta);
   document.getElementById('editDataNascimento').max = dataDeHoje();
   ligar('editDataNascimento', 'input', atualizarIdadeNoPerfil);
   ligar('editEmail', 'input', atualizarCampoSenhaAtual);
@@ -497,6 +503,45 @@ function abrirEditarPerfil() {
 
 function sair() {
   encerrarSessao();
+}
+
+function abrirExclusaoDeConta() {
+  document.getElementById('confirmacaoExclusao').value = '';
+  document.getElementById('erroExcluirConta').textContent = '';
+  atualizarBotaoExclusao();
+  abrirOverlay('overlayExcluirConta');
+  document.getElementById('confirmacaoExclusao').focus();
+}
+
+function atualizarBotaoExclusao() {
+  const digitado = document.getElementById('confirmacaoExclusao').value;
+  document.getElementById('btnConfirmarExclusao').disabled = digitado !== PALAVRA_CONFIRMACAO_EXCLUSAO;
+}
+
+async function excluirMinhaConta(evento) {
+  evento.preventDefault();
+  if (document.getElementById('confirmacaoExclusao').value !== PALAVRA_CONFIRMACAO_EXCLUSAO) return;
+
+  const erro = document.getElementById('erroExcluirConta');
+  const botao = document.getElementById('btnConfirmarExclusao');
+  erro.textContent = '';
+  botao.disabled = true;
+
+  try {
+    const resposta = await api(`/usuarios/${usuarioLogado.id}`, { method: 'DELETE' });
+    const dados = await resposta.json().catch(function () { return {}; });
+    if (!resposta.ok) {
+      erro.textContent = dados.erro || 'Não foi possível excluir a conta.';
+      atualizarBotaoExclusao();
+      return;
+    }
+    limparSessao();
+    avisarNoLogin('Sua conta foi excluída.');
+    window.location.href = PAGINA_LOGIN;
+  } catch (e) {
+    erro.textContent = MENSAGEM_SEM_CONEXAO;
+    atualizarBotaoExclusao();
+  }
 }
 
 function configurarRanking() {

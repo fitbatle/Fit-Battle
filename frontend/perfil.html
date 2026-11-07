@@ -123,7 +123,10 @@
 
     <section class="card card--interno perfil-cartao perfil-zona-exclusao" aria-labelledby="tituloExclusao">
         <h2 class="perfil-secao-titulo" id="tituloExclusao">Zona de exclusão</h2>
-        <p class="rotulo-mini">A exclusão da conta ainda não é feita por esta tela. Os seus direitos, incluindo o pedido de exclusão, estão descritos nos <a href="termos.html#termo-consentimento">Termos de Uso e na Política de Privacidade</a>.</p>
+        <p class="perfil-zona-texto">Excluir a conta é uma ação permanente. Depois de confirmada, não há como desfazer. Os seus direitos estão descritos nos <a href="termos.html#termo-consentimento">Termos de Uso e na Política de Privacidade</a>.</p>
+        <div class="perfil-zona-acoes">
+            <button type="button" class="btn btn--secundario btn-excluir-conta" id="btnExcluirConta">Excluir minha conta</button>
+        </div>
     </section>
 
 </main>
@@ -250,6 +253,34 @@
             <button type="button" class="btn btn--secundario btn--pequeno ranking-aba" data-escopo="global">Global</button>
         </div>
         <div id="rankingLista"></div>
+    </div>
+</div>
+
+<div class="overlay" id="overlayExcluirConta">
+    <div class="modal-termo">
+        <button type="button" class="modal-close" id="closeExcluirConta" aria-label="Fechar"></button>
+        <h2 class="modal-title">Excluir conta</h2>
+        <form id="formExcluirConta" novalidate>
+            <p class="perfil-zona-texto">Esta ação apaga definitivamente:</p>
+            <ul class="perfil-lista-exclusao">
+                <li>sua conta e os seus dados de acesso;</li>
+                <li>todos os seus treinos, com o XP e o nível acumulados;</li>
+                <li>suas postagens, comentários e curtidas;</li>
+                <li>suas fotos de perfil e as fotos das suas postagens;</li>
+                <li>suas metas e desafios;</li>
+                <li>suas participações em grupos, e os grupos que você criou.</li>
+            </ul>
+            <p class="perfil-zona-texto">Não é possível desfazer esta ação.</p>
+            <div class="campo">
+                <label class="campo__rotulo" for="confirmacaoExclusao">Digite EXCLUIR para confirmar</label>
+                <input type="text" id="confirmacaoExclusao" class="input" autocomplete="off" spellcheck="false">
+            </div>
+            <p class="mensagem-form" id="erroExcluirConta" role="alert"></p>
+            <div class="modal-actions">
+                <button type="button" class="btn btn--secundario" id="btnCancelarExclusao">Cancelar</button>
+                <button type="submit" class="btn btn-confirmar-exclusao" id="btnConfirmarExclusao" disabled>Excluir definitivamente</button>
+            </div>
+        </form>
     </div>
 </div>
 

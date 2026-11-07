@@ -74,6 +74,28 @@ function encerrarSessao() {
   window.location.href = PAGINA_LOGIN;
 }
 
+const CHAVE_AVISO_LOGIN = 'fitbattle_aviso_login';
+
+function avisarNoLogin(texto) {
+  const armazenamento = armazenamentoDaSessao();
+  if (!armazenamento) return;
+  try {
+    armazenamento.setItem(CHAVE_AVISO_LOGIN, texto);
+  } catch (e) {}
+}
+
+function lerAvisoDoLogin() {
+  const armazenamento = armazenamentoDaSessao();
+  if (!armazenamento) return null;
+  try {
+    const texto = armazenamento.getItem(CHAVE_AVISO_LOGIN);
+    armazenamento.removeItem(CHAVE_AVISO_LOGIN);
+    return texto;
+  } catch (e) {
+    return null;
+  }
+}
+
 const MENSAGEM_SEM_CONEXAO = 'Não foi possível falar com o servidor. Tente novamente.';
 
 class ErroDeConexao extends Error {

@@ -2,6 +2,9 @@ const PADRAO_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ATRASO_REDIRECIONAR_MS = 700;
 
 document.addEventListener('DOMContentLoaded', function () {
+  const avisoAnterior = lerAvisoDoLogin();
+  if (avisoAnterior) mostrarToast(avisoAnterior);
+
   const form = document.getElementById('loginForm');
   const identificador = document.getElementById('email');
   const senha = document.getElementById('senha');
