@@ -19,6 +19,9 @@ const NOME_TIPO = {
 
 let usuarioLogado = null;
 let fotoSelecionada = null;
+let treinosDoPerfil = [];
+const TAMANHO_PAGINA_TREINOS = 5;
+let quantidadeTreinosVisiveis = TAMANHO_PAGINA_TREINOS;
 
 function dataDeHoje() {
   const hoje = new Date();
@@ -203,10 +206,12 @@ async function carregarRankingLocal() {
 }
 
 function renderizarTreinos(treinos) {
+  treinosDoPerfil = treinos;
   const lista = document.getElementById('listaTreinos');
   const vazia = document.getElementById('listaVazia');
 
   lista.querySelectorAll('.activity-card').forEach(function (el) { el.remove(); });
+  atualizarMostrarMais();
 
   if (treinos.length === 0) {
     vazia.hidden = false;
@@ -214,7 +219,7 @@ function renderizarTreinos(treinos) {
   }
   vazia.hidden = true;
 
-  treinos.forEach(function (t) {
+  treinos.slice(0, quantidadeTreinosVisiveis).forEach(function (t) {
     lista.insertAdjacentHTML('beforeend', htmlCardTreino(t));
   });
 
@@ -233,6 +238,17 @@ function renderizarTreinos(treinos) {
       });
     });
   });
+}
+
+function atualizarMostrarMais() {
+  const botao = document.getElementById('btnMostrarMais');
+  if (!botao) return;
+  botao.hidden = treinosDoPerfil.length <= quantidadeTreinosVisiveis;
+}
+
+function mostrarMaisTreinos() {
+  quantidadeTreinosVisiveis += TAMANHO_PAGINA_TREINOS;
+  renderizarTreinos(treinosDoPerfil);
 }
 
 function htmlCardTreino(t) {
@@ -318,6 +334,7 @@ function configurarModais() {
   document.getElementById('iconeEditar').innerHTML = ICONE_EDITAR;
   document.querySelectorAll('.modal-close').forEach(function (botao) { botao.innerHTML = ICONE_FECHAR; });
   ligar('closePerfil', 'click', function () { fecharOverlay('overlayPerfil'); });
+  ligar('btnMostrarMais', 'click', mostrarMaisTreinos);
   document.getElementById('editDataNascimento').max = dataDeHoje();
   ligar('editDataNascimento', 'input', atualizarIdadeNoPerfil);
   ligar('editEmail', 'input', atualizarCampoSenhaAtual);
