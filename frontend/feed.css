@@ -227,8 +227,9 @@
 
 .feed-card__titulo {
   margin-bottom: var(--esp-2);
-  font-size: var(--texto-md);
-  font-weight: var(--peso-forte);
+  font-size: var(--texto-lg);
+  font-weight: var(--peso-extra);
+  overflow-wrap: anywhere;
 }
 
 .feed-card__texto {
@@ -293,6 +294,15 @@
   border-top: 1px solid var(--cor-borda-suave);
 }
 
+.feed-card__rodape .btn {
+  min-height: 32px;
+  color: var(--cor-texto-2);
+}
+
+.feed-card__rodape .btn:hover {
+  color: var(--cor-texto);
+}
+
 .feed-acao {
   display: inline-flex;
   align-items: center;
@@ -309,6 +319,7 @@
   stroke-linejoin: round;
 }
 
+.feed-card__rodape .feed-acao--ativa,
 .feed-acao--ativa {
   color: var(--cor-destaque);
 }

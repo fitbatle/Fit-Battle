@@ -238,7 +238,8 @@ function renderizarTreinos(treinos) {
 function htmlCardTreino(t) {
   const icone = ICONE_TIPO[t.tipo] || ICONE_TIPO.outro;
   const nomeTipo = NOME_TIPO[t.tipo] || capitalizar(t.tipo);
-  const titulo = nomeTipo + (t.titulo ? ': ' + esc(t.titulo).toUpperCase() : '');
+  const exercicio = t.titulo ? esc(t.titulo) : nomeTipo;
+  const xp = t.pontuacao != null ? `<span class="activity-xp">+${t.pontuacao} xp</span>` : '';
 
   const metricas = [];
   if (t.tempo_min != null) {
@@ -254,10 +255,17 @@ function htmlCardTreino(t) {
 
   return `
     <div class="activity-card">
-      <div class="activity-title"><span class="perfil-icone">${icone}</span>${titulo}
-        <span class="activity-time">${dataRelativa(t.data_registro)}</span>
+      <div class="activity-cabecalho">
+        <div class="activity-title">
+          <span class="perfil-icone">${icone}</span>
+          <span class="activity-tipo">${esc(nomeTipo)}</span>
+          <span class="activity-nome">${exercicio}</span>
+        </div>
+        <div class="activity-meta">
+          <span class="activity-time">${dataRelativa(t.data_registro)}</span>${xp}
+        </div>
       </div>
-      <div class="activity-desc">${esc(t.descricao || '')}</div>
+      ${t.descricao ? `<p class="activity-desc">${esc(t.descricao)}</p>` : ''}
       <div class="activity-metrics">${metricas.join('')}</div>
       <div class="card-actions">
         <button class="btn btn--fantasma btn--pequeno" data-compartilhar="${esc('Registrei um treino de ' + nomeTipo + (t.titulo ? ' (' + t.titulo + ')' : '') + ' no FitBattle! #FitBattle')}" data-compartilhar-id="${t.id}"><span class="perfil-icone">${ICONE_COMPARTILHAR}</span>Compartilhar</button>
