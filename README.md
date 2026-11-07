@@ -418,14 +418,14 @@ variáveis no ambiente ou use o gerenciador de variáveis da sua hospedagem.
 
 ```bash
 cd backend
-ADMIN_EMAILS=helena@fitbattle.dev python tests/servidor_dev.py
+ADMIN_EMAILS=jotape@fitbattle.dev python tests/servidor_dev.py
 ```
 
 No Windows (PowerShell), defina a variável antes de rodar:
 
 ```powershell
 cd backend
-$env:ADMIN_EMAILS = "helena@fitbattle.dev"
+$env:ADMIN_EMAILS = "jotape@fitbattle.dev"
 python tests\servidor_dev.py
 ```
 
@@ -433,7 +433,7 @@ Sobe a API num banco SQLite local (`backend/dev.db`), já populado com ~12
 usuários e treinos de teste, sem precisar de MySQL. Útil para demonstração
 rápida ou para olhar o frontend sem configurar banco nenhum. A variável
 `ADMIN_EMAILS` é opcional, mas sem ela nenhum usuário consegue criar desafios.
-Login de teste: `helena@fitbattle.dev` / `senhaforte123`.
+Login de teste: `jotape@fitbattle.dev` / `senhaforte123`.
 
 ### 4. Suíte de testes
 
@@ -468,7 +468,7 @@ Se o arquivo não estiver marcado como executável, use `bash iniciar-demo.sh`.
 
 Os dois scripts criam a pasta `.venv` (na primeira vez), instalam as dependências,
 sobem a API na porta 5000 com dados de demonstração e o frontend na porta 5500.
-Abra `http://localhost:5500/login.html` e entre com `helena@fitbattle.dev` e
+Abra `http://localhost:5500/login.html` e entre com `jotape@fitbattle.dev` e
 `senhaforte123`.
 
 Por padrão a demonstração só fica acessível neste computador (`127.0.0.1`). Para abrir de outro aparelho da mesma rede, defina `FITBATTLE_REDE=1` antes de rodar e use `http://IP_DESTE_COMPUTADOR:5500/login.html`. Use só em rede de confiança, porque a conta de demonstração tem senha pública. Libere as portas 5000 e 5500 no firewall na primeira vez.
@@ -483,7 +483,7 @@ py -3 -m venv .venv
 python -m pip install -r backend\requirements.txt
 cd backend
 $env:HOST = "127.0.0.1"
-$env:ADMIN_EMAILS = "helena@fitbattle.dev"
+$env:ADMIN_EMAILS = "jotape@fitbattle.dev"
 python tests\servidor_dev.py
 ```
 
@@ -501,7 +501,7 @@ python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r backend/requirements.txt
 cd backend
-HOST=127.0.0.1 ADMIN_EMAILS=helena@fitbattle.dev python tests/servidor_dev.py
+HOST=127.0.0.1 ADMIN_EMAILS=jotape@fitbattle.dev python tests/servidor_dev.py
 ```
 
 Em outro terminal, na pasta do projeto:

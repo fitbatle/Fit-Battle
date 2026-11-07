@@ -24,10 +24,10 @@ from tests.apoio import CONSENTIMENTOS_OPCIONAIS_ACEITOS, criar_views_de_ranking
 from utils import agora, inicio_utc_do_dia_local
 
 SENHA = "senhaforte123"
-PRINCIPAL = "helena@fitbattle.dev"
+PRINCIPAL_EMAIL = "jotape@fitbattle.dev"
 
 USUARIOS = [
-    ("Helena Duarte", PRINCIPAL, 29, "Belo Horizonte", "MG"),
+    ("Jotape", PRINCIPAL_EMAIL, 29, "Belo Horizonte", "MG"),
     ("Lucas Ferreira", "lucas@fitbattle.dev", 26, "Belo Horizonte", "MG"),
     ("Marina Alves", "marina@fitbattle.dev", 24, "Belo Horizonte", "MG"),
     ("Bruno Teixeira", "bruno@fitbattle.dev", 31, "Belo Horizonte", "MG"),
@@ -57,21 +57,21 @@ TEXTOS_TREINO = {
     "Yoga de recuperação": "Yoga de recuperação depois do treino pesado. Alongamento de quadril e costas.",
 }
 
-HELENA_SESSOES = [
+SESSOES_PRINCIPAL = [
     "Supino reto", "Corrida no parque", "Agachamento livre", "Costas e bíceps", "Supino reto",
     "Yoga de recuperação", "Levantamento terra", "Supino reto", "Bike ergométrica", "Agachamento livre",
     "Peito e tríceps", "Supino reto", "Caminhada rápida", "Costas e bíceps", "Agachamento livre",
     "Supino reto", "Esteira intervalada", "Levantamento terra", "Supino reto",
 ]
-HELENA_TREINOS_POR_SEMANA = [2, 3, 1, 4, 2, 3, 1, 3]
-HELENA_CARGA_INICIAL = {
+TREINOS_POR_SEMANA_PRINCIPAL = [2, 3, 1, 4, 2, 3, 1, 3]
+CARGA_INICIAL_PRINCIPAL = {
     "Supino reto": (70, 2.5),
     "Agachamento livre": (60, 5),
     "Levantamento terra": (80, 2.5),
     "Costas e bíceps": (40, 2.5),
     "Peito e tríceps": (30, 2.5),
 }
-CARDIO_HELENA = ("Corrida no parque", "Bike ergométrica", "Esteira intervalada", "Caminhada rápida")
+CARDIO_PRINCIPAL = ("Corrida no parque", "Bike ergométrica", "Esteira intervalada", "Caminhada rápida")
 
 CATALOGO_OUTROS = [
     ("musculacao", "Pernas"),
@@ -131,15 +131,15 @@ def momentos_da_semana(hoje, semanas_atras, quantidade):
     return momentos
 
 
-def treino_helena(exercicio, indice_carga, dias_atras):
-    if exercicio in HELENA_CARGA_INICIAL:
-        inicial, passo = HELENA_CARGA_INICIAL[exercicio]
+def treino_principal(exercicio, indice_carga, dias_atras):
+    if exercicio in CARGA_INICIAL_PRINCIPAL:
+        inicial, passo = CARGA_INICIAL_PRINCIPAL[exercicio]
         return {
             "tipo": "musculacao", "titulo": exercicio, "descricao": TEXTOS_TREINO[exercicio],
             "tempo_min": 50, "carga_kg": round(inicial + passo * indice_carga, 1), "repeticoes": 8,
             "dias_atras": dias_atras,
         }
-    if exercicio in CARDIO_HELENA:
+    if exercicio in CARDIO_PRINCIPAL:
         return {
             "tipo": "cardio", "titulo": exercicio, "descricao": TEXTOS_TREINO[exercicio],
             "tempo_min": 35, "distancia_km": 4.0 + (indice_carga % 3) * 0.5, "dias_atras": dias_atras,
@@ -178,20 +178,20 @@ def planos_de_treino(hoje):
 
     momentos = []
     for semanas_atras in range(7, -1, -1):
-        quantidade = HELENA_TREINOS_POR_SEMANA[7 - semanas_atras]
+        quantidade = TREINOS_POR_SEMANA_PRINCIPAL[7 - semanas_atras]
         momentos.extend(momentos_da_semana(hoje, semanas_atras, quantidade))
     momentos.sort(key=lambda momento: (-momento[0], momento[1]))
-    assert len(momentos) == len(HELENA_SESSOES)
+    assert len(momentos) == len(SESSOES_PRINCIPAL)
 
     contagem_carga = {}
-    treinos_helena = []
-    for exercicio, (dias, hora) in zip(HELENA_SESSOES, momentos):
+    treinos_principal = []
+    for exercicio, (dias, hora) in zip(SESSOES_PRINCIPAL, momentos):
         indice = contagem_carga.get(exercicio, 0)
         contagem_carga[exercicio] = indice + 1
-        treino = treino_helena(exercicio, indice, dias)
+        treino = treino_principal(exercicio, indice, dias)
         treino["hora"] = hora
-        treinos_helena.append(treino)
-    planos[PRINCIPAL] = treinos_helena
+        treinos_principal.append(treino)
+    planos[PRINCIPAL_EMAIL] = treinos_principal
 
     for i, (_, email, _, _, _) in enumerate(USUARIOS[1:], start=1):
         total, fator = VOLUME_OUTROS[i]
@@ -270,11 +270,11 @@ def popular(hoje=None):
     AlternarCurtidaService.executar(ids["lucas@fitbattle.dev"], "atividade", primeira)
     AlternarCurtidaService.executar(ids["diego@fitbattle.dev"], "atividade", primeira)
 
-    grupo = CriarGrupoService.executar(ids[PRINCIPAL], {
+    grupo = CriarGrupoService.executar(ids[PRINCIPAL_EMAIL], {
         "nome": "Turma do Parque", "descricao": "Grupo para treinar junto e acompanhar a evolução.",
     })
     EntrarGrupoPorCodigoService.executar(ids["lucas@fitbattle.dev"], grupo.codigo_convite)
-    CriarMetaService.executar(ids[PRINCIPAL], {
+    CriarMetaService.executar(ids[PRINCIPAL_EMAIL], {
         "titulo": "Supino 120 kg", "tipo": "curto_prazo", "tipo_metrica": "carga_maxima",
         "exercicio": "supino reto", "valor_objetivo": 120, "data_final": "2030-12-31",
     })
@@ -290,7 +290,7 @@ def popular(hoje=None):
         "data_fim": inicio_semana + timedelta(days=6),
         "recompensa_xp": 100,
     }).salvar()
-    DesafioUsuario(id_desafio=desafio.id_desafio, id_usuario=ids[PRINCIPAL], status="inscrito").salvar()
+    DesafioUsuario(id_desafio=desafio.id_desafio, id_usuario=ids[PRINCIPAL_EMAIL], status="inscrito").salvar()
     espalhar_notificacoes()
 
 
