@@ -161,7 +161,7 @@ Hoje (conferido direto na árvore de arquivos): 58 rotas registradas em
 classes `Repository` em `repositories/` (uma por arquivo), 14 classes `Model`
 em `models/` (uma por arquivo, todas herdando de `ModeloBase`), 10 arquivos
 `apoio.py` em `services/` (um por área que precisa de lógica compartilhada),
-mais um `apoio.py` em `controllers/` e um em `repositories/`, e 464 testes.
+mais um `apoio.py` em `controllers/` e um em `repositories/`, e 475 testes.
 
 | Caso de uso | Controller | Service | Repository |
 |---|---|---|---|
@@ -442,7 +442,7 @@ cd backend
 python -m unittest discover -s tests -t .
 ```
 
-464 testes atualmente, cobrindo autenticação/LGPD (incluindo as fronteiras de
+475 testes atualmente, cobrindo autenticação/LGPD (incluindo as fronteiras de
 13 e 18 anos), robustez (uploads, limite de login, concorrência),
 grupos/convites, metas, compartilhamento, busca restrita (nome, cidade,
 menores de idade, perfil revogado), rankings, dashboard (estado vazio,
