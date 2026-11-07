@@ -22,26 +22,23 @@
 
 <body data-pagina="perfil">
 
-<main>
+<main class="perfil-cartoes">
 
-    <section class="card card--interno perfil-topo">
-        <div class="perfil-identidade">
-            <button type="button" class="avatar avatar--grande perfil-foto" id="avatarLarge" aria-label="Ver ou trocar a foto de perfil"></button>
-            <div class="perfil-texto">
-                <h1 class="perfil-nome">
-                    <span id="pNome">—</span>
-                    <button type="button" class="botao-icone" id="btnEditarPerfil" aria-label="Editar perfil">
-                        <span class="perfil-icone" id="iconeEditar" aria-hidden="true"></span>
-                    </button>
-                </h1>
-                <p class="rotulo-mini"><span id="pHandle">—</span> &middot; <span id="pLocal">—</span></p>
-                <p class="perfil-bio" id="pBio"></p>
-                <p class="perfil-dados">
-                    <span>Peso: <strong id="pPeso">—</strong></span>
-                    <span>Altura: <strong id="pAltura">—</strong></span>
-                    <span>Idade: <strong id="pIdade">—</strong></span>
-                </p>
-            </div>
+    <section class="card card--interno perfil-cartao">
+        <h2 class="perfil-secao-titulo">Dados do perfil</h2>
+        <div class="perfil-texto">
+            <h1 class="perfil-nome">
+                <span id="pNome">—</span>
+                <button type="button" class="botao-icone" id="btnEditarPerfil" aria-label="Editar perfil">
+                    <span class="perfil-icone" id="iconeEditar" aria-hidden="true"></span>
+                </button>
+            </h1>
+            <p class="rotulo-mini"><span id="pHandle">—</span> &middot; <span id="pLocal">—</span></p>
+            <p class="perfil-dados">
+                <span>Peso: <strong id="pPeso">—</strong></span>
+                <span>Altura: <strong id="pAltura">—</strong></span>
+                <span>Idade: <strong id="pIdade">—</strong></span>
+            </p>
         </div>
 
         <dl class="perfil-estatisticas">
@@ -60,17 +57,20 @@
         </dl>
 
         <div class="perfil-acoes">
-            <button type="button" class="btn btn--secundario btn--pequeno" id="btnVerRanking">Ver ranking</button>
-            <a class="btn btn--fantasma btn--pequeno" href="privacidade.html">Privacidade e consentimentos</a>
+            <button type="button" class="btn btn--secundario perfil-acao" id="btnVerRanking">Ver ranking</button>
+            <a class="btn btn--secundario perfil-acao" href="privacidade.html">Privacidade e consentimentos</a>
         </div>
     </section>
 
-    <section class="card card--interno">
-        <h2 class="perfil-secao-titulo">Medalhas</h2>
-        <ul class="medalhas-lista" id="listaMedalhas"></ul>
+    <section class="card card--interno perfil-cartao">
+        <h2 class="perfil-secao-titulo">Foto e bio</h2>
+        <div class="perfil-foto-bio">
+            <button type="button" class="avatar avatar--grande perfil-foto" id="avatarLarge" aria-label="Ver ou trocar a foto de perfil"></button>
+            <p class="perfil-bio" id="pBio"></p>
+        </div>
     </section>
 
-    <section class="card card--interno">
+    <section class="card card--interno perfil-cartao">
         <h2 class="perfil-secao-titulo">Nível <span id="levelNome">—</span></h2>
         <div class="barra">
             <div class="barra__preenchimento" id="levelBar"></div>
@@ -78,28 +78,12 @@
         <p class="rotulo-mini" id="levelFooter">—</p>
     </section>
 
-    <section class="card card--interno">
-        <h2 class="perfil-secao-titulo">Alterar senha</h2>
-        <form id="formSenha" novalidate>
-            <div class="campo">
-                <label class="campo__rotulo" for="senhaAtual">Senha atual</label>
-                <input type="password" id="senhaAtual" class="input" autocomplete="current-password" required>
-            </div>
-            <div class="campo">
-                <label class="campo__rotulo" for="senhaNova">Nova senha</label>
-                <input type="password" id="senhaNova" class="input" autocomplete="new-password" minlength="8" required>
-                <span class="campo__auxiliar">Mínimo de 8 caracteres.</span>
-            </div>
-            <div class="campo">
-                <label class="campo__rotulo" for="senhaConfirmacao">Confirmar nova senha</label>
-                <input type="password" id="senhaConfirmacao" class="input" autocomplete="new-password" required>
-            </div>
-            <p class="mensagem-form" id="erroSenha" role="alert"></p>
-            <button type="submit" class="btn btn--primario" id="btnAlterarSenha">Alterar senha</button>
-        </form>
+    <section class="card card--interno perfil-cartao">
+        <h2 class="perfil-secao-titulo">Medalhas</h2>
+        <ul class="medalhas-lista" id="listaMedalhas"></ul>
     </section>
 
-    <section class="card card--interno">
+    <section class="card card--interno perfil-cartao">
         <div class="perfil-secao-cabecalho">
             <h2 class="perfil-secao-titulo">Meus treinos</h2>
             <button type="button" class="btn btn--primario btn--pequeno" id="btnNovoTreino">Novo treino</button>
@@ -107,6 +91,36 @@
         <div id="listaTreinos">
             <p class="estado-vazio" id="listaVazia" hidden>Nenhum treino ainda. Clique em "Novo treino" para registrar o primeiro.</p>
         </div>
+    </section>
+
+    <section class="card card--interno perfil-cartao" aria-labelledby="tituloSeguranca">
+        <h2 class="perfil-secao-titulo" id="tituloSeguranca">Segurança</h2>
+        <p class="rotulo-mini">Troque a sua senha de acesso. A nova senha precisa ter pelo menos 8 caracteres.</p>
+        <form id="formSenha" class="perfil-formulario" novalidate>
+            <div class="perfil-formulario__campos">
+                <div class="campo">
+                    <label class="campo__rotulo" for="senhaAtual">Senha atual</label>
+                    <input type="password" id="senhaAtual" class="input" autocomplete="current-password" required>
+                </div>
+                <div class="campo">
+                    <label class="campo__rotulo" for="senhaNova">Nova senha</label>
+                    <input type="password" id="senhaNova" class="input" autocomplete="new-password" minlength="8" required>
+                </div>
+                <div class="campo">
+                    <label class="campo__rotulo" for="senhaConfirmacao">Confirmar nova senha</label>
+                    <input type="password" id="senhaConfirmacao" class="input" autocomplete="new-password" required>
+                </div>
+            </div>
+            <p class="mensagem-form" id="erroSenha" role="alert"></p>
+            <div class="perfil-formulario__acoes">
+                <button type="submit" class="btn btn--primario" id="btnAlterarSenha">Alterar senha</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card card--interno perfil-cartao perfil-zona-exclusao" aria-labelledby="tituloExclusao">
+        <h2 class="perfil-secao-titulo" id="tituloExclusao">Zona de exclusão</h2>
+        <p class="rotulo-mini">A exclusão da conta ainda não é feita por esta tela. Os seus direitos, incluindo o pedido de exclusão, estão descritos nos <a href="termos.html#termo-consentimento">Termos de Uso e na Política de Privacidade</a>.</p>
     </section>
 
 </main>

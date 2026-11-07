@@ -158,7 +158,7 @@ function preencherPerfil(u) {
   texto('pNome', u.nome);
   texto('pHandle', '@' + (u.email ? u.email.split('@')[0] : 'usuario'));
   texto('pLocal', u.cidade || 'Localização não informada');
-  texto('pBio', u.descricao || '');
+  texto('pBio', u.descricao || 'Adicione uma bio em Editar perfil.');
   texto('pPeso', u.peso ? formatarNumero(u.peso) + ' kg' : '—');
   texto('pAltura', u.altura ? formatarNumero(u.altura) + ' m' : '—');
   texto('pIdade', u.idade != null ? u.idade : '—');

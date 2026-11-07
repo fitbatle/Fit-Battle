@@ -1,13 +1,30 @@
-.perfil-topo {
+.perfil-cartoes {
   display: flex;
   flex-direction: column;
   gap: var(--esp-5);
 }
 
-.perfil-identidade {
+.perfil-cartao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.perfil-cartao > .perfil-secao-titulo {
+  margin-bottom: 0;
+}
+
+.perfil-foto-bio {
   display: flex;
   align-items: center;
   gap: var(--esp-5);
+}
+
+.perfil-foto-bio .perfil-bio {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--texto-md);
+  line-height: 1.55;
 }
 
 .perfil-foto {
@@ -188,6 +205,9 @@
 }
 
 .metric-box .m-val {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
   font-size: var(--texto-lg);
   font-weight: var(--peso-extra);
 }
@@ -232,7 +252,7 @@
 
 .perfil-foto-edicao .rotulo-mini {
   display: block;
-  margin-top: var(--esp-2);
+  margin: 0;
 }
 
 .perfil-abas {
@@ -247,6 +267,7 @@
   color: var(--cor-destaque);
 }
 
+  line-height: 1.55;
 .rank-linha {
   display: flex;
   align-items: center;
@@ -310,7 +331,7 @@
 }
 
 @media (max-width: 560px) {
-  .perfil-identidade {
+  .perfil-foto-bio {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -325,5 +346,14 @@
 
   .perfil-estatisticas dd {
     font-size: var(--texto-lg);
+  }
+}
+@media (max-width: 640px) {
+  .perfil-formulario__campos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .perfil-acoes .perfil-acao {
+    flex: 1 1 100%;
   }
 }
