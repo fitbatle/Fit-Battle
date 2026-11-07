@@ -29,6 +29,7 @@ class TestTextoConsentimento(unittest.TestCase):
         self.assertIn(TEXTO_RANKING, secao)
         self.assertIn(TEXTO_BUSCA, secao)
         self.assertIn(TEXTO_PRIVACIDADE, secao)
+        self.assertNotIn("já vêm marcadas", html)
         for chave in ("ranking_publico", "busca_perfil"):
             with self.subTest(chave=chave):
                 linha = re.search(r'<input type="checkbox" name="consent" value="%s"[^>]*>' % chave, html)
