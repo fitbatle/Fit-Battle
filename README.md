@@ -2,7 +2,7 @@
 
 [![testes](https://github.com/fitbatle/Fit-Battle/actions/workflows/testes.yml/badge.svg)](https://github.com/fitbatle/Fit-Battle/actions/workflows/testes.yml)
 
-Bernardo Nardelli, Cauã Gomes, João Paulo Costa, João Pedro Braga, Miguel Assunção, Henrique Vale.
+Bernardo Nardelli, Cauã Gomes, João Paulo Costa, João Pedro Braga, Miguel Dutra, Henrique Vale.
 
 Plataforma gamificada de treinos. Este repositório contém a API (Flask) e o
 frontend web.
@@ -107,6 +107,12 @@ Cada item indica a tela, a rota da API, o Controller e o método, o Service e o 
    Tela: `registrar-treino.html` (aviso de recorde após salvar e linha "Seu recorde atual"); rota: `POST /api/usuarios/<id>/atividades` (campo `recorde_pessoal` na resposta); Controller: `AtividadeController.registrar`; Service: `RegistrarTreinoService`; Repository/Model: `AtividadeRepository.maior_carga` e `Atividade.salvar`, `Atividade`.
 35. Ver nível e progresso até o próximo nível
    Tela: `perfil.html` (barra de nível); rota: `GET /api/eu` (campo `progresso_nivel`); Controller: `UsuarioController.eu`; Service: `ConsultarProgressoNivelService`; Model: `Usuario` (campo `xp`).
+36. Excluir conta
+   Tela: `perfil.html` (botão "Excluir minha conta", com confirmação digitando EXCLUIR); rota: `DELETE /api/usuarios/<id>`; Controller: `UsuarioController.excluir`; Service: `ExcluirContaService`; Repository/Model: `AtividadeRepository`, `PostagemRepository`, `CurtidaRepository`, `ComentarioRepository`, `Usuario.deletar`, `Usuario`.
+37. Mostrar mais treinos no histórico
+   Tela: `perfil.html` (botão "Mostrar mais", de 5 em 5 treinos, em `perfil.js`); rota: `GET /api/usuarios/<id>/atividades`; Controller: `AtividadeController.historico`; Service: `ConsultarHistoricoTreinosService`; Repository/Model: `AtividadeRepository.listar_do_usuario`, `Atividade`. A paginação acontece no navegador, sobre a lista já carregada.
+38. Anexar vídeo do treino (em breve)
+   Tela: `registrar-treino.html` (botão "Vídeo do treino" com selo "Em breve", desativado). Sem rota, Controller, Service ou Model: o envio de vídeo ainda não foi implementado.
 
 Diagrama de classes das entidades: `docs/diagrama_de_classes_dominio.svg` (versão em imagem: `docs/diagrama_de_classes_dominio.png`).
 
@@ -367,7 +373,7 @@ botão do raio (Execute All).
 
 O script cria o banco `fitbattle`, todas as tabelas e views, e o usuário de
 aplicação `fitbattle` / senha `Fitbattle@123` (usado pela API, não pelo
-root). Essa senha é só um exemplo para desenvolvimento local; troque-a (e
+root). Essa é a senha padrão de desenvolvimento local, nunca deve ser usada em ambiente real; troque-a (e
 configure `DB_PASSWORD` com o novo valor) em qualquer ambiente compartilhado
 ou de produção.
 
@@ -407,7 +413,7 @@ vírgula com permissão para criar, editar e encerrar desafios sazonais —
 RF16; sem essa variável, nenhum usuário é administrador).
 
 `DB_PASSWORD` não tem padrão no código de produção. Em desenvolvimento, se a
-variável faltar, a API usa a senha de exemplo `Fitbattle@123` e imprime um
+variável faltar, a API usa a senha padrão de desenvolvimento `Fitbattle@123` e imprime um
 aviso no terminal. Com `FITBATTLE_ENV=production`, a API recusa iniciar se
 `DB_PASSWORD` não estiver definida (a exceção é `DB_URI`, que já traz a senha
 dentro da própria URI). O arquivo `backend/.env.example` lista todas as
@@ -433,7 +439,7 @@ Sobe a API num banco SQLite local (`backend/dev.db`), já populado com ~12
 usuários e treinos de teste, sem precisar de MySQL. Útil para demonstração
 rápida ou para olhar o frontend sem configurar banco nenhum. A variável
 `ADMIN_EMAILS` é opcional, mas sem ela nenhum usuário consegue criar desafios.
-Login de teste: `jotape@fitbattle.dev` / `senhaforte123`.
+Login de teste: `jotape@fitbattle.dev` / `senhaforte123`. Essa conta existe só na base local de demonstração (`backend/dev.db`), não em nenhum banco de produção.
 
 ### 4. Suíte de testes
 
@@ -469,7 +475,7 @@ Se o arquivo não estiver marcado como executável, use `bash iniciar-demo.sh`.
 Os dois scripts criam a pasta `.venv` (na primeira vez), instalam as dependências,
 sobem a API na porta 5000 com dados de demonstração e o frontend na porta 5500.
 Abra `http://localhost:5500/login.html` e entre com `jotape@fitbattle.dev` e
-`senhaforte123`.
+`senhaforte123`. Essa conta existe só na base local de demonstração.
 
 Por padrão a demonstração só fica acessível neste computador (`127.0.0.1`). Para abrir de outro aparelho da mesma rede, defina `FITBATTLE_REDE=1` antes de rodar e use `http://IP_DESTE_COMPUTADOR:5500/login.html`. Use só em rede de confiança, porque a conta de demonstração tem senha pública. Libere as portas 5000 e 5500 no firewall na primeira vez.
 
@@ -664,7 +670,7 @@ puro.
 | GET | `/api/usuarios/busca?nome=` | Busca restrita por nome ou cidade (parâmetro `nome` tratado como termo geral), só perfis públicos, com `busca_perfil` aceito e maiores de 18 | Logado | RF19 |
 | GET | `/api/usuarios/<id>` | Perfil (próprio: completo; de outro: público, se visível — mesmo 404 para perfil privado, inexistente ou de menor de idade) | Logado | RF03, RF19 |
 | PUT | `/api/usuarios/<id>` | Atualiza o perfil; se incluir `data_nascimento`, reaplica as mesmas regras de idade do cadastro | Dono | RF03 |
-| DELETE | `/api/usuarios/<id>` | Exclui a conta (e as fotos associadas). Disponível só via API (sem tela no frontend) | Dono | — |
+| DELETE | `/api/usuarios/<id>` | Exclui a conta (e as fotos associadas). A exclusão é feita pelo botão "Excluir minha conta" em `perfil.html`, com confirmação digitando EXCLUIR | Dono | — |
 | POST | `/api/usuarios/<id>/foto` | Envia a foto de perfil (multipart, campo `foto`) | Dono | RF03 |
 | POST | `/api/usuarios/<id>/atividades` | Registra um treino; calcula pontuação e XP/nível | Dono | RF04, RF12, RF13 |
 | POST | `/api/usuarios/<id>/atividades/previa` | Prévia de um treino sem gravar: pontuação estimada, recorde pessoal e recorde atual; recusa com 400 o treino que estouraria os limites de XP | Dono | RF04, RF12 |
