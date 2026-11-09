@@ -197,6 +197,7 @@ function renderizarPodio(dados, modo) {
   const vagas = ordenarVagasPodio(dados.slice(0, 3));
   podio.className = 'podio podio--' + vagas.length;
   podio.innerHTML = vagas.map(function (item) { return htmlVagaPodio(item, modo); }).join('');
+  ativarIcones(podio);
 }
 
 function htmlVagaPodio(item, modo) {
@@ -205,7 +206,10 @@ function htmlVagaPodio(item, modo) {
     ? ''
     : `<span class="podio-vaga__nivel">${esc(nomeNivel(item))}</span>`;
 
+  const trofeu = item.posicao === 1 ? '<span class="podio-vaga__trofeu" data-icone="trofeu"></span>' : '';
+
   return `<div class="podio-vaga podio-vaga--${item.posicao}${eu ? ' podio-vaga--eu' : ''}">
+    ${trofeu}
     <span class="podio-vaga__pos">${item.posicao}º</span>
     <span class="avatar" aria-hidden="true">${esc(iniciais(item.nome))}</span>
     <span class="podio-vaga__nome">${esc(item.nome)}${eu ? ' (você)' : ''}</span>
