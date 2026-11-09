@@ -1,7 +1,3 @@
--- Rode este script uma única vez. MySQL não aceita ADD COLUMN/DROP COLUMN
--- IF [NOT] EXISTS, então executá-lo de novo falha na linha do DROP COLUMN
--- (coluna já removida) com erro 1091.
-
 USE fitbattle;
 
 ALTER TABLE meta
