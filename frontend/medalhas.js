@@ -1,5 +1,3 @@
-const ICONE_MEDALHA = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5 5 2.5-1.5-7.5"/></svg>';
-
 function formatarDataMedalha(iso) {
   const partes = String(iso || '').split('-');
   return partes.length === 3 ? partes[2] + '/' + partes[1] + '/' + partes[0] : '';
@@ -34,7 +32,7 @@ function criarCartaoMedalha(medalha, opcoes) {
     criarElemento('span', { classe: 'medalha__criterio', texto: medalha.criterio }),
     criarElemento('span', { classe: 'medalha__progresso', texto: textoProgressoMedalha(medalha) })
   ]);
-  item.appendChild(criarElemento('span', { classe: 'medalha__icone', 'aria-hidden': 'true', html: ICONE_MEDALHA }));
+  item.appendChild(criarElemento('span', { classe: 'medalha__icone', 'aria-hidden': 'true' }, [criarIcone('medalha')]));
   item.appendChild(textos);
   if (opcoes.compartilhavel && medalha.conquistada) {
     item.appendChild(botaoCompartilharMedalha(medalha));

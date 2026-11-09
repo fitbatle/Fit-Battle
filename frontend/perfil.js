@@ -1,11 +1,5 @@
 const TAMANHO_MAX_FOTO = 3 * 1024 * 1024;
 
-const ICONE_TIPO = {
-  musculacao: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6v12M18 6v12M3 9v6M21 9v6M6 12h12"/></svg>',
-  cardio: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z"/></svg>',
-  yoga: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M12 8v5M7 13h10M9 21l3-8 3 8"/></svg>',
-  outro: '<svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
-};
 const ICONE_EDITAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>';
 const ICONE_FECHAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 const ICONE_COMPARTILHAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>';
@@ -223,6 +217,7 @@ function renderizarTreinos(treinos) {
   treinos.slice(0, quantidadeTreinosVisiveis).forEach(function (t) {
     lista.insertAdjacentHTML('beforeend', htmlCardTreino(t));
   });
+  ativarIcones(lista);
 
   lista.querySelectorAll('[data-excluir]').forEach(function (botao) {
     botao.addEventListener('click', function () {
@@ -253,7 +248,6 @@ function mostrarMaisTreinos() {
 }
 
 function htmlCardTreino(t) {
-  const icone = ICONE_TIPO[t.tipo] || ICONE_TIPO.outro;
   const nomeTipo = NOME_TIPO[t.tipo] || capitalizar(t.tipo);
   const exercicio = t.titulo ? esc(t.titulo) : nomeTipo;
   const xp = t.pontuacao != null ? `<span class="activity-xp">+${t.pontuacao} xp</span>` : '';
@@ -274,7 +268,7 @@ function htmlCardTreino(t) {
     <div class="activity-card">
       <div class="activity-cabecalho">
         <div class="activity-title">
-          <span class="perfil-icone">${icone}</span>
+          <span class="perfil-icone" data-icone="${nomeIconeDoTipo(t.tipo)}"></span>
           <span class="activity-tipo">${esc(nomeTipo)}</span>
           <span class="activity-nome">${exercicio}</span>
         </div>
