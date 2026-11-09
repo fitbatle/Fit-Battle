@@ -5,10 +5,10 @@ from utils import agora, data_local, inicio_utc_do_dia_local
 
 FAIXAS_NIVEL = [
     (0, "iniciante"),
-    (1000, "intermediario"),
-    (3000, "avancado"),
-    (7000, "profissional"),
-    (15000, "elite"),
+    (10000, "intermediario"),
+    (30000, "avancado"),
+    (70000, "profissional"),
+    (150000, "elite"),
 ]
 
 PONTUACAO_MAXIMA_TREINO = 2000
