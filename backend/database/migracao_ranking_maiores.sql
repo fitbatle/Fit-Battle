@@ -1,7 +1,3 @@
--- Rode este script quantas vezes precisar. CREATE OR REPLACE VIEW
--- nao falha se a view ja existir, ao contrario das migracoes de
--- ADD COLUMN.
-
 USE fitbattle;
 
 CREATE OR REPLACE VIEW vw_ranking_global AS
