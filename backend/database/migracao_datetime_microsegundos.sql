@@ -1,7 +1,5 @@
 USE fitbattle;
 
--- Guarda microssegundos nas colunas de data e hora, como a aplicacao grava.
--- Sem isso o MySQL arredonda para o segundo e a ordem de registros criados no mesmo segundo muda.
 ALTER TABLE usuario MODIFY responsavel_autorizado_em DATETIME(6) NULL;
 ALTER TABLE usuario MODIFY criado_em DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
 ALTER TABLE atividade MODIFY data_registro DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6);
