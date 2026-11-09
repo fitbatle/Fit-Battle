@@ -74,7 +74,7 @@ async function carregarDashboard(exercicio) {
 
 function formatarData(iso) {
   if (!iso) return '—';
-  return new Date(iso).toLocaleDateString('pt-BR');
+  return new Date(iso + (iso.length === 10 ? 'T00:00:00' : '')).toLocaleDateString('pt-BR');
 }
 
 function formatarMinutos(minutos) {

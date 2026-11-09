@@ -50,7 +50,7 @@ async function carregarBanner() {
         criarIcone('sequencia'),
         document.createTextNode(' Sequência de ' + sequencia + ' dia' + (sequencia > 1 ? 's' : ''))
       ]));
-      subtitulo.textContent = 'Você está treinando há ' + sequencia + ' dia' + (sequencia > 1 ? 's' : '') + ' seguidos. Mantenha o ritmo!';
+      subtitulo.textContent = 'Você está treinando há ' + sequencia + (sequencia > 1 ? ' dias seguidos' : ' dia seguido') + '. Mantenha o ritmo!';
     } else if (treinos > 0) {
       subtitulo.textContent = 'Faz um tempo que você não registra um treino. Bora retomar?';
     } else {

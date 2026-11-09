@@ -286,14 +286,17 @@ async function carregarDesafioAtivo() {
     const desafios = await resposta.json();
     const ativo = desafios.find(function (d) {
       return d.minha_inscricao && d.minha_inscricao.status === 'inscrito';
+    }) || desafios.find(function (d) {
+      return d.minha_inscricao && d.minha_inscricao.status === 'concluido';
     });
     if (!ativo) return;
     const progresso = ativo.minha_inscricao;
     const unidade = ativo.tipo_metrica === 'carga_maxima' ? 'kg' : 'treinos';
+    const rotuloConcluido = progresso.status === 'concluido' ? ' · Concluído' : '';
     area.innerHTML = `
       <p class="rt-desafio-nome">${esc(ativo.nome)}</p>
       <div class="barra"><div class="barra__preenchimento" style="width:${progresso.percentual}%"></div></div>
-      <p class="rotulo-mini">${formatarNumero(progresso.valor_atual)} de ${formatarNumero(ativo.valor_objetivo)} ${unidade}</p>
+      <p class="rotulo-mini">${formatarNumero(progresso.valor_atual)} de ${formatarNumero(ativo.valor_objetivo)} ${unidade}${rotuloConcluido}</p>
       <p><a href="desafio-detalhes.html?id=${ativo.id}">Ver desafio</a></p>`;
   } catch (erro) {
     mostrarFalhaDeCarregamento(carregarDesafioAtivo);
