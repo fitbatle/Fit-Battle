@@ -1,93 +1,91 @@
-<?xml version="1.0"?><svg width="698pt" height="690pt" viewBox="0.00 0.00 698.00 690.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 654)">
-<title>G</title>
-<polygon fill="white" stroke="transparent" points="-36,36 -36,-654 662,-654 662,36 -36,36"></polygon>
-<text text-anchor="start" x="8" y="-600.6" font-family="Inter" font-weight="bold" font-size="18.00">Diretórios do backend — Controllers, Services, Repositories e Models</text>
-
-<g id="node1" class="node">
-<title>arvore</title>
-<polygon fill="#fafafb" stroke="transparent" points="10,-4 10,-586 616,-586 616,-4 10,-4"></polygon>
-<text text-anchor="start" x="22" y="-565.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">backend/</text>
-<text text-anchor="start" x="207" y="-565.5" font-family="Inter" font-size="10.00" fill="#6b7280">   API Flask</text>
-<text text-anchor="start" x="22" y="-551.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── app.py</text>
-<text text-anchor="start" x="207" y="-551.5" font-family="Inter" font-size="10.00" fill="#6b7280">   cria a aplicação (factory) e registra as rotas</text>
-<text text-anchor="start" x="22" y="-537.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── auth.py</text>
-<text text-anchor="start" x="207" y="-537.5" font-family="Inter" font-size="10.00" fill="#6b7280">   token assinado e proteção das rotas</text>
-<text text-anchor="start" x="22" y="-523.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── database.py</text>
-<text text-anchor="start" x="207" y="-523.5" font-family="Inter" font-size="10.00" fill="#6b7280">   conexão com o banco (SQLAlchemy)</text>
-<text text-anchor="start" x="22" y="-509.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── utils.py</text>
-<text text-anchor="start" x="207" y="-509.5" font-family="Inter" font-size="10.00" fill="#6b7280">   funções utilitárias compartilhadas</text>
-<text text-anchor="start" x="22" y="-495.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── routers/</text>
-<text text-anchor="start" x="207" y="-495.5" font-family="Inter" font-size="10.00" fill="#6b7280">   </text>
-<text text-anchor="start" x="22" y="-481.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   └── routers.py</text>
-<text text-anchor="start" x="207" y="-481.5" font-family="Inter" font-size="10.00" fill="#6b7280">   URL → Controller (58 rotas)</text>
-<text text-anchor="start" x="22" y="-467.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── controllers/</text>
-<text text-anchor="start" x="207" y="-467.5" font-family="Inter" font-size="10.00" fill="#6b7280">   um arquivo por Controller (16) e apoio.py</text>
-<text text-anchor="start" x="22" y="-453.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── *_controller.py</text>
-<text text-anchor="start" x="207" y="-453.5" font-family="Inter" font-size="10.00" fill="#6b7280">   requisição e resposta HTTP, sem regra de negócio</text>
-<text text-anchor="start" x="22" y="-439.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   └── controller.py</text>
-<text text-anchor="start" x="207" y="-439.5" font-family="Inter" font-size="10.00" fill="#6b7280">   apenas reexporta os Controllers</text>
-<text text-anchor="start" x="22" y="-425.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── services/</text>
-<text text-anchor="start" x="207" y="-425.5" font-family="Inter" font-size="10.00" fill="#6b7280">   uma pasta por área, um arquivo por caso de uso (63)</text>
-<text text-anchor="start" x="22" y="-411.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── usuario/</text>
-<text text-anchor="start" x="207" y="-411.5" font-family="Inter" font-size="10.00" fill="#6b7280">   10: cadastrar, autenticar, perfil, foto, excluir conta, estatísticas…</text>
-<text text-anchor="start" x="22" y="-397.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── atividade/</text>
-<text text-anchor="start" x="207" y="-397.5" font-family="Inter" font-size="10.00" fill="#6b7280">   6: registrar treino, prévia, histórico, consultar, excluir (apoio.py: pontuação e nível)</text>
-<text text-anchor="start" x="22" y="-383.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── desafio/</text>
-<text text-anchor="start" x="207" y="-383.5" font-family="Inter" font-size="10.00" fill="#6b7280">   8: criar, atualizar, encerrar, participar, desistir, avaliar progresso…</text>
-<text text-anchor="start" x="22" y="-369.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── grupo/</text>
-<text text-anchor="start" x="207" y="-369.5" font-family="Inter" font-size="10.00" fill="#6b7280">   10: criar, entrar por código, convidar, membros, ranking do grupo…</text>
-<text text-anchor="start" x="22" y="-355.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── meta/</text>
-<text text-anchor="start" x="207" y="-355.5" font-family="Inter" font-size="10.00" fill="#6b7280">   5: criar, listar, consultar, atualizar, excluir</text>
-<text text-anchor="start" x="22" y="-341.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── ranking/</text>
-<text text-anchor="start" x="207" y="-341.5" font-family="Inter" font-size="10.00" fill="#6b7280">   4: global, regional, por exercício, resumo do usuário</text>
-<text text-anchor="start" x="22" y="-327.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── notificacao/</text>
-<text text-anchor="start" x="207" y="-327.5" font-family="Inter" font-size="10.00" fill="#6b7280">   4: listar, contar, marcar lida, marcar todas (apoio.py: gerar_notificacao)</text>
-<text text-anchor="start" x="22" y="-313.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── comentario/</text>
-<text text-anchor="start" x="207" y="-313.5" font-family="Inter" font-size="10.00" fill="#6b7280">   3: criar, listar, excluir</text>
-<text text-anchor="start" x="22" y="-299.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── convite/</text>
-<text text-anchor="start" x="207" y="-299.5" font-family="Inter" font-size="10.00" fill="#6b7280">   2: listar recebidos, responder</text>
-<text text-anchor="start" x="22" y="-285.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── postagem/</text>
-<text text-anchor="start" x="207" y="-285.5" font-family="Inter" font-size="10.00" fill="#6b7280">   2: criar, excluir</text>
-<text text-anchor="start" x="22" y="-271.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── privacidade/</text>
-<text text-anchor="start" x="207" y="-271.5" font-family="Inter" font-size="10.00" fill="#6b7280">   2: consentimentos (LGPD)</text>
-<text text-anchor="start" x="22" y="-257.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── medalha/</text>
-<text text-anchor="start" x="207" y="-257.5" font-family="Inter" font-size="10.00" fill="#6b7280">   2: listar medalhas do usuário, avisar medalha nova</text>
-<text text-anchor="start" x="22" y="-243.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── curtida/</text>
-<text text-anchor="start" x="207" y="-243.5" font-family="Inter" font-size="10.00" fill="#6b7280">   1: alternar curtida</text>
-<text text-anchor="start" x="22" y="-229.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── dashboard/</text>
-<text text-anchor="start" x="207" y="-229.5" font-family="Inter" font-size="10.00" fill="#6b7280">   1: estatísticas e gráficos do progresso</text>
-<text text-anchor="start" x="22" y="-215.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── feed/</text>
-<text text-anchor="start" x="207" y="-215.5" font-family="Inter" font-size="10.00" fill="#6b7280">   1: feed de treinos e postagens</text>
-<text text-anchor="start" x="22" y="-201.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── compartilhamento/</text>
-<text text-anchor="start" x="207" y="-201.5" font-family="Inter" font-size="10.00" fill="#6b7280">   1: compartilhar treino, recorde, meta ou medalha</text>
-<text text-anchor="start" x="22" y="-187.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── email/</text>
-<text text-anchor="start" x="207" y="-187.5" font-family="Inter" font-size="10.00" fill="#6b7280">   1: enviar e-mail por SMTP (opcional)</text>
-<text text-anchor="start" x="22" y="-173.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   └── comum.py</text>
-<text text-anchor="start" x="207" y="-173.5" font-family="Inter" font-size="10.00" fill="#6b7280">   erros e validações compartilhadas</text>
-<text text-anchor="start" x="22" y="-159.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── repositories/</text>
-<text text-anchor="start" x="207" y="-159.5" font-family="Inter" font-size="10.00" fill="#6b7280">   um arquivo por Repository (13) e apoio.py</text>
-<text text-anchor="start" x="22" y="-145.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── *_repository.py</text>
-<text text-anchor="start" x="207" y="-145.5" font-family="Inter" font-size="10.00" fill="#6b7280">   consultas em SQL escrito à mão (sem CRUD)</text>
-<text text-anchor="start" x="22" y="-131.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   └── repository.py</text>
-<text text-anchor="start" x="207" y="-131.5" font-family="Inter" font-size="10.00" fill="#6b7280">   apenas reexporta os Repositories</text>
-<text text-anchor="start" x="22" y="-117.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── models/</text>
-<text text-anchor="start" x="207" y="-117.5" font-family="Inter" font-size="10.00" fill="#6b7280">   um arquivo por Model (14)</text>
-<text text-anchor="start" x="22" y="-103.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── base.py</text>
-<text text-anchor="start" x="207" y="-103.5" font-family="Inter" font-size="10.00" fill="#6b7280">   ModeloBase: o CRUD (salvar, atualizar, deletar, listar_todos, buscar_por_id)</text>
-<text text-anchor="start" x="22" y="-89.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── &lt;entidade&gt;.py</text>
-<text text-anchor="start" x="207" y="-89.5" font-family="Inter" font-size="10.00" fill="#6b7280">   14 entidades do domínio, todas herdam de ModeloBase</text>
-<text text-anchor="start" x="22" y="-75.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   └── model.py</text>
-<text text-anchor="start" x="207" y="-75.5" font-family="Inter" font-size="10.00" fill="#6b7280">   apenas reexporta as Models</text>
-<text text-anchor="start" x="22" y="-61.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">├── database/</text>
-<text text-anchor="start" x="207" y="-61.5" font-family="Inter" font-size="10.00" fill="#6b7280">   </text>
-<text text-anchor="start" x="22" y="-47.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   ├── create_database.sql</text>
-<text text-anchor="start" x="207" y="-47.5" font-family="Inter" font-size="10.00" fill="#6b7280">   tabelas e views</text>
-<text text-anchor="start" x="22" y="-33.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">│   └── migracao_*.sql</text>
-<text text-anchor="start" x="207" y="-33.5" font-family="Inter" font-size="10.00" fill="#6b7280">   migrações de colunas, views e DATETIME(6)</text>
-<text text-anchor="start" x="22" y="-19.2" font-family="DejaVu Sans Mono" font-size="11.00" fill="#1f2430">└── tests/</text>
-<text text-anchor="start" x="207" y="-19.5" font-family="Inter" font-size="10.00" fill="#6b7280">   479 testes</text>
-<polygon fill="none" stroke="#8a8f99" points="10,-4 10,-586 616,-586 616,-4 10,-4"></polygon>
+<?xml version="1.0"?>
+<svg font-family="Inter" width="698pt" height="690pt" viewBox="0 0 698 690" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(36 654)">
+<polygon fill="white" points="-36,36 -36,-654 662,-654 662,36"/>
+<text x="8" y="-600.6" font-weight="bold" font-size="18">Diretórios do backend — Controllers, Services, Repositories e Models</text>
+<g id="arvore">
+<polygon fill="#fafafb" points="10,-4 10,-586 616,-586 616,-4"/>
+<text x="22" y="-565.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">backend/</text>
+<text x="207" y="-565.5" font-size="10" fill="#6b7280">   API Flask</text>
+<text x="22" y="-551.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── app.py</text>
+<text x="207" y="-551.5" font-size="10" fill="#6b7280">   cria a aplicação (factory) e registra as rotas</text>
+<text x="22" y="-537.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── auth.py</text>
+<text x="207" y="-537.5" font-size="10" fill="#6b7280">   token assinado e proteção das rotas</text>
+<text x="22" y="-523.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── database.py</text>
+<text x="207" y="-523.5" font-size="10" fill="#6b7280">   conexão com o banco (SQLAlchemy)</text>
+<text x="22" y="-509.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── utils.py</text>
+<text x="207" y="-509.5" font-size="10" fill="#6b7280">   funções utilitárias compartilhadas</text>
+<text x="22" y="-495.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── routers/</text>
+<text x="207" y="-495.5" font-size="10" fill="#6b7280">   </text>
+<text x="22" y="-481.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   └── routers.py</text>
+<text x="207" y="-481.5" font-size="10" fill="#6b7280">   URL → Controller (58 rotas)</text>
+<text x="22" y="-467.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── controllers/</text>
+<text x="207" y="-467.5" font-size="10" fill="#6b7280">   um arquivo por Controller (16) e apoio.py</text>
+<text x="22" y="-453.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── *_controller.py</text>
+<text x="207" y="-453.5" font-size="10" fill="#6b7280">   requisição e resposta HTTP, sem regra de negócio</text>
+<text x="22" y="-439.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   └── controller.py</text>
+<text x="207" y="-439.5" font-size="10" fill="#6b7280">   apenas reexporta os Controllers</text>
+<text x="22" y="-425.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── services/</text>
+<text x="207" y="-425.5" font-size="10" fill="#6b7280">   uma pasta por área, um arquivo por caso de uso (63)</text>
+<text x="22" y="-411.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── usuario/</text>
+<text x="207" y="-411.5" font-size="10" fill="#6b7280">   10: cadastrar, autenticar, perfil, foto, excluir conta, estatísticas…</text>
+<text x="22" y="-397.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── atividade/</text>
+<text x="207" y="-397.5" font-size="10" fill="#6b7280">   6: registrar treino, prévia, histórico, consultar, excluir (apoio.py: pontuação e nível)</text>
+<text x="22" y="-383.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── desafio/</text>
+<text x="207" y="-383.5" font-size="10" fill="#6b7280">   8: criar, atualizar, encerrar, participar, desistir, avaliar progresso…</text>
+<text x="22" y="-369.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── grupo/</text>
+<text x="207" y="-369.5" font-size="10" fill="#6b7280">   10: criar, entrar por código, convidar, membros, ranking do grupo…</text>
+<text x="22" y="-355.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── meta/</text>
+<text x="207" y="-355.5" font-size="10" fill="#6b7280">   5: criar, listar, consultar, atualizar, excluir</text>
+<text x="22" y="-341.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── ranking/</text>
+<text x="207" y="-341.5" font-size="10" fill="#6b7280">   4: global, regional, por exercício, resumo do usuário</text>
+<text x="22" y="-327.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── notificacao/</text>
+<text x="207" y="-327.5" font-size="10" fill="#6b7280">   4: listar, contar, marcar lida, marcar todas (apoio.py: gerar_notificacao)</text>
+<text x="22" y="-313.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── comentario/</text>
+<text x="207" y="-313.5" font-size="10" fill="#6b7280">   3: criar, listar, excluir</text>
+<text x="22" y="-299.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── convite/</text>
+<text x="207" y="-299.5" font-size="10" fill="#6b7280">   2: listar recebidos, responder</text>
+<text x="22" y="-285.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── postagem/</text>
+<text x="207" y="-285.5" font-size="10" fill="#6b7280">   2: criar, excluir</text>
+<text x="22" y="-271.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── privacidade/</text>
+<text x="207" y="-271.5" font-size="10" fill="#6b7280">   2: consentimentos (LGPD)</text>
+<text x="22" y="-257.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── medalha/</text>
+<text x="207" y="-257.5" font-size="10" fill="#6b7280">   2: listar medalhas do usuário, avisar medalha nova</text>
+<text x="22" y="-243.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── curtida/</text>
+<text x="207" y="-243.5" font-size="10" fill="#6b7280">   1: alternar curtida</text>
+<text x="22" y="-229.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── dashboard/</text>
+<text x="207" y="-229.5" font-size="10" fill="#6b7280">   1: estatísticas e gráficos do progresso</text>
+<text x="22" y="-215.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── feed/</text>
+<text x="207" y="-215.5" font-size="10" fill="#6b7280">   1: feed de treinos e postagens</text>
+<text x="22" y="-201.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── compartilhamento/</text>
+<text x="207" y="-201.5" font-size="10" fill="#6b7280">   1: compartilhar treino, recorde, meta ou medalha</text>
+<text x="22" y="-187.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── email/</text>
+<text x="207" y="-187.5" font-size="10" fill="#6b7280">   1: enviar e-mail por SMTP (opcional)</text>
+<text x="22" y="-173.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   └── comum.py</text>
+<text x="207" y="-173.5" font-size="10" fill="#6b7280">   erros e validações compartilhadas</text>
+<text x="22" y="-159.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── repositories/</text>
+<text x="207" y="-159.5" font-size="10" fill="#6b7280">   um arquivo por Repository (13) e apoio.py</text>
+<text x="22" y="-145.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── *_repository.py</text>
+<text x="207" y="-145.5" font-size="10" fill="#6b7280">   consultas em SQL escrito à mão (sem CRUD)</text>
+<text x="22" y="-131.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   └── repository.py</text>
+<text x="207" y="-131.5" font-size="10" fill="#6b7280">   apenas reexporta os Repositories</text>
+<text x="22" y="-117.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── models/</text>
+<text x="207" y="-117.5" font-size="10" fill="#6b7280">   um arquivo por Model (14)</text>
+<text x="22" y="-103.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── base.py</text>
+<text x="207" y="-103.5" font-size="10" fill="#6b7280">   ModeloBase: o CRUD (salvar, atualizar, deletar, listar_todos, buscar_por_id)</text>
+<text x="22" y="-89.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── &lt;entidade&gt;.py</text>
+<text x="207" y="-89.5" font-size="10" fill="#6b7280">   14 entidades do domínio, todas herdam de ModeloBase</text>
+<text x="22" y="-75.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   └── model.py</text>
+<text x="207" y="-75.5" font-size="10" fill="#6b7280">   apenas reexporta as Models</text>
+<text x="22" y="-61.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">├── database/</text>
+<text x="207" y="-61.5" font-size="10" fill="#6b7280">   </text>
+<text x="22" y="-47.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   ├── create_database.sql</text>
+<text x="207" y="-47.5" font-size="10" fill="#6b7280">   tabelas e views</text>
+<text x="22" y="-33.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">│   └── migracao_*.sql</text>
+<text x="207" y="-33.5" font-size="10" fill="#6b7280">   migrações de colunas, views e DATETIME(6)</text>
+<text x="22" y="-19.2" font-family="DejaVu Sans Mono" font-size="11" fill="#1f2430">└── tests/</text>
+<text x="207" y="-19.5" font-size="10" fill="#6b7280">   479 testes</text>
+<polygon fill="none" stroke="#8a8f99" points="10,-4 10,-586 616,-586 616,-4"/>
 </g>
 </g>
 </svg>

@@ -1,468 +1,344 @@
-<?xml version="1.0"?><svg width="749pt" height="2151pt" viewBox="0.00 0.00 748.60 2150.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 2121.8)">
-<title>G</title>
-<polygon fill="white" stroke="transparent" points="-28.8,28.8 -28.8,-2121.8 719.8,-2121.8 719.8,28.8 -28.8,28.8"></polygon>
-<text text-anchor="start" x="8" y="-2075.6" font-family="Inter" font-weight="bold" font-size="18.00">Fluxograma de entrada de dados — Registrar treino</text>
-
-<g id="node1" class="node">
-<title>inicio</title>
-<path fill="#1f2430" stroke="#1f2430" stroke-width="1.4" d="M279.5,-2011.5C279.5,-2011.5 44.5,-2011.5 44.5,-2011.5 38.5,-2011.5 32.5,-2005.5 32.5,-1999.5 32.5,-1999.5 32.5,-1987.5 32.5,-1987.5 32.5,-1981.5 38.5,-1975.5 44.5,-1975.5 44.5,-1975.5 279.5,-1975.5 279.5,-1975.5 285.5,-1975.5 291.5,-1981.5 291.5,-1987.5 291.5,-1987.5 291.5,-1999.5 291.5,-1999.5 291.5,-2005.5 285.5,-2011.5 279.5,-2011.5"></path>
-<text text-anchor="start" x="45.5" y="-1991.7" font-family="Inter" font-weight="bold" font-size="11.00" fill="white">Início: usuário preenche o treino e confirma</text>
+<?xml version="1.0"?>
+<svg font-family="Inter" width="749pt" height="2151pt" viewBox="0 0 748.6 2150.6" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(28.8 2121.8)">
+<polygon fill="white" points="-28.8,28.8 -28.8,-2121.8 719.8,-2121.8 719.8,28.8"/>
+<text x="8" y="-2075.6" font-weight="bold" font-size="18">Fluxograma de entrada de dados — Registrar treino</text>
+<g id="inicio">
+<path fill="#1f2430" stroke="#1f2430" stroke-width="1.4" d="M279.5,-2011.5C279.5,-2011.5 44.5,-2011.5 44.5,-2011.5 38.5,-2011.5 32.5,-2005.5 32.5,-1999.5 32.5,-1999.5 32.5,-1987.5 32.5,-1987.5 32.5,-1981.5 38.5,-1975.5 44.5,-1975.5 44.5,-1975.5 279.5,-1975.5 279.5,-1975.5 285.5,-1975.5 291.5,-1981.5 291.5,-1987.5 291.5,-1987.5 291.5,-1999.5 291.5,-1999.5 291.5,-2005.5 285.5,-2011.5 279.5,-2011.5"/>
+<text x="45.5" y="-1991.7" font-weight="bold" font-size="11" fill="white">Início: usuário preenche o treino e confirma</text>
 </g>
-
-<g id="node2" class="node">
-<title>fe1</title>
-<path fill="#dce8f7" stroke="#2f5d9b" stroke-width="1.4" d="M300,-1892C300,-1892 24,-1892 24,-1892 18,-1892 12,-1886 12,-1880 12,-1880 12,-1850 12,-1850 12,-1844 18,-1838 24,-1838 24,-1838 300,-1838 300,-1838 306,-1838 312,-1844 312,-1850 312,-1850 312,-1880 312,-1880 312,-1886 306,-1892 300,-1892"></path>
-<text text-anchor="start" x="137" y="-1878.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#2f5d9b">FRONTEND</text>
-<text text-anchor="start" x="114" y="-1868.2" font-family="Inter" font-weight="bold" font-size="11.00">registrar-treino.js</text>
-<text text-anchor="start" x="78.5" y="-1858" font-family="Inter" font-size="10.00">api(POST /usuarios/{id}/atividades)</text>
-<text text-anchor="start" x="25" y="-1848" font-family="Inter" font-size="10.00">corpo JSON: tipo, titulo, tempo_min, carga_kg, repeticoes</text>
+<g id="fe1">
+<path fill="#dce8f7" stroke="#2f5d9b" stroke-width="1.4" d="M300,-1892C300,-1892 24,-1892 24,-1892 18,-1892 12,-1886 12,-1880 12,-1880 12,-1850 12,-1850 12,-1844 18,-1838 24,-1838 24,-1838 300,-1838 300,-1838 306,-1838 312,-1844 312,-1850 312,-1850 312,-1880 312,-1880 312,-1886 306,-1892 300,-1892"/>
+<text x="137" y="-1878.8" font-weight="bold" font-size="9" fill="#2f5d9b">FRONTEND</text>
+<text x="114" y="-1868.2" font-weight="bold" font-size="11">registrar-treino.js</text>
+<text x="78.5" y="-1858" font-size="10">api(POST /usuarios/{id}/atividades)</text>
+<text x="25" y="-1848" font-size="10">corpo JSON: tipo, titulo, tempo_min, carga_kg, repeticoes</text>
 </g>
-
-<g id="edge1" class="edge">
-<title>inicio-&gt;fe1</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1975.44C162,-1956.38 162,-1925 162,-1900.73"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1900.47 162,-1892.47 159.2,-1900.47 164.8,-1900.47"></polygon>
+<g id="e_inicio-fe1">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1975.44C162,-1956.38 162,-1925 162,-1900.73"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1900.47 162,-1892.47 159.2,-1900.47"/>
 </g>
-
-<g id="node3" class="node">
-<title>rt</title>
-<path fill="#fbebc8" stroke="#a8741a" stroke-width="1.4" d="M295.5,-1808C295.5,-1808 28.5,-1808 28.5,-1808 22.5,-1808 16.5,-1802 16.5,-1796 16.5,-1796 16.5,-1776 16.5,-1776 16.5,-1770 22.5,-1764 28.5,-1764 28.5,-1764 295.5,-1764 295.5,-1764 301.5,-1764 307.5,-1770 307.5,-1776 307.5,-1776 307.5,-1796 307.5,-1796 307.5,-1802 301.5,-1808 295.5,-1808"></path>
-<text text-anchor="start" x="129" y="-1794.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#a8741a">ROTAS / AUTH</text>
-<text text-anchor="start" x="29.5" y="-1784.2" font-family="Inter" font-weight="bold" font-size="11.00">rota atividade_registrar (DONO) → auth.protegido</text>
-<text text-anchor="start" x="38.5" y="-1774" font-family="Inter" font-size="10.00">lê o token e consulta Usuario.buscar_por_id (Model)</text>
+<g id="rt">
+<path fill="#fbebc8" stroke="#a8741a" stroke-width="1.4" d="M295.5,-1808C295.5,-1808 28.5,-1808 28.5,-1808 22.5,-1808 16.5,-1802 16.5,-1796 16.5,-1796 16.5,-1776 16.5,-1776 16.5,-1770 22.5,-1764 28.5,-1764 28.5,-1764 295.5,-1764 295.5,-1764 301.5,-1764 307.5,-1770 307.5,-1776 307.5,-1776 307.5,-1796 307.5,-1796 307.5,-1802 301.5,-1808 295.5,-1808"/>
+<text x="129" y="-1794.8" font-weight="bold" font-size="9" fill="#a8741a">ROTAS / AUTH</text>
+<text x="29.5" y="-1784.2" font-weight="bold" font-size="11">rota atividade_registrar (DONO) → auth.protegido</text>
+<text x="38.5" y="-1774" font-size="10">lê o token e consulta Usuario.buscar_por_id (Model)</text>
 </g>
-
-<g id="edge2" class="edge">
-<title>fe1-&gt;rt</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1837.93C162,-1830.97 162,-1823.4 162,-1816.28"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1816.19 162,-1808.19 159.2,-1816.19 164.8,-1816.19"></polygon>
+<g id="e_fe1-rt">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1837.93C162,-1830.97 162,-1823.4 162,-1816.28"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1816.19 162,-1808.19 159.2,-1816.19"/>
 </g>
-
-<g id="node4" class="node">
-<title>d1</title>
-<polygon fill="#fff6d6" stroke="#a8741a" stroke-width="1.4" points="162,-1734 109.86,-1716 162,-1698 214.14,-1716 162,-1734"></polygon>
-<text text-anchor="start" x="128.5" y="-1714.5" font-family="Inter" font-weight="bold" font-size="10.00">Token válido?</text>
+<g id="d1">
+<polygon fill="#fff6d6" stroke="#a8741a" stroke-width="1.4" points="162,-1734 109.86,-1716 162,-1698 214.14,-1716"/>
+<text x="128.5" y="-1714.5" font-weight="bold" font-size="10">Token válido?</text>
 </g>
-
-<g id="edge3" class="edge">
-<title>rt-&gt;d1</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1763.86C162,-1757.02 162,-1749.37 162,-1742.26"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1742.26 162,-1734.26 159.2,-1742.26 164.8,-1742.26"></polygon>
+<g id="e_rt-d1">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1763.86C162,-1757.02 162,-1749.37 162,-1742.26"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1742.26 162,-1734.26 159.2,-1742.26"/>
 </g>
-
-<g id="node5" class="node">
-<title>e1</title>
-<path fill="#fde7e5" stroke="#b3261e" stroke-width="1.4" d="M439.5,-1734C439.5,-1734 266.5,-1734 266.5,-1734 260.5,-1734 254.5,-1728 254.5,-1722 254.5,-1722 254.5,-1710 254.5,-1710 254.5,-1704 260.5,-1698 266.5,-1698 266.5,-1698 439.5,-1698 439.5,-1698 445.5,-1698 451.5,-1704 451.5,-1710 451.5,-1710 451.5,-1722 451.5,-1722 451.5,-1728 445.5,-1734 439.5,-1734"></path>
-<text text-anchor="start" x="267.5" y="-1714.2" font-family="Inter" font-weight="bold" font-size="11.00" fill="#7a1812">401 — Autenticação necessária</text>
+<g id="e1">
+<path fill="#fde7e5" stroke="#b3261e" stroke-width="1.4" d="M439.5,-1734C439.5,-1734 266.5,-1734 266.5,-1734 260.5,-1734 254.5,-1728 254.5,-1722 254.5,-1722 254.5,-1710 254.5,-1710 254.5,-1704 260.5,-1698 266.5,-1698 266.5,-1698 439.5,-1698 439.5,-1698 445.5,-1698 451.5,-1704 451.5,-1710 451.5,-1710 451.5,-1722 451.5,-1722 451.5,-1728 445.5,-1734 439.5,-1734"/>
+<text x="267.5" y="-1714.2" font-weight="bold" font-size="11" fill="#7a1812">401 — Autenticação necessária</text>
 </g>
-
-<g id="edge29" class="edge">
-<title>d1-&gt;e1</title>
-<path fill="none" stroke="#b3261e" stroke-width="1.3" stroke-dasharray="5,2" d="M214.28,-1716C221.04,-1716 225.67,-1716 225.67,-1716 225.67,-1716 234.75,-1716 246.05,-1716"></path>
-<polygon fill="#b3261e" stroke="#b3261e" stroke-width="1.3" points="246.15,-1718.8 254.15,-1716 246.15,-1713.2 246.15,-1718.8"></polygon>
-<text text-anchor="start" x="230.17" y="-1720" font-family="Inter" font-weight="bold" font-size="10.00" fill="#b3261e">não</text>
+<g id="e_d1-e1">
+<path fill="none" stroke="#b3261e" stroke-width="1.3" stroke-dasharray="5,2" d="M214.28,-1716C221.04,-1716 225.67,-1716 225.67,-1716 225.67,-1716 234.75,-1716 246.05,-1716"/>
+<polygon fill="#b3261e" stroke="#b3261e" stroke-width="1.3" points="246.15,-1718.8 254.15,-1716 246.15,-1713.2"/>
+<text x="230.17" y="-1720" font-weight="bold" font-size="10" fill="#b3261e">não</text>
 </g>
-
-<g id="node6" class="node">
-<title>d2</title>
-<polygon fill="#fff6d6" stroke="#a8741a" stroke-width="1.4" points="162,-1668 90.57,-1650 162,-1632 233.43,-1650 162,-1668"></polygon>
-<text text-anchor="start" x="127.5" y="-1653" font-family="Inter" font-weight="bold" font-size="10.00">id da URL é do</text>
-<text text-anchor="start" x="123" y="-1643" font-family="Inter" font-weight="bold" font-size="10.00">usuário logado?</text>
+<g id="d2">
+<polygon fill="#fff6d6" stroke="#a8741a" stroke-width="1.4" points="162,-1668 90.57,-1650 162,-1632 233.43,-1650"/>
+<text x="127.5" y="-1653" font-weight="bold" font-size="10">id da URL é do</text>
+<text x="123" y="-1643" font-weight="bold" font-size="10">usuário logado?</text>
 </g>
-
-<g id="edge4" class="edge">
-<title>d1-&gt;d2</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1697.85C162,-1691.25 162,-1683.57 162,-1676.35"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1676.2 162,-1668.2 159.2,-1676.2 164.8,-1676.2"></polygon>
-<text text-anchor="start" x="144" y="-1691.1" font-family="Inter" font-weight="bold" font-size="10.00">sim</text>
+<g id="e_d1-d2">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1697.85C162,-1691.25 162,-1683.57 162,-1676.35"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1676.2 162,-1668.2 159.2,-1676.2"/>
+<text x="144" y="-1691.1" font-weight="bold" font-size="10">sim</text>
 </g>
-
-<g id="node7" class="node">
-<title>e2</title>
-<path fill="#fde7e5" stroke="#b3261e" stroke-width="1.4" d="M408.5,-1668C408.5,-1668 285.5,-1668 285.5,-1668 279.5,-1668 273.5,-1662 273.5,-1656 273.5,-1656 273.5,-1644 273.5,-1644 273.5,-1638 279.5,-1632 285.5,-1632 285.5,-1632 408.5,-1632 408.5,-1632 414.5,-1632 420.5,-1638 420.5,-1644 420.5,-1644 420.5,-1656 420.5,-1656 420.5,-1662 414.5,-1668 408.5,-1668"></path>
-<text text-anchor="start" x="286.5" y="-1648.2" font-family="Inter" font-weight="bold" font-size="11.00" fill="#7a1812">403 — Sem permissão</text>
+<g id="e2">
+<path fill="#fde7e5" stroke="#b3261e" stroke-width="1.4" d="M408.5,-1668C408.5,-1668 285.5,-1668 285.5,-1668 279.5,-1668 273.5,-1662 273.5,-1656 273.5,-1656 273.5,-1644 273.5,-1644 273.5,-1638 279.5,-1632 285.5,-1632 285.5,-1632 408.5,-1632 408.5,-1632 414.5,-1632 420.5,-1638 420.5,-1644 420.5,-1644 420.5,-1656 420.5,-1656 420.5,-1662 414.5,-1668 408.5,-1668"/>
+<text x="286.5" y="-1648.2" font-weight="bold" font-size="11" fill="#7a1812">403 — Sem permissão</text>
 </g>
-
-<g id="edge30" class="edge">
-<title>d2-&gt;e2</title>
-<path fill="none" stroke="#b3261e" stroke-width="1.3" stroke-dasharray="5,2" d="M233.57,-1650C241.98,-1650 254.31,-1650 264.83,-1650"></path>
-<polygon fill="#b3261e" stroke="#b3261e" stroke-width="1.3" points="265.12,-1652.8 273.12,-1650 265.12,-1647.2 265.12,-1652.8"></polygon>
-<text text-anchor="start" x="249.2" y="-1654" font-family="Inter" font-weight="bold" font-size="10.00" fill="#b3261e">não</text>
+<g id="e_d2-e2">
+<path fill="none" stroke="#b3261e" stroke-width="1.3" stroke-dasharray="5,2" d="M233.57,-1650C241.98,-1650 254.31,-1650 264.83,-1650"/>
+<polygon fill="#b3261e" stroke="#b3261e" stroke-width="1.3" points="265.12,-1652.8 273.12,-1650 265.12,-1647.2"/>
+<text x="249.2" y="-1654" font-weight="bold" font-size="10" fill="#b3261e">não</text>
 </g>
-
-<g id="node8" class="node">
-<title>ct1</title>
-<path fill="#d8f0de" stroke="#2e7d4a" stroke-width="1.4" d="M312,-1602C312,-1602 12,-1602 12,-1602 6,-1602 0,-1596 0,-1590 0,-1590 0,-1570 0,-1570 0,-1564 6,-1558 12,-1558 12,-1558 312,-1558 312,-1558 318,-1558 324,-1564 324,-1570 324,-1570 324,-1590 324,-1590 324,-1596 318,-1602 312,-1602"></path>
-<text text-anchor="start" x="131.5" y="-1588.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#2e7d4a">CONTROLLER</text>
-<text text-anchor="start" x="51.5" y="-1578.2" font-family="Inter" font-weight="bold" font-size="11.00">AtividadeController.registrar(id_usuario)</text>
-<text text-anchor="start" x="13" y="-1568" font-family="Inter" font-size="10.00">lê o JSON do corpo e chama RegistrarTreinoService.executar()</text>
+<g id="ct1">
+<path fill="#d8f0de" stroke="#2e7d4a" stroke-width="1.4" d="M312,-1602C312,-1602 12,-1602 12,-1602 6,-1602 0,-1596 0,-1590 0,-1590 0,-1570 0,-1570 0,-1564 6,-1558 12,-1558 12,-1558 312,-1558 312,-1558 318,-1558 324,-1564 324,-1570 324,-1570 324,-1590 324,-1590 324,-1596 318,-1602 312,-1602"/>
+<text x="131.5" y="-1588.8" font-weight="bold" font-size="9" fill="#2e7d4a">CONTROLLER</text>
+<text x="51.5" y="-1578.2" font-weight="bold" font-size="11">AtividadeController.registrar(id_usuario)</text>
+<text x="13" y="-1568" font-size="10">lê o JSON do corpo e chama RegistrarTreinoService.executar()</text>
 </g>
-
-<g id="edge5" class="edge">
-<title>d2-&gt;ct1</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1631.84C162,-1625.39 162,-1617.86 162,-1610.61"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1610.29 162,-1602.29 159.2,-1610.29 164.8,-1610.29"></polygon>
-<text text-anchor="start" x="144" y="-1625.22" font-family="Inter" font-weight="bold" font-size="10.00">sim</text>
+<g id="e_d2-ct1">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1631.84C162,-1625.39 162,-1617.86 162,-1610.61"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1610.29 162,-1602.29 159.2,-1610.29"/>
+<text x="144" y="-1625.22" font-weight="bold" font-size="10">sim</text>
 </g>
-
-<g id="node9" class="node">
-<title>sv1</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M303,-1528C303,-1528 21,-1528 21,-1528 15,-1528 9,-1522 9,-1516 9,-1516 9,-1486 9,-1486 9,-1480 15,-1474 21,-1474 21,-1474 303,-1474 303,-1474 309,-1474 315,-1480 315,-1486 315,-1486 315,-1516 315,-1516 315,-1522 309,-1528 303,-1528"></path>
-<text text-anchor="start" x="142.5" y="-1514.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="22" y="-1504.2" font-family="Inter" font-weight="bold" font-size="11.00">RegistrarTreinoService.executar(id_usuario, dados)</text>
-<text text-anchor="start" x="37.5" y="-1494" font-family="Inter" font-size="10.00">buscar_usuario(id) → Usuario.buscar_por_id (Model)</text>
-<text text-anchor="start" x="92.5" y="-1484" font-family="Inter" font-size="10.00">(404 se o usuário não existir)</text>
+<g id="sv1">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M303,-1528C303,-1528 21,-1528 21,-1528 15,-1528 9,-1522 9,-1516 9,-1516 9,-1486 9,-1486 9,-1480 15,-1474 21,-1474 21,-1474 303,-1474 303,-1474 309,-1474 315,-1480 315,-1486 315,-1486 315,-1516 315,-1516 315,-1522 309,-1528 303,-1528"/>
+<text x="142.5" y="-1514.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="22" y="-1504.2" font-weight="bold" font-size="11">RegistrarTreinoService.executar(id_usuario, dados)</text>
+<text x="37.5" y="-1494" font-size="10">buscar_usuario(id) → Usuario.buscar_por_id (Model)</text>
+<text x="92.5" y="-1484" font-size="10">(404 se o usuário não existir)</text>
 </g>
-
-<g id="edge6" class="edge">
-<title>ct1-&gt;sv1</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1557.96C162,-1551.37 162,-1543.91 162,-1536.63"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1536.24 162,-1528.24 159.2,-1536.24 164.8,-1536.24"></polygon>
+<g id="e_ct1-sv1">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1557.96C162,-1551.37 162,-1543.91 162,-1536.63"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1536.24 162,-1528.24 159.2,-1536.24"/>
 </g>
-
-<g id="node10" class="node">
-<title>d3</title>
-<polygon fill="#fff6d6" stroke="#6b46a3" stroke-width="1.4" points="162,-1444 9,-1412 162,-1380 315,-1412 162,-1444"></polygon>
-<text text-anchor="start" x="125" y="-1420" font-family="Inter" font-weight="bold" font-size="10.00">Dados válidos?</text>
-<text text-anchor="start" x="86.5" y="-1410" font-family="Inter" font-weight="bold" font-size="10.00">(validar_treino: tipo, números e</text>
-<text text-anchor="start" x="109" y="-1400" font-family="Inter" font-weight="bold" font-size="10.00">duração ou distância)</text>
+<g id="d3">
+<polygon fill="#fff6d6" stroke="#6b46a3" stroke-width="1.4" points="162,-1444 9,-1412 162,-1380 315,-1412"/>
+<text x="125" y="-1420" font-weight="bold" font-size="10">Dados válidos?</text>
+<text x="86.5" y="-1410" font-weight="bold" font-size="10">(validar_treino: tipo, números e</text>
+<text x="109" y="-1400" font-weight="bold" font-size="10">duração ou distância)</text>
 </g>
-
-<g id="edge7" class="edge">
-<title>sv1-&gt;d3</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1473.9C162,-1467.21 162,-1459.86 162,-1452.65"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1452.3 162,-1444.3 159.2,-1452.3 164.8,-1452.3"></polygon>
+<g id="e_sv1-d3">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1473.9C162,-1467.21 162,-1459.86 162,-1452.65"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1452.3 162,-1444.3 159.2,-1452.3"/>
 </g>
-
-<g id="node11" class="node">
-<title>e3</title>
-<path fill="#fde7e5" stroke="#b3261e" stroke-width="1.4" d="M578.5,-1430C578.5,-1430 367.5,-1430 367.5,-1430 361.5,-1430 355.5,-1424 355.5,-1418 355.5,-1418 355.5,-1406 355.5,-1406 355.5,-1400 361.5,-1394 367.5,-1394 367.5,-1394 578.5,-1394 578.5,-1394 584.5,-1394 590.5,-1400 590.5,-1406 590.5,-1406 590.5,-1418 590.5,-1418 590.5,-1424 584.5,-1430 578.5,-1430"></path>
-<text text-anchor="start" x="368.5" y="-1410.2" font-family="Inter" font-weight="bold" font-size="11.00" fill="#7a1812">400 — ErroValidacao (dados inválidos)</text>
+<g id="e3">
+<path fill="#fde7e5" stroke="#b3261e" stroke-width="1.4" d="M578.5,-1430C578.5,-1430 367.5,-1430 367.5,-1430 361.5,-1430 355.5,-1424 355.5,-1418 355.5,-1418 355.5,-1406 355.5,-1406 355.5,-1400 361.5,-1394 367.5,-1394 367.5,-1394 578.5,-1394 578.5,-1394 584.5,-1394 590.5,-1400 590.5,-1406 590.5,-1406 590.5,-1418 590.5,-1418 590.5,-1424 584.5,-1430 578.5,-1430"/>
+<text x="368.5" y="-1410.2" font-weight="bold" font-size="11" fill="#7a1812">400 — ErroValidacao (dados inválidos)</text>
 </g>
-
-<g id="edge31" class="edge">
-<title>d3-&gt;e3</title>
-<path fill="none" stroke="#b3261e" stroke-width="1.3" stroke-dasharray="5,2" d="M315.07,-1412C326.41,-1412 337.9,-1412 347.38,-1412"></path>
-<polygon fill="#b3261e" stroke="#b3261e" stroke-width="1.3" points="347.45,-1414.8 355.45,-1412 347.45,-1409.2 347.45,-1414.8"></polygon>
-<text text-anchor="start" x="331.22" y="-1416" font-family="Inter" font-weight="bold" font-size="10.00" fill="#b3261e">não</text>
+<g id="e_d3-e3">
+<path fill="none" stroke="#b3261e" stroke-width="1.3" stroke-dasharray="5,2" d="M315.07,-1412C326.41,-1412 337.9,-1412 347.38,-1412"/>
+<polygon fill="#b3261e" stroke="#b3261e" stroke-width="1.3" points="347.45,-1414.8 355.45,-1412 347.45,-1409.2"/>
+<text x="331.22" y="-1416" font-weight="bold" font-size="10" fill="#b3261e">não</text>
 </g>
-
-<g id="node12" class="node">
-<title>rp0</title>
-<path fill="#fadfd0" stroke="#b8501f" stroke-width="1.4" d="M280,-1350C280,-1350 44,-1350 44,-1350 38,-1350 32,-1344 32,-1338 32,-1338 32,-1308 32,-1308 32,-1302 38,-1296 44,-1296 44,-1296 280,-1296 280,-1296 286,-1296 292,-1302 292,-1308 292,-1308 292,-1338 292,-1338 292,-1344 286,-1350 280,-1350"></path>
-<text text-anchor="start" x="133" y="-1336.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#b8501f">REPOSITORY</text>
-<text text-anchor="start" x="45" y="-1326.2" font-family="Inter" font-weight="bold" font-size="11.00">RankingRepository.minha_posicao_global()</text>
-<text text-anchor="start" x="96" y="-1316" font-family="Inter" font-size="10.00">consulta vw_ranking_global:</text>
-<text text-anchor="start" x="80.5" y="-1306" font-family="Inter" font-size="10.00">posição do usuário antes do treino</text>
+<g id="rp0">
+<path fill="#fadfd0" stroke="#b8501f" stroke-width="1.4" d="M280,-1350C280,-1350 44,-1350 44,-1350 38,-1350 32,-1344 32,-1338 32,-1338 32,-1308 32,-1308 32,-1302 38,-1296 44,-1296 44,-1296 280,-1296 280,-1296 286,-1296 292,-1302 292,-1308 292,-1308 292,-1338 292,-1338 292,-1344 286,-1350 280,-1350"/>
+<text x="133" y="-1336.8" font-weight="bold" font-size="9" fill="#b8501f">REPOSITORY</text>
+<text x="45" y="-1326.2" font-weight="bold" font-size="11">RankingRepository.minha_posicao_global()</text>
+<text x="96" y="-1316" font-size="10">consulta vw_ranking_global:</text>
+<text x="80.5" y="-1306" font-size="10">posição do usuário antes do treino</text>
 </g>
-
-<g id="edge8" class="edge">
-<title>d3-&gt;rp0</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1379.59C162,-1372.66 162,-1365.29 162,-1358.26"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1358.21 162,-1350.21 159.2,-1358.21 164.8,-1358.21"></polygon>
-<text text-anchor="start" x="144" y="-1372.93" font-family="Inter" font-weight="bold" font-size="10.00">sim</text>
+<g id="e_d3-rp0">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1379.59C162,-1372.66 162,-1365.29 162,-1358.26"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1358.21 162,-1350.21 159.2,-1358.21"/>
+<text x="144" y="-1372.93" font-weight="bold" font-size="10">sim</text>
 </g>
-
-<g id="node13" class="node">
-<title>sv0</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M260.5,-1266C260.5,-1266 63.5,-1266 63.5,-1266 57.5,-1266 51.5,-1260 51.5,-1254 51.5,-1254 51.5,-1224 51.5,-1224 51.5,-1218 57.5,-1212 63.5,-1212 63.5,-1212 260.5,-1212 260.5,-1212 266.5,-1212 272.5,-1218 272.5,-1224 272.5,-1224 272.5,-1254 272.5,-1254 272.5,-1260 266.5,-1266 260.5,-1266"></path>
-<text text-anchor="start" x="142.5" y="-1252.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="94.5" y="-1242.2" font-family="Inter" font-weight="bold" font-size="11.00">medalhas antes do treino</text>
-<text text-anchor="start" x="76.5" y="-1232" font-family="Inter" font-size="10.00">calcula as medalhas já conquistadas</text>
-<text text-anchor="start" x="64.5" y="-1222" font-family="Inter" font-size="10.00">(a partir de atividades, metas e XP atuais)</text>
+<g id="sv0">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M260.5,-1266C260.5,-1266 63.5,-1266 63.5,-1266 57.5,-1266 51.5,-1260 51.5,-1254 51.5,-1254 51.5,-1224 51.5,-1224 51.5,-1218 57.5,-1212 63.5,-1212 63.5,-1212 260.5,-1212 260.5,-1212 266.5,-1212 272.5,-1218 272.5,-1224 272.5,-1224 272.5,-1254 272.5,-1254 272.5,-1260 266.5,-1266 260.5,-1266"/>
+<text x="142.5" y="-1252.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="94.5" y="-1242.2" font-weight="bold" font-size="11">medalhas antes do treino</text>
+<text x="76.5" y="-1232" font-size="10">calcula as medalhas já conquistadas</text>
+<text x="64.5" y="-1222" font-size="10">(a partir de atividades, metas e XP atuais)</text>
 </g>
-
-<g id="edge9" class="edge">
-<title>rp0-&gt;sv0</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1295.6C162,-1288.81 162,-1281.39 162,-1274.26"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1274.07 162,-1266.07 159.2,-1274.07 164.8,-1274.07"></polygon>
+<g id="e_rp0-sv0">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1295.6C162,-1288.81 162,-1281.39 162,-1274.26"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1274.07 162,-1266.07 159.2,-1274.07"/>
 </g>
-
-<g id="node14" class="node">
-<title>sv2</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M310,-1182C310,-1182 14,-1182 14,-1182 8,-1182 2,-1176 2,-1170 2,-1170 2,-1140 2,-1140 2,-1134 8,-1128 14,-1128 14,-1128 310,-1128 310,-1128 316,-1128 322,-1134 322,-1140 322,-1140 322,-1170 322,-1170 322,-1176 316,-1182 310,-1182"></path>
-<text text-anchor="start" x="142.5" y="-1168.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="87.5" y="-1158.2" font-family="Inter" font-weight="bold" font-size="11.00">calcular_pontuacao(dados)</text>
-<text text-anchor="start" x="15" y="-1148" font-family="Inter" font-size="10.00">tempo + distância×10 + carga×repetições/100 + bônus do tipo</text>
-<text text-anchor="start" x="116.5" y="-1138" font-family="Inter" font-size="10.00">(mínimo 10 pontos)</text>
+<g id="sv2">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M310,-1182C310,-1182 14,-1182 14,-1182 8,-1182 2,-1176 2,-1170 2,-1170 2,-1140 2,-1140 2,-1134 8,-1128 14,-1128 14,-1128 310,-1128 310,-1128 316,-1128 322,-1134 322,-1140 322,-1140 322,-1170 322,-1170 322,-1176 316,-1182 310,-1182"/>
+<text x="142.5" y="-1168.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="87.5" y="-1158.2" font-weight="bold" font-size="11">calcular_pontuacao(dados)</text>
+<text x="15" y="-1148" font-size="10">tempo + distância×10 + carga×repetições/100 + bônus do tipo</text>
+<text x="116.5" y="-1138" font-size="10">(mínimo 10 pontos)</text>
 </g>
-
-<g id="edge10" class="edge">
-<title>sv0-&gt;sv2</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1211.6C162,-1204.81 162,-1197.39 162,-1190.26"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1190.07 162,-1182.07 159.2,-1190.07 164.8,-1190.07"></polygon>
+<g id="e_sv0-sv2">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1211.6C162,-1204.81 162,-1197.39 162,-1190.26"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1190.07 162,-1182.07 159.2,-1190.07"/>
 </g>
-
-<g id="node15" class="node">
-<title>rp1</title>
-<path fill="#d9eef0" stroke="#2a7f86" stroke-width="1.4" d="M264,-1098C264,-1098 60,-1098 60,-1098 54,-1098 48,-1092 48,-1086 48,-1086 48,-1066 48,-1066 48,-1060 54,-1054 60,-1054 60,-1054 264,-1054 264,-1054 270,-1054 276,-1060 276,-1066 276,-1066 276,-1086 276,-1086 276,-1092 270,-1098 264,-1098"></path>
-<text text-anchor="start" x="145.5" y="-1084.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#2a7f86">MODEL</text>
-<text text-anchor="start" x="112.5" y="-1074.2" font-family="Inter" font-weight="bold" font-size="11.00">Atividade.salvar()</text>
-<text text-anchor="start" x="61" y="-1064" font-family="Inter" font-size="10.00">CRUD na Model: db.session.add + commit</text>
+<g id="rp1">
+<path fill="#d9eef0" stroke="#2a7f86" stroke-width="1.4" d="M264,-1098C264,-1098 60,-1098 60,-1098 54,-1098 48,-1092 48,-1086 48,-1086 48,-1066 48,-1066 48,-1060 54,-1054 60,-1054 60,-1054 264,-1054 264,-1054 270,-1054 276,-1060 276,-1066 276,-1066 276,-1086 276,-1086 276,-1092 270,-1098 264,-1098"/>
+<text x="145.5" y="-1084.8" font-weight="bold" font-size="9" fill="#2a7f86">MODEL</text>
+<text x="112.5" y="-1074.2" font-weight="bold" font-size="11">Atividade.salvar()</text>
+<text x="61" y="-1064" font-size="10">CRUD na Model: db.session.add + commit</text>
 </g>
-
-<g id="edge11" class="edge">
-<title>sv2-&gt;rp1</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1127.93C162,-1120.97 162,-1113.4 162,-1106.28"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1106.19 162,-1098.19 159.2,-1106.19 164.8,-1106.19"></polygon>
+<g id="e_sv2-rp1">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1127.93C162,-1120.97 162,-1113.4 162,-1106.28"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1106.19 162,-1098.19 159.2,-1106.19"/>
 </g>
-
-<g id="node16" class="node">
-<title>db1</title>
-<path fill="#e4e6ea" stroke="#4a5160" stroke-width="1.4" d="M238,-1024C238,-1024 86,-1024 86,-1024 80,-1024 74,-1018 74,-1012 74,-1012 74,-992 74,-992 74,-986 80,-980 86,-980 86,-980 238,-980 238,-980 244,-980 250,-986 250,-992 250,-992 250,-1012 250,-1012 250,-1018 244,-1024 238,-1024"></path>
-<text text-anchor="start" x="121" y="-1010.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#4a5160">BANCO DE DADOS</text>
-<text text-anchor="start" x="101" y="-1000.2" font-family="Inter" font-weight="bold" font-size="11.00">INSERT INTO atividade</text>
-<text text-anchor="start" x="87" y="-990" font-family="Inter" font-size="10.00">grava o treino com a pontuação</text>
+<g id="db1">
+<path fill="#e4e6ea" stroke="#4a5160" stroke-width="1.4" d="M238,-1024C238,-1024 86,-1024 86,-1024 80,-1024 74,-1018 74,-1012 74,-1012 74,-992 74,-992 74,-986 80,-980 86,-980 86,-980 238,-980 238,-980 244,-980 250,-986 250,-992 250,-992 250,-1012 250,-1012 250,-1018 244,-1024 238,-1024"/>
+<text x="121" y="-1010.8" font-weight="bold" font-size="9" fill="#4a5160">BANCO DE DADOS</text>
+<text x="101" y="-1000.2" font-weight="bold" font-size="11">INSERT INTO atividade</text>
+<text x="87" y="-990" font-size="10">grava o treino com a pontuação</text>
 </g>
-
-<g id="edge12" class="edge">
-<title>rp1-&gt;db1</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1053.79C162,-1047.11 162,-1039.61 162,-1032.46"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1032.31 162,-1024.31 159.2,-1032.31 164.8,-1032.31"></polygon>
+<g id="e_rp1-db1">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-1053.79C162,-1047.11 162,-1039.61 162,-1032.46"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-1032.31 162,-1024.31 159.2,-1032.31"/>
 </g>
-
-<g id="node17" class="node">
-<title>sv3</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M262.5,-950C262.5,-950 61.5,-950 61.5,-950 55.5,-950 49.5,-944 49.5,-938 49.5,-938 49.5,-918 49.5,-918 49.5,-912 55.5,-906 61.5,-906 61.5,-906 262.5,-906 262.5,-906 268.5,-906 274.5,-912 274.5,-918 274.5,-918 274.5,-938 274.5,-938 274.5,-944 268.5,-950 262.5,-950"></path>
-<text text-anchor="start" x="142.5" y="-936.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="114.5" y="-926.2" font-family="Inter" font-weight="bold" font-size="11.00">atualiza o usuário</text>
-<text text-anchor="start" x="62.5" y="-916" font-family="Inter" font-size="10.00">xp += pontuação; nivel = nivel_por_xp(xp)</text>
+<g id="sv3">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M262.5,-950C262.5,-950 61.5,-950 61.5,-950 55.5,-950 49.5,-944 49.5,-938 49.5,-938 49.5,-918 49.5,-918 49.5,-912 55.5,-906 61.5,-906 61.5,-906 262.5,-906 262.5,-906 268.5,-906 274.5,-912 274.5,-918 274.5,-918 274.5,-938 274.5,-938 274.5,-944 268.5,-950 262.5,-950"/>
+<text x="142.5" y="-936.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="114.5" y="-926.2" font-weight="bold" font-size="11">atualiza o usuário</text>
+<text x="62.5" y="-916" font-size="10">xp += pontuação; nivel = nivel_por_xp(xp)</text>
 </g>
-
-<g id="edge13" class="edge">
-<title>db1-&gt;sv3</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-979.79C162,-973.11 162,-965.61 162,-958.46"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-958.31 162,-950.31 159.2,-958.31 164.8,-958.31"></polygon>
+<g id="e_db1-sv3">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-979.79C162,-973.11 162,-965.61 162,-958.46"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-958.31 162,-950.31 159.2,-958.31"/>
 </g>
-
-<g id="node18" class="node">
-<title>rp2</title>
-<path fill="#d9eef0" stroke="#2a7f86" stroke-width="1.4" d="M264,-876C264,-876 60,-876 60,-876 54,-876 48,-870 48,-864 48,-864 48,-844 48,-844 48,-838 54,-832 60,-832 60,-832 264,-832 264,-832 270,-832 276,-838 276,-844 276,-844 276,-864 276,-864 276,-870 270,-876 264,-876"></path>
-<text text-anchor="start" x="145.5" y="-862.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#2a7f86">MODEL</text>
-<text text-anchor="start" x="117.5" y="-852.2" font-family="Inter" font-weight="bold" font-size="11.00">Usuario.salvar()</text>
-<text text-anchor="start" x="61" y="-842" font-family="Inter" font-size="10.00">CRUD na Model: db.session.add + commit</text>
+<g id="rp2">
+<path fill="#d9eef0" stroke="#2a7f86" stroke-width="1.4" d="M264,-876C264,-876 60,-876 60,-876 54,-876 48,-870 48,-864 48,-864 48,-844 48,-844 48,-838 54,-832 60,-832 60,-832 264,-832 264,-832 270,-832 276,-838 276,-844 276,-844 276,-864 276,-864 276,-870 270,-876 264,-876"/>
+<text x="145.5" y="-862.8" font-weight="bold" font-size="9" fill="#2a7f86">MODEL</text>
+<text x="117.5" y="-852.2" font-weight="bold" font-size="11">Usuario.salvar()</text>
+<text x="61" y="-842" font-size="10">CRUD na Model: db.session.add + commit</text>
 </g>
-
-<g id="edge14" class="edge">
-<title>sv3-&gt;rp2</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-905.79C162,-899.11 162,-891.61 162,-884.46"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-884.31 162,-876.31 159.2,-884.31 164.8,-884.31"></polygon>
+<g id="e_sv3-rp2">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-905.79C162,-899.11 162,-891.61 162,-884.46"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-884.31 162,-876.31 159.2,-884.31"/>
 </g>
-
-<g id="node19" class="node">
-<title>db2</title>
-<path fill="#e4e6ea" stroke="#4a5160" stroke-width="1.4" d="M216,-802C216,-802 108,-802 108,-802 102,-802 96,-796 96,-790 96,-790 96,-770 96,-770 96,-764 102,-758 108,-758 108,-758 216,-758 216,-758 222,-758 228,-764 228,-770 228,-770 228,-790 228,-790 228,-796 222,-802 216,-802"></path>
-<text text-anchor="start" x="121" y="-788.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#4a5160">BANCO DE DADOS</text>
-<text text-anchor="start" x="118" y="-778.2" font-family="Inter" font-weight="bold" font-size="11.00">UPDATE usuario</text>
-<text text-anchor="start" x="109" y="-768" font-family="Inter" font-size="10.00">grava xp e nível novos</text>
+<g id="db2">
+<path fill="#e4e6ea" stroke="#4a5160" stroke-width="1.4" d="M216,-802C216,-802 108,-802 108,-802 102,-802 96,-796 96,-790 96,-790 96,-770 96,-770 96,-764 102,-758 108,-758 108,-758 216,-758 216,-758 222,-758 228,-764 228,-770 228,-770 228,-790 228,-790 228,-796 222,-802 216,-802"/>
+<text x="121" y="-788.8" font-weight="bold" font-size="9" fill="#4a5160">BANCO DE DADOS</text>
+<text x="118" y="-778.2" font-weight="bold" font-size="11">UPDATE usuario</text>
+<text x="109" y="-768" font-size="10">grava xp e nível novos</text>
 </g>
-
-<g id="edge15" class="edge">
-<title>rp2-&gt;db2</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-831.79C162,-825.11 162,-817.61 162,-810.46"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-810.31 162,-802.31 159.2,-810.31 164.8,-810.31"></polygon>
+<g id="e_rp2-db2">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-831.79C162,-825.11 162,-817.61 162,-810.46"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-810.31 162,-802.31 159.2,-810.31"/>
 </g>
-
-<g id="node20" class="node">
-<title>rp3</title>
-<path fill="#fadfd0" stroke="#b8501f" stroke-width="1.4" d="M280,-728C280,-728 44,-728 44,-728 38,-728 32,-722 32,-716 32,-716 32,-686 32,-686 32,-680 38,-674 44,-674 44,-674 280,-674 280,-674 286,-674 292,-680 292,-686 292,-686 292,-716 292,-716 292,-722 286,-728 280,-728"></path>
-<text text-anchor="start" x="133" y="-714.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#b8501f">REPOSITORY</text>
-<text text-anchor="start" x="45" y="-704.2" font-family="Inter" font-weight="bold" font-size="11.00">RankingRepository.minha_posicao_global()</text>
-<text text-anchor="start" x="96" y="-694" font-family="Inter" font-size="10.00">consulta vw_ranking_global:</text>
-<text text-anchor="start" x="77.5" y="-684" font-family="Inter" font-size="10.00">posição do usuário depois do treino</text>
+<g id="rp3">
+<path fill="#fadfd0" stroke="#b8501f" stroke-width="1.4" d="M280,-728C280,-728 44,-728 44,-728 38,-728 32,-722 32,-716 32,-716 32,-686 32,-686 32,-680 38,-674 44,-674 44,-674 280,-674 280,-674 286,-674 292,-680 292,-686 292,-686 292,-716 292,-716 292,-722 286,-728 280,-728"/>
+<text x="133" y="-714.8" font-weight="bold" font-size="9" fill="#b8501f">REPOSITORY</text>
+<text x="45" y="-704.2" font-weight="bold" font-size="11">RankingRepository.minha_posicao_global()</text>
+<text x="96" y="-694" font-size="10">consulta vw_ranking_global:</text>
+<text x="77.5" y="-684" font-size="10">posição do usuário depois do treino</text>
 </g>
-
-<g id="edge16" class="edge">
-<title>db2-&gt;rp3</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-757.96C162,-751.37 162,-743.91 162,-736.63"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-736.24 162,-728.24 159.2,-736.24 164.8,-736.24"></polygon>
+<g id="e_db2-rp3">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-757.96C162,-751.37 162,-743.91 162,-736.63"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-736.24 162,-728.24 159.2,-736.24"/>
 </g>
-
-<g id="node21" class="node">
-<title>d4</title>
-<polygon fill="#fff6d6" stroke="#6b46a3" stroke-width="1.4" points="162,-625 86.92,-607 162,-589 237.08,-607 162,-625"></polygon>
-<text text-anchor="start" x="121" y="-610" font-family="Inter" font-weight="bold" font-size="10.00">Subiu no ranking</text>
-<text text-anchor="start" x="143.5" y="-600" font-family="Inter" font-weight="bold" font-size="10.00">global?</text>
+<g id="d4">
+<polygon fill="#fff6d6" stroke="#6b46a3" stroke-width="1.4" points="162,-625 86.92,-607 162,-589 237.08,-607"/>
+<text x="121" y="-610" font-weight="bold" font-size="10">Subiu no ranking</text>
+<text x="143.5" y="-600" font-weight="bold" font-size="10">global?</text>
 </g>
-
-<g id="edge17" class="edge">
-<title>rp3-&gt;d4</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-673.88C162,-661.19 162,-646 162,-633.41"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-633.17 162,-625.17 159.2,-633.17 164.8,-633.17"></polygon>
+<g id="e_rp3-d4">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M162,-673.88C162,-661.19 162,-646 162,-633.41"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="164.8,-633.17 162,-625.17 159.2,-633.17"/>
 </g>
-
-<g id="node22" class="node">
-<title>sv4</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M563,-644C563,-644 289,-644 289,-644 283,-644 277,-638 277,-632 277,-632 277,-582 277,-582 277,-576 283,-570 289,-570 289,-570 563,-570 563,-570 569,-570 575,-576 575,-582 575,-582 575,-632 575,-632 575,-638 569,-644 563,-644"></path>
-<text text-anchor="start" x="406.5" y="-630.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="326" y="-620.2" font-family="Inter" font-weight="bold" font-size="11.00">gerar_notificacao(“subida_ranking”)</text>
-<text text-anchor="start" x="304" y="-610" font-family="Inter" font-size="10.00">só se o consentimento “notificacoes” estiver aceito</text>
-<text text-anchor="start" x="331" y="-600" font-family="Inter" font-size="10.00">consulta o consentimento no Repository</text>
-<text text-anchor="start" x="297" y="-590" font-family="Inter" font-size="10.00">Notificacao.salvar (Model) → INSERT INTO notificacao</text>
-<text text-anchor="start" x="290" y="-580" font-family="Inter" font-size="10.00">e-mail por SMTP opcional; falha não derruba a requisição</text>
+<g id="sv4">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M563,-644C563,-644 289,-644 289,-644 283,-644 277,-638 277,-632 277,-632 277,-582 277,-582 277,-576 283,-570 289,-570 289,-570 563,-570 563,-570 569,-570 575,-576 575,-582 575,-582 575,-632 575,-632 575,-638 569,-644 563,-644"/>
+<text x="406.5" y="-630.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="326" y="-620.2" font-weight="bold" font-size="11">gerar_notificacao(“subida_ranking”)</text>
+<text x="304" y="-610" font-size="10">só se o consentimento “notificacoes” estiver aceito</text>
+<text x="331" y="-600" font-size="10">consulta o consentimento no Repository</text>
+<text x="297" y="-590" font-size="10">Notificacao.salvar (Model) → INSERT INTO notificacao</text>
+<text x="290" y="-580" font-size="10">e-mail por SMTP opcional; falha não derruba a requisição</text>
 </g>
-
-<g id="edge25" class="edge">
-<title>d4-&gt;sv4</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M237.39,-607C245,-607 250,-607 250,-607 250,-607 257.83,-607 268.82,-607"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="268.88,-609.8 276.88,-607 268.88,-604.2 268.88,-609.8"></polygon>
-<text text-anchor="start" x="253.11" y="-611" font-family="Inter" font-weight="bold" font-size="10.00">sim</text>
+<g id="e_d4-sv4">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M237.39,-607C245,-607 250,-607 250,-607 250,-607 257.83,-607 268.82,-607"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="268.88,-609.8 276.88,-607 268.88,-604.2"/>
+<text x="253.11" y="-611" font-weight="bold" font-size="10">sim</text>
 </g>
-
-<g id="node23" class="node">
-<title>sv5</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M432,-540C432,-540 156,-540 156,-540 150,-540 144,-534 144,-528 144,-528 144,-508 144,-508 144,-502 150,-496 156,-496 156,-496 432,-496 432,-496 438,-496 444,-502 444,-508 444,-508 444,-528 444,-528 444,-534 438,-540 432,-540"></path>
-<text text-anchor="start" x="274.5" y="-526.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="171" y="-516.2" font-family="Inter" font-weight="bold" font-size="11.00">AvaliarDesafiosDoUsuarioService.executar()</text>
-<text text-anchor="start" x="157" y="-506" font-family="Inter" font-size="10.00">para cada inscrição ainda “inscrito”, recalcula o progresso</text>
+<g id="sv5">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M432,-540C432,-540 156,-540 156,-540 150,-540 144,-534 144,-528 144,-528 144,-508 144,-508 144,-502 150,-496 156,-496 156,-496 432,-496 432,-496 438,-496 444,-502 444,-508 444,-508 444,-528 444,-528 444,-534 438,-540 432,-540"/>
+<text x="274.5" y="-526.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="171" y="-516.2" font-weight="bold" font-size="11">AvaliarDesafiosDoUsuarioService.executar()</text>
+<text x="157" y="-506" font-size="10">para cada inscrição ainda “inscrito”, recalcula o progresso</text>
 </g>
-
-<g id="edge18" class="edge">
-<title>d4-&gt;sv5</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M181.19,-593.35C200.54,-580.6 230.94,-560.56 255.31,-544.5"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="256.87,-546.82 262.01,-540.08 253.79,-542.15 256.87,-546.82"></polygon>
-<text text-anchor="start" x="199.25" y="-572.92" font-family="Inter" font-weight="bold" font-size="10.00">não</text>
+<g id="e_d4-sv5">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M181.19,-593.35C200.54,-580.6 230.94,-560.56 255.31,-544.5"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="256.87,-546.82 262.01,-540.08 253.79,-542.15"/>
+<text x="199.25" y="-572.92" font-weight="bold" font-size="10">não</text>
 </g>
-
-<g id="edge26" class="edge">
-<title>sv4-&gt;sv5</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M371.17,-569.86C358.38,-561.43 345.01,-552.62 333.07,-544.75"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="334.43,-542.3 326.21,-540.23 331.35,-546.97 334.43,-542.3"></polygon>
+<g id="e_sv4-sv5">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M371.17,-569.86C358.38,-561.43 345.01,-552.62 333.07,-544.75"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="334.43,-542.3 326.21,-540.23 331.35,-546.97"/>
 </g>
-
-<g id="node24" class="node">
-<title>rp4</title>
-<path fill="#fadfd0" stroke="#b8501f" stroke-width="1.4" d="M461.5,-466C461.5,-466 126.5,-466 126.5,-466 120.5,-466 114.5,-460 114.5,-454 114.5,-454 114.5,-414 114.5,-414 114.5,-408 120.5,-402 126.5,-402 126.5,-402 461.5,-402 461.5,-402 467.5,-402 473.5,-408 473.5,-414 473.5,-414 473.5,-454 473.5,-454 473.5,-460 467.5,-466 461.5,-466"></path>
-<text text-anchor="start" x="265" y="-452.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#b8501f">REPOSITORY</text>
-<text text-anchor="start" x="209.5" y="-442.2" font-family="Inter" font-weight="bold" font-size="11.00">Repositories de desafio e treino</text>
-<text text-anchor="start" x="189" y="-432" font-family="Inter" font-size="10.00">DesafioUsuarioRepository.listar_do_usuario()</text>
-<text text-anchor="start" x="217" y="-422" font-family="Inter" font-size="10.00">Desafio.buscar_por_id() (Model)</text>
-<text text-anchor="start" x="127.5" y="-412" font-family="Inter" font-size="10.00">AtividadeRepository.contar_no_periodo() ou maior_carga_no_periodo()</text>
+<g id="rp4">
+<path fill="#fadfd0" stroke="#b8501f" stroke-width="1.4" d="M461.5,-466C461.5,-466 126.5,-466 126.5,-466 120.5,-466 114.5,-460 114.5,-454 114.5,-454 114.5,-414 114.5,-414 114.5,-408 120.5,-402 126.5,-402 126.5,-402 461.5,-402 461.5,-402 467.5,-402 473.5,-408 473.5,-414 473.5,-414 473.5,-454 473.5,-454 473.5,-460 467.5,-466 461.5,-466"/>
+<text x="265" y="-452.8" font-weight="bold" font-size="9" fill="#b8501f">REPOSITORY</text>
+<text x="209.5" y="-442.2" font-weight="bold" font-size="11">Repositories de desafio e treino</text>
+<text x="189" y="-432" font-size="10">DesafioUsuarioRepository.listar_do_usuario()</text>
+<text x="217" y="-422" font-size="10">Desafio.buscar_por_id() (Model)</text>
+<text x="127.5" y="-412" font-size="10">AtividadeRepository.contar_no_periodo() ou maior_carga_no_periodo()</text>
 </g>
-
-<g id="edge19" class="edge">
-<title>sv5-&gt;rp4</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M294,-495.88C294,-489.26 294,-481.73 294,-474.27"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="296.8,-474.25 294,-466.25 291.2,-474.25 296.8,-474.25"></polygon>
+<g id="e_sv5-rp4">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M294,-495.88C294,-489.26 294,-481.73 294,-474.27"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="296.8,-474.25 294,-466.25 291.2,-474.25"/>
 </g>
-
-<g id="node25" class="node">
-<title>d5</title>
-<polygon fill="#fff6d6" stroke="#6b46a3" stroke-width="1.4" points="294,-358 217.35,-340 294,-322 370.65,-340 294,-358"></polygon>
-<text text-anchor="start" x="266" y="-343" font-family="Inter" font-weight="bold" font-size="10.00">Objetivo do</text>
-<text text-anchor="start" x="252" y="-333" font-family="Inter" font-weight="bold" font-size="10.00">desafio atingido?</text>
+<g id="d5">
+<polygon fill="#fff6d6" stroke="#6b46a3" stroke-width="1.4" points="294,-358 217.35,-340 294,-322 370.65,-340"/>
+<text x="266" y="-343" font-weight="bold" font-size="10">Objetivo do</text>
+<text x="252" y="-333" font-weight="bold" font-size="10">desafio atingido?</text>
 </g>
-
-<g id="edge20" class="edge">
-<title>rp4-&gt;d5</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M294,-401.85C294,-390.34 294,-377.43 294,-366.47"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="296.8,-366.17 294,-358.17 291.2,-366.17 296.8,-366.17"></polygon>
+<g id="e_rp4-d5">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M294,-401.85C294,-390.34 294,-377.43 294,-366.47"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="296.8,-366.17 294,-358.17 291.2,-366.17"/>
 </g>
-
-<g id="node26" class="node">
-<title>sv6</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M679,-372C679,-372 423,-372 423,-372 417,-372 411,-366 411,-360 411,-360 411,-320 411,-320 411,-314 417,-308 423,-308 423,-308 679,-308 679,-308 685,-308 691,-314 691,-320 691,-320 691,-360 691,-360 691,-366 685,-372 679,-372"></path>
-<text text-anchor="start" x="531.5" y="-358.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="505" y="-348.2" font-family="Inter" font-weight="bold" font-size="11.00">conclui o desafio</text>
-<text text-anchor="start" x="424" y="-338" font-family="Inter" font-size="10.00">status concluido; xp += recompensa_xp; nivel_por_xp</text>
-<text text-anchor="start" x="494" y="-328" font-family="Inter" font-size="10.00">Usuario.salvar() (Model)</text>
-<text text-anchor="start" x="459" y="-318" font-family="Inter" font-size="10.00">gerar_notificacao(“desafio_concluido”)</text>
+<g id="sv6">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M679,-372C679,-372 423,-372 423,-372 417,-372 411,-366 411,-360 411,-360 411,-320 411,-320 411,-314 417,-308 423,-308 423,-308 679,-308 679,-308 685,-308 691,-314 691,-320 691,-320 691,-360 691,-360 691,-366 685,-372 679,-372"/>
+<text x="531.5" y="-358.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="505" y="-348.2" font-weight="bold" font-size="11">conclui o desafio</text>
+<text x="424" y="-338" font-size="10">status concluido; xp += recompensa_xp; nivel_por_xp</text>
+<text x="494" y="-328" font-size="10">Usuario.salvar() (Model)</text>
+<text x="459" y="-318" font-size="10">gerar_notificacao(“desafio_concluido”)</text>
 </g>
-
-<g id="edge27" class="edge">
-<title>d5-&gt;sv6</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M370.82,-340C376.27,-340 379.67,-340 379.67,-340 379.67,-340 389.36,-340 402.23,-340"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="402.59,-342.8 410.59,-340 402.59,-337.2 402.59,-342.8"></polygon>
-<text text-anchor="start" x="386.53" y="-344" font-family="Inter" font-weight="bold" font-size="10.00">sim</text>
+<g id="e_d5-sv6">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M370.82,-340C376.27,-340 379.67,-340 379.67,-340 379.67,-340 389.36,-340 402.23,-340"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="402.59,-342.8 410.59,-340 402.59,-337.2"/>
+<text x="386.53" y="-344" font-weight="bold" font-size="10">sim</text>
 </g>
-
-<g id="node27" class="node">
-<title>sv7</title>
-<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M554,-278C554,-278 290,-278 290,-278 284,-278 278,-272 278,-266 278,-266 278,-226 278,-226 278,-220 284,-214 290,-214 290,-214 554,-214 554,-214 560,-214 566,-220 566,-226 566,-226 566,-266 566,-266 566,-272 560,-278 554,-278"></path>
-<text text-anchor="start" x="402.5" y="-264.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#6b46a3">SERVICE</text>
-<text text-anchor="start" x="309.5" y="-254.2" font-family="Inter" font-weight="bold" font-size="11.00">AvisarMedalhasNovasService.executar()</text>
-<text text-anchor="start" x="310.5" y="-244" font-family="Inter" font-size="10.00">compara as medalhas antes e depois do treino;</text>
-<text text-anchor="start" x="291" y="-234" font-family="Inter" font-size="10.00">para cada medalha nova, gerar_notificacao(“medalha”),</text>
-<text text-anchor="start" x="356" y="-224" font-family="Inter" font-size="10.00">sem repetir aviso já enviado</text>
+<g id="sv7">
+<path fill="#e8ddf5" stroke="#6b46a3" stroke-width="1.4" d="M554,-278C554,-278 290,-278 290,-278 284,-278 278,-272 278,-266 278,-266 278,-226 278,-226 278,-220 284,-214 290,-214 290,-214 554,-214 554,-214 560,-214 566,-220 566,-226 566,-226 566,-266 566,-266 566,-272 560,-278 554,-278"/>
+<text x="402.5" y="-264.8" font-weight="bold" font-size="9" fill="#6b46a3">SERVICE</text>
+<text x="309.5" y="-254.2" font-weight="bold" font-size="11">AvisarMedalhasNovasService.executar()</text>
+<text x="310.5" y="-244" font-size="10">compara as medalhas antes e depois do treino;</text>
+<text x="291" y="-234" font-size="10">para cada medalha nova, gerar_notificacao(“medalha”),</text>
+<text x="356" y="-224" font-size="10">sem repetir aviso já enviado</text>
 </g>
-
-<g id="edge21" class="edge">
-<title>d5-&gt;sv7</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M312.07,-326.01C327.61,-314.84 350.8,-298.17 371.88,-283.02"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="373.77,-285.11 378.64,-278.17 370.51,-280.56 373.77,-285.11"></polygon>
-<text text-anchor="start" x="322.97" y="-308.52" font-family="Inter" font-weight="bold" font-size="10.00">não</text>
+<g id="e_d5-sv7">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M312.07,-326.01C327.61,-314.84 350.8,-298.17 371.88,-283.02"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="373.77,-285.11 378.64,-278.17 370.51,-280.56"/>
+<text x="322.97" y="-308.52" font-weight="bold" font-size="10">não</text>
 </g>
-
-<g id="edge28" class="edge">
-<title>sv6-&gt;sv7</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M507.33,-307.85C496.08,-299.83 483.9,-291.14 472.34,-282.9"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="473.77,-280.48 465.63,-278.11 470.52,-285.04 473.77,-280.48"></polygon>
+<g id="e_sv6-sv7">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M507.33,-307.85C496.08,-299.83 483.9,-291.14 472.34,-282.9"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="473.77,-280.48 465.63,-278.11 470.52,-285.04"/>
 </g>
-
-<g id="node28" class="node">
-<title>ct2</title>
-<path fill="#d8f0de" stroke="#2e7d4a" stroke-width="1.4" d="M537.5,-184C537.5,-184 306.5,-184 306.5,-184 300.5,-184 294.5,-178 294.5,-172 294.5,-172 294.5,-152 294.5,-152 294.5,-146 300.5,-140 306.5,-140 306.5,-140 537.5,-140 537.5,-140 543.5,-140 549.5,-146 549.5,-152 549.5,-152 549.5,-172 549.5,-172 549.5,-178 543.5,-184 537.5,-184"></path>
-<text text-anchor="start" x="391.5" y="-170.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#2e7d4a">CONTROLLER</text>
-<text text-anchor="start" x="361.5" y="-160.2" font-family="Inter" font-weight="bold" font-size="11.00">jsonify → resposta 201</text>
-<text text-anchor="start" x="307.5" y="-150" font-family="Inter" font-size="10.00">mensagem, pontuacao_ganha, atividade, usuario</text>
+<g id="ct2">
+<path fill="#d8f0de" stroke="#2e7d4a" stroke-width="1.4" d="M537.5,-184C537.5,-184 306.5,-184 306.5,-184 300.5,-184 294.5,-178 294.5,-172 294.5,-172 294.5,-152 294.5,-152 294.5,-146 300.5,-140 306.5,-140 306.5,-140 537.5,-140 537.5,-140 543.5,-140 549.5,-146 549.5,-152 549.5,-152 549.5,-172 549.5,-172 549.5,-178 543.5,-184 537.5,-184"/>
+<text x="391.5" y="-170.8" font-weight="bold" font-size="9" fill="#2e7d4a">CONTROLLER</text>
+<text x="361.5" y="-160.2" font-weight="bold" font-size="11">jsonify → resposta 201</text>
+<text x="307.5" y="-150" font-size="10">mensagem, pontuacao_ganha, atividade, usuario</text>
 </g>
-
-<g id="edge22" class="edge">
-<title>sv7-&gt;ct2</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M422,-214C422,-206.83 422,-199.22 422,-192.13"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="424.8,-192.11 422,-184.11 419.2,-192.11 424.8,-192.11"></polygon>
+<g id="e_sv7-ct2">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M422,-214C422,-206.83 422,-199.22 422,-192.13"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="424.8,-192.11 422,-184.11 419.2,-192.11"/>
 </g>
-
-<g id="node29" class="node">
-<title>fe2</title>
-<path fill="#dce8f7" stroke="#2f5d9b" stroke-width="1.4" d="M509,-110C509,-110 335,-110 335,-110 329,-110 323,-104 323,-98 323,-98 323,-78 323,-78 323,-72 329,-66 335,-66 335,-66 509,-66 509,-66 515,-66 521,-72 521,-78 521,-78 521,-98 521,-98 521,-104 515,-110 509,-110"></path>
-<text text-anchor="start" x="397" y="-96.8" font-family="Inter" font-weight="bold" font-size="9.00" fill="#2f5d9b">FRONTEND</text>
-<text text-anchor="start" x="336" y="-86.2" font-family="Inter" font-weight="bold" font-size="11.00">toast “Treino registrado! +N xp”</text>
-<text text-anchor="start" x="366.5" y="-76" font-family="Inter" font-size="10.00">redireciona para o feed</text>
+<g id="fe2">
+<path fill="#dce8f7" stroke="#2f5d9b" stroke-width="1.4" d="M509,-110C509,-110 335,-110 335,-110 329,-110 323,-104 323,-98 323,-98 323,-78 323,-78 323,-72 329,-66 335,-66 335,-66 509,-66 509,-66 515,-66 521,-72 521,-78 521,-78 521,-98 521,-98 521,-104 515,-110 509,-110"/>
+<text x="397" y="-96.8" font-weight="bold" font-size="9" fill="#2f5d9b">FRONTEND</text>
+<text x="336" y="-86.2" font-weight="bold" font-size="11">toast “Treino registrado! +N xp”</text>
+<text x="366.5" y="-76" font-size="10">redireciona para o feed</text>
 </g>
-
-<g id="edge23" class="edge">
-<title>ct2-&gt;fe2</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M422,-139.79C422,-133.11 422,-125.61 422,-118.46"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="424.8,-118.31 422,-110.31 419.2,-118.31 424.8,-118.31"></polygon>
+<g id="e_ct2-fe2">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M422,-139.79C422,-133.11 422,-125.61 422,-118.46"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="424.8,-118.31 422,-110.31 419.2,-118.31"/>
 </g>
-
-<g id="node30" class="node">
-<title>fim</title>
-<path fill="#1f2430" stroke="#1f2430" stroke-width="1.4" d="M437,-36C437,-36 407,-36 407,-36 401,-36 395,-30 395,-24 395,-24 395,-12 395,-12 395,-6 401,0 407,0 407,0 437,0 437,0 443,0 449,-6 449,-12 449,-12 449,-24 449,-24 449,-30 443,-36 437,-36"></path>
-<text text-anchor="start" x="412" y="-16.2" font-family="Inter" font-weight="bold" font-size="11.00" fill="white">Fim</text>
+<g id="fim">
+<path fill="#1f2430" stroke="#1f2430" stroke-width="1.4" d="M437,-36C437,-36 407,-36 407,-36 401,-36 395,-30 395,-24 395,-24 395,-12 395,-12 395,-6 401,0 407,0 407,0 437,0 437,0 443,0 449,-6 449,-12 449,-12 449,-24 449,-24 449,-30 443,-36 437,-36"/>
+<text x="412" y="-16.2" font-weight="bold" font-size="11" fill="white">Fim</text>
 </g>
-
-<g id="edge24" class="edge">
-<title>fe2-&gt;fim</title>
-<path fill="none" stroke="#555b66" stroke-width="1.3" d="M422,-65.86C422,-59.02 422,-51.37 422,-44.26"></path>
-<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="424.8,-44.26 422,-36.26 419.2,-44.26 424.8,-44.26"></polygon>
+<g id="e_fe2-fim">
+<path fill="none" stroke="#555b66" stroke-width="1.3" d="M422,-65.86C422,-59.02 422,-51.37 422,-44.26"/>
+<polygon fill="#555b66" stroke="#555b66" stroke-width="1.3" points="424.8,-44.26 422,-36.26 419.2,-44.26"/>
 </g>
-
-<g id="node31" class="node">
-<title>legenda</title>
-<polygon fill="#dce8f7" stroke="transparent" points="348,-2039.5 348,-2054.5 366,-2054.5 366,-2039.5 348,-2039.5"></polygon>
-<polygon fill="none" stroke="#2f5d9b" points="348,-2039.5 348,-2054.5 366,-2054.5 366,-2039.5 348,-2039.5"></polygon>
-<text text-anchor="start" x="371" y="-2044.5" font-family="Inter" font-size="10.00">Frontend</text>
-<polygon fill="#fbebc8" stroke="transparent" points="348,-2021.5 348,-2036.5 366,-2036.5 366,-2021.5 348,-2021.5"></polygon>
-<polygon fill="none" stroke="#a8741a" points="348,-2021.5 348,-2036.5 366,-2036.5 366,-2021.5 348,-2021.5"></polygon>
-<text text-anchor="start" x="371" y="-2026.5" font-family="Inter" font-size="10.00">Rotas / Auth</text>
-<polygon fill="#d8f0de" stroke="transparent" points="348,-2003.5 348,-2018.5 366,-2018.5 366,-2003.5 348,-2003.5"></polygon>
-<polygon fill="none" stroke="#2e7d4a" points="348,-2003.5 348,-2018.5 366,-2018.5 366,-2003.5 348,-2003.5"></polygon>
-<text text-anchor="start" x="371" y="-2008.5" font-family="Inter" font-size="10.00">Controller</text>
-<polygon fill="#e8ddf5" stroke="transparent" points="348,-1985.5 348,-2000.5 366,-2000.5 366,-1985.5 348,-1985.5"></polygon>
-<polygon fill="none" stroke="#6b46a3" points="348,-1985.5 348,-2000.5 366,-2000.5 366,-1985.5 348,-1985.5"></polygon>
-<text text-anchor="start" x="371" y="-1990.5" font-family="Inter" font-size="10.00">Service</text>
-<polygon fill="#fadfd0" stroke="transparent" points="348,-1967.5 348,-1982.5 366,-1982.5 366,-1967.5 348,-1967.5"></polygon>
-<polygon fill="none" stroke="#b8501f" points="348,-1967.5 348,-1982.5 366,-1982.5 366,-1967.5 348,-1967.5"></polygon>
-<text text-anchor="start" x="371" y="-1972.5" font-family="Inter" font-size="10.00">Repository (SQL)</text>
-<polygon fill="#d9eef0" stroke="transparent" points="348,-1949.5 348,-1964.5 366,-1964.5 366,-1949.5 348,-1949.5"></polygon>
-<polygon fill="none" stroke="#2a7f86" points="348,-1949.5 348,-1964.5 366,-1964.5 366,-1949.5 348,-1949.5"></polygon>
-<text text-anchor="start" x="371" y="-1954.5" font-family="Inter" font-size="10.00">Model (CRUD)</text>
-<polygon fill="#e4e6ea" stroke="transparent" points="348,-1931.5 348,-1946.5 366,-1946.5 366,-1931.5 348,-1931.5"></polygon>
-<polygon fill="none" stroke="#4a5160" points="348,-1931.5 348,-1946.5 366,-1946.5 366,-1931.5 348,-1931.5"></polygon>
-<text text-anchor="start" x="371" y="-1936.5" font-family="Inter" font-size="10.00">Banco de dados</text>
+<g id="legenda">
+<polygon fill="#dce8f7" points="348,-2039.5 348,-2054.5 366,-2054.5 366,-2039.5"/>
+<polygon fill="none" stroke="#2f5d9b" points="348,-2039.5 348,-2054.5 366,-2054.5 366,-2039.5"/>
+<text x="371" y="-2044.5" font-size="10">Frontend</text>
+<polygon fill="#fbebc8" points="348,-2021.5 348,-2036.5 366,-2036.5 366,-2021.5"/>
+<polygon fill="none" stroke="#a8741a" points="348,-2021.5 348,-2036.5 366,-2036.5 366,-2021.5"/>
+<text x="371" y="-2026.5" font-size="10">Rotas / Auth</text>
+<polygon fill="#d8f0de" points="348,-2003.5 348,-2018.5 366,-2018.5 366,-2003.5"/>
+<polygon fill="none" stroke="#2e7d4a" points="348,-2003.5 348,-2018.5 366,-2018.5 366,-2003.5"/>
+<text x="371" y="-2008.5" font-size="10">Controller</text>
+<polygon fill="#e8ddf5" points="348,-1985.5 348,-2000.5 366,-2000.5 366,-1985.5"/>
+<polygon fill="none" stroke="#6b46a3" points="348,-1985.5 348,-2000.5 366,-2000.5 366,-1985.5"/>
+<text x="371" y="-1990.5" font-size="10">Service</text>
+<polygon fill="#fadfd0" points="348,-1967.5 348,-1982.5 366,-1982.5 366,-1967.5"/>
+<polygon fill="none" stroke="#b8501f" points="348,-1967.5 348,-1982.5 366,-1982.5 366,-1967.5"/>
+<text x="371" y="-1972.5" font-size="10">Repository (SQL)</text>
+<polygon fill="#d9eef0" points="348,-1949.5 348,-1964.5 366,-1964.5 366,-1949.5"/>
+<polygon fill="none" stroke="#2a7f86" points="348,-1949.5 348,-1964.5 366,-1964.5 366,-1949.5"/>
+<text x="371" y="-1954.5" font-size="10">Model (CRUD)</text>
+<polygon fill="#e4e6ea" points="348,-1931.5 348,-1946.5 366,-1946.5 366,-1931.5"/>
+<polygon fill="none" stroke="#4a5160" points="348,-1931.5 348,-1946.5 366,-1946.5 366,-1931.5"/>
+<text x="371" y="-1936.5" font-size="10">Banco de dados</text>
 </g>
 </g>
 </svg>
