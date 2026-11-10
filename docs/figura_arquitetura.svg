@@ -1,173 +1,142 @@
-<?xml version="1.0"?><svg width="1035pt" height="1181pt" viewBox="0.00 0.00 1034.50 1181.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 1145)">
-<title>G</title>
-<polygon fill="white" stroke="transparent" points="-36,36 -36,-1145 998.5,-1145 998.5,36 -36,36"></polygon>
-<text text-anchor="start" x="8" y="-1090" font-family="Inter" font-weight="bold" font-size="20.00">Arquitetura do FitBattle — cliente-servidor com API em camadas</text>
-
-<g id="node1" class="node">
-<title>cliente</title>
-<polygon fill="#2f5d9b" stroke="transparent" points="9,-1045.5 9,-1073.5 649,-1073.5 649,-1045.5 9,-1045.5"></polygon>
-<text text-anchor="start" x="16" y="-1057.1" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">CLIENTE — frontend/  (servidor estático, porta 5500)</text>
-<polygon fill="#dce8f7" stroke="transparent" points="9,-1019.5 9,-1045.5 649,-1045.5 649,-1019.5 9,-1019.5"></polygon>
-<text text-anchor="start" x="16" y="-1029.7" font-family="Inter" font-size="11.00">HTML, CSS e JavaScript puros. 21 páginas, api.js (fetch), config.js (URL da API) e shell.js.</text>
-<polygon fill="#dce8f7" stroke="transparent" points="9,-1002.5 9,-1019.5 649,-1019.5 649,-1002.5 9,-1002.5"></polygon>
-<text text-anchor="start" x="12" y="-1008.5" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">python -m http.server 5500   ou   Live Server</text>
-<polygon fill="none" stroke="#2f5d9b" points="8,-1002 8,-1075 650,-1075 650,-1002 8,-1002"></polygon>
+<?xml version="1.0"?>
+<svg font-family="Inter" width="1035pt" height="1181pt" viewBox="0 0 1034.5 1181" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(36 1145)">
+<polygon fill="white" points="-36,36 -36,-1145 998.5,-1145 998.5,36"/>
+<text x="8" y="-1090" font-weight="bold" font-size="20">Arquitetura do FitBattle — cliente-servidor com API em camadas</text>
+<g id="cliente">
+<polygon fill="#2f5d9b" points="9,-1045.5 9,-1073.5 649,-1073.5 649,-1045.5"/>
+<text x="16" y="-1057.1" font-weight="bold" font-size="13" fill="white">CLIENTE — frontend/  (servidor estático, porta 5500)</text>
+<polygon fill="#dce8f7" points="9,-1019.5 9,-1045.5 649,-1045.5 649,-1019.5"/>
+<text x="16" y="-1029.7" font-size="11">HTML, CSS e JavaScript puros. 21 páginas, api.js (fetch), config.js (URL da API) e shell.js.</text>
+<polygon fill="#dce8f7" points="9,-1002.5 9,-1019.5 649,-1019.5 649,-1002.5"/>
+<text x="12" y="-1008.5" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">python -m http.server 5500   ou   Live Server</text>
+<polygon fill="none" stroke="#2f5d9b" points="8,-1002 8,-1075 650,-1075 650,-1002"/>
 </g>
-
-<g id="node2" class="node">
-<title>rotas</title>
-<polygon fill="#a8741a" stroke="transparent" points="9,-913.5 9,-941.5 649,-941.5 649,-913.5 9,-913.5"></polygon>
-<text text-anchor="start" x="16" y="-925.1" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">1. Routers — backend/routers/</text>
-<polygon fill="#fbebc8" stroke="transparent" points="9,-875.5 9,-913.5 649,-913.5 649,-875.5 9,-875.5"></polygon>
-<text text-anchor="start" x="16" y="-897.7" font-family="Inter" font-size="11.00">Registra as 58 rotas e liga cada URL ao Controller.</text>
-<text text-anchor="start" x="16" y="-885.7" font-family="Inter" font-size="11.00">Define o acesso (público, LOGADO ou DONO) com o token assinado de auth.py.</text>
-<polygon fill="#fbebc8" stroke="transparent" points="9,-858.5 9,-875.5 649,-875.5 649,-858.5 9,-858.5"></polygon>
-<text text-anchor="start" x="12" y="-864.5" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">routers/routers.py</text>
-<polygon fill="none" stroke="#a8741a" points="8,-858 8,-943 650,-943 650,-858 8,-858"></polygon>
+<g id="rotas">
+<polygon fill="#a8741a" points="9,-913.5 9,-941.5 649,-941.5 649,-913.5"/>
+<text x="16" y="-925.1" font-weight="bold" font-size="13" fill="white">1. Routers — backend/routers/</text>
+<polygon fill="#fbebc8" points="9,-875.5 9,-913.5 649,-913.5 649,-875.5"/>
+<text x="16" y="-897.7" font-size="11">Registra as 58 rotas e liga cada URL ao Controller.</text>
+<text x="16" y="-885.7" font-size="11">Define o acesso (público, LOGADO ou DONO) com o token assinado de auth.py.</text>
+<polygon fill="#fbebc8" points="9,-858.5 9,-875.5 649,-875.5 649,-858.5"/>
+<text x="12" y="-864.5" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">routers/routers.py</text>
+<polygon fill="none" stroke="#a8741a" points="8,-858 8,-943 650,-943 650,-858"/>
 </g>
-
-<g id="edge1" class="edge">
-<title>cliente-&gt;rotas</title>
-<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-997.8C329,-984.93 329,-970.42 329,-956.63"></path>
-<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-956.24 329,-947.24 325.85,-956.24 332.15,-956.24"></polygon>
-<text text-anchor="start" x="329" y="-971" font-family="Inter" font-weight="bold" font-size="10.00">  requisições HTTP com JSON  (fetch + Authorization: Bearer)  </text>
+<g id="e_cliente-rotas">
+<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-997.8C329,-984.93 329,-970.42 329,-956.63"/>
+<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-956.24 329,-947.24 325.85,-956.24"/>
+<text x="329" y="-971" font-weight="bold" font-size="10">  requisições HTTP com JSON  (fetch + Authorization: Bearer)  </text>
 </g>
-
-<g id="node3" class="node">
-<title>controller</title>
-<polygon fill="#2e7d4a" stroke="transparent" points="9,-769.5 9,-797.5 649,-797.5 649,-769.5 9,-769.5"></polygon>
-<text text-anchor="start" x="16" y="-781.1" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">2. Controllers — backend/controllers/</text>
-<polygon fill="#d8f0de" stroke="transparent" points="9,-743.5 9,-769.5 649,-769.5 649,-743.5 9,-743.5"></polygon>
-<text text-anchor="start" x="16" y="-753.7" font-family="Inter" font-size="11.00">Recebem a requisição HTTP, acionam o caso de uso no Service e devolvem JSON com o status.</text>
-<polygon fill="#d8f0de" stroke="transparent" points="9,-726.5 9,-743.5 649,-743.5 649,-726.5 9,-726.5"></polygon>
-<text text-anchor="start" x="12" y="-732.5" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">controllers/*_controller.py  (16 Controllers, um por arquivo)</text>
-<polygon fill="none" stroke="#2e7d4a" points="8,-726 8,-799 650,-799 650,-726 8,-726"></polygon>
+<g id="controller">
+<polygon fill="#2e7d4a" points="9,-769.5 9,-797.5 649,-797.5 649,-769.5"/>
+<text x="16" y="-781.1" font-weight="bold" font-size="13" fill="white">2. Controllers — backend/controllers/</text>
+<polygon fill="#d8f0de" points="9,-743.5 9,-769.5 649,-769.5 649,-743.5"/>
+<text x="16" y="-753.7" font-size="11">Recebem a requisição HTTP, acionam o caso de uso no Service e devolvem JSON com o status.</text>
+<polygon fill="#d8f0de" points="9,-726.5 9,-743.5 649,-743.5 649,-726.5"/>
+<text x="12" y="-732.5" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">controllers/*_controller.py  (16 Controllers, um por arquivo)</text>
+<polygon fill="none" stroke="#2e7d4a" points="8,-726 8,-799 650,-799 650,-726"/>
 </g>
-
-<g id="edge2" class="edge">
-<title>rotas-&gt;controller</title>
-<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-853.84C329,-840.54 329,-825.97 329,-812.48"></path>
-<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-812.35 329,-803.35 325.85,-812.35 332.15,-812.35"></polygon>
-<text text-anchor="middle" x="380.5" y="-826" font-family="Inter" font-size="10.00">  chama o Controller  </text>
+<g id="e_rotas-controller">
+<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-853.84C329,-840.54 329,-825.97 329,-812.48"/>
+<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-812.35 329,-803.35 325.85,-812.35"/>
+<text text-anchor="middle" x="380.5" y="-826" font-size="10">  chama o Controller  </text>
 </g>
-
-<g id="node4" class="node">
-<title>service</title>
-<polygon fill="#6b46a3" stroke="transparent" points="9,-617 9,-645 649,-645 649,-617 9,-617"></polygon>
-<text text-anchor="start" x="16" y="-628.6" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">3. Services — backend/services/</text>
-<polygon fill="#e8ddf5" stroke="transparent" points="9,-567 9,-617 649,-617 649,-567 9,-567"></polygon>
-<text text-anchor="start" x="16" y="-601.2" font-family="Inter" font-size="11.00">Regras da aplicação: validação, pontuação, nível, permissões, desafios e notificações.</text>
-<text text-anchor="start" x="16" y="-589.2" font-family="Inter" font-size="11.00">Uma pasta por área e um arquivo por caso de uso (63 no total): cada um é uma classe</text>
-<text text-anchor="start" x="16" y="-577.2" font-family="Inter" font-size="11.00">&lt;Verbo&gt;&lt;Objeto&gt;Service com um único método executar(). Regras compartilhadas ficam em apoio.py.</text>
-<polygon fill="#e8ddf5" stroke="transparent" points="9,-550 9,-567 649,-567 649,-550 9,-550"></polygon>
-<text text-anchor="start" x="12" y="-556" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">usuario/ (10)   grupo/ (10)   desafio/ (8)   meta/ (5)</text>
-<polygon fill="#e8ddf5" stroke="transparent" points="9,-533 9,-550 649,-550 649,-533 9,-533"></polygon>
-<text text-anchor="start" x="12" y="-539" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">atividade/ (6)   notificacao/ (4)   ranking/ (4)   comentario/ (3)</text>
-<polygon fill="#e8ddf5" stroke="transparent" points="9,-516 9,-533 649,-533 649,-516 9,-516"></polygon>
-<text text-anchor="start" x="12" y="-522" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">convite/ (2)   postagem/ (2)   privacidade/ (2)   medalha/ (2)</text>
-<polygon fill="#e8ddf5" stroke="transparent" points="9,-499 9,-516 649,-516 649,-499 9,-499"></polygon>
-<text text-anchor="start" x="12" y="-505" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">curtida/ (1)   dashboard/ (1)   feed/ (1)   compartilhamento/ (1)   email/ (1)   comum.py</text>
-<polygon fill="none" stroke="#6b46a3" points="8,-498 8,-646 650,-646 650,-498 8,-498"></polygon>
+<g id="service">
+<polygon fill="#6b46a3" points="9,-617 9,-645 649,-645 649,-617"/>
+<text x="16" y="-628.6" font-weight="bold" font-size="13" fill="white">3. Services — backend/services/</text>
+<polygon fill="#e8ddf5" points="9,-567 9,-617 649,-617 649,-567"/>
+<text x="16" y="-601.2" font-size="11">Regras da aplicação: validação, pontuação, nível, permissões, desafios e notificações.</text>
+<text x="16" y="-589.2" font-size="11">Uma pasta por área e um arquivo por caso de uso (63 no total): cada um é uma classe</text>
+<text x="16" y="-577.2" font-size="11">&lt;Verbo&gt;&lt;Objeto&gt;Service com um único método executar(). Regras compartilhadas ficam em apoio.py.</text>
+<polygon fill="#e8ddf5" points="9,-550 9,-567 649,-567 649,-550"/>
+<text x="12" y="-556" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">usuario/ (10)   grupo/ (10)   desafio/ (8)   meta/ (5)</text>
+<polygon fill="#e8ddf5" points="9,-533 9,-550 649,-550 649,-533"/>
+<text x="12" y="-539" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">atividade/ (6)   notificacao/ (4)   ranking/ (4)   comentario/ (3)</text>
+<polygon fill="#e8ddf5" points="9,-516 9,-533 649,-533 649,-516"/>
+<text x="12" y="-522" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">convite/ (2)   postagem/ (2)   privacidade/ (2)   medalha/ (2)</text>
+<polygon fill="#e8ddf5" points="9,-499 9,-516 649,-516 649,-499"/>
+<text x="12" y="-505" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">curtida/ (1)   dashboard/ (1)   feed/ (1)   compartilhamento/ (1)   email/ (1)   comum.py</text>
+<polygon fill="none" stroke="#6b46a3" points="8,-498 8,-646 650,-646 650,-498"/>
 </g>
-
-<g id="edge3" class="edge">
-<title>controller-&gt;service</title>
-<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-721.98C329,-703.67 329,-681.14 329,-659.2"></path>
-<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-659.17 329,-650.17 325.85,-659.17 332.15,-659.17"></polygon>
-<text text-anchor="middle" x="385.5" y="-694" font-family="Inter" font-size="10.00">  aciona o caso de uso  </text>
+<g id="e_controller-service">
+<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-721.98C329,-703.67 329,-681.14 329,-659.2"/>
+<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-659.17 329,-650.17 325.85,-659.17"/>
+<text text-anchor="middle" x="385.5" y="-694" font-size="10">  aciona o caso de uso  </text>
 </g>
-
-<g id="node5" class="node">
-<title>repository</title>
-<polygon fill="#b8501f" stroke="transparent" points="9,-388.5 9,-416.5 649,-416.5 649,-388.5 9,-388.5"></polygon>
-<text text-anchor="start" x="16" y="-400.1" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">4. Repositories — backend/repositories/</text>
-<polygon fill="#fadfd0" stroke="transparent" points="9,-350.5 9,-388.5 649,-388.5 649,-350.5 9,-350.5"></polygon>
-<text text-anchor="start" x="16" y="-372.7" font-family="Inter" font-size="11.00">Consultas em SQL escrito à mão, com parâmetros nomeados (inclui as views de ranking).</text>
-<text text-anchor="start" x="16" y="-360.7" font-family="Inter" font-size="11.00">Sem métodos CRUD: criar, atualizar e excluir ficam nas Models.</text>
-<polygon fill="#fadfd0" stroke="transparent" points="9,-333.5 9,-350.5 649,-350.5 649,-333.5 9,-333.5"></polygon>
-<text text-anchor="start" x="12" y="-339.5" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">repositories/*_repository.py  (13 Repositories, um por arquivo)</text>
-<polygon fill="none" stroke="#b8501f" points="8,-333 8,-418 650,-418 650,-333 8,-333"></polygon>
+<g id="repository">
+<polygon fill="#b8501f" points="9,-388.5 9,-416.5 649,-416.5 649,-388.5"/>
+<text x="16" y="-400.1" font-weight="bold" font-size="13" fill="white">4. Repositories — backend/repositories/</text>
+<polygon fill="#fadfd0" points="9,-350.5 9,-388.5 649,-388.5 649,-350.5"/>
+<text x="16" y="-372.7" font-size="11">Consultas em SQL escrito à mão, com parâmetros nomeados (inclui as views de ranking).</text>
+<text x="16" y="-360.7" font-size="11">Sem métodos CRUD: criar, atualizar e excluir ficam nas Models.</text>
+<polygon fill="#fadfd0" points="9,-333.5 9,-350.5 649,-350.5 649,-333.5"/>
+<text x="12" y="-339.5" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">repositories/*_repository.py  (13 Repositories, um por arquivo)</text>
+<polygon fill="none" stroke="#b8501f" points="8,-333 8,-418 650,-418 650,-333"/>
 </g>
-
-<g id="edge4" class="edge">
-<title>service-&gt;repository</title>
-<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-493.85C329,-472.88 329,-450.61 329,-431.17"></path>
-<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-431.16 329,-422.16 325.85,-431.16 332.15,-431.16"></polygon>
-<text text-anchor="middle" x="370.5" y="-445" font-family="Inter" font-size="10.00">  consulta (SQL)  </text>
+<g id="e_service-repository">
+<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-493.85C329,-472.88 329,-450.61 329,-431.17"/>
+<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-431.16 329,-422.16 325.85,-431.16"/>
+<text text-anchor="middle" x="370.5" y="-445" font-size="10">  consulta (SQL)  </text>
 </g>
-
-<g id="node6" class="node">
-<title>model</title>
-<polygon fill="#2a7f86" stroke="transparent" points="9,-245 9,-273 649,-273 649,-245 9,-245"></polygon>
-<text text-anchor="start" x="16" y="-256.6" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">5. Models — backend/models/</text>
-<polygon fill="#d9eef0" stroke="transparent" points="9,-183 9,-245 649,-245 649,-183 9,-183"></polygon>
-<text text-anchor="start" x="16" y="-229.2" font-family="Inter" font-size="11.00">14 entidades mapeadas com SQLAlchemy. Todas herdam de ModeloBase, que concentra o CRUD</text>
-<text text-anchor="start" x="16" y="-217.2" font-family="Inter" font-size="11.00">(salvar, atualizar, deletar, listar_todos, buscar_por_id): Usuario, Atividade, Meta, Desafio, DesafioUsuario,</text>
-<text text-anchor="start" x="16" y="-205.2" font-family="Inter" font-size="11.00">Postagem, Curtida, Comentario, Grupo, GrupoMembro, Convite, Notificacao,</text>
-<text text-anchor="start" x="16" y="-193.2" font-family="Inter" font-size="11.00">Compartilhamento e Consentimento.</text>
-<polygon fill="#d9eef0" stroke="transparent" points="9,-166 9,-183 649,-183 649,-166 9,-166"></polygon>
-<text text-anchor="start" x="12" y="-172" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">models/base.py  (ModeloBase)</text>
-<polygon fill="#d9eef0" stroke="transparent" points="9,-149 9,-166 649,-166 649,-149 9,-149"></polygon>
-<text text-anchor="start" x="12" y="-155" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">models/*.py  (14 Models, uma por arquivo)</text>
-<polygon fill="none" stroke="#2a7f86" points="8,-148 8,-274 650,-274 650,-148 8,-148"></polygon>
+<g id="model">
+<polygon fill="#2a7f86" points="9,-245 9,-273 649,-273 649,-245"/>
+<text x="16" y="-256.6" font-weight="bold" font-size="13" fill="white">5. Models — backend/models/</text>
+<polygon fill="#d9eef0" points="9,-183 9,-245 649,-245 649,-183"/>
+<text x="16" y="-229.2" font-size="11">14 entidades mapeadas com SQLAlchemy. Todas herdam de ModeloBase, que concentra o CRUD</text>
+<text x="16" y="-217.2" font-size="11">(salvar, atualizar, deletar, listar_todos, buscar_por_id): Usuario, Atividade, Meta, Desafio, DesafioUsuario,</text>
+<text x="16" y="-205.2" font-size="11">Postagem, Curtida, Comentario, Grupo, GrupoMembro, Convite, Notificacao,</text>
+<text x="16" y="-193.2" font-size="11">Compartilhamento e Consentimento.</text>
+<polygon fill="#d9eef0" points="9,-166 9,-183 649,-183 649,-166"/>
+<text x="12" y="-172" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">models/base.py  (ModeloBase)</text>
+<polygon fill="#d9eef0" points="9,-149 9,-166 649,-166 649,-149"/>
+<text x="12" y="-155" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">models/*.py  (14 Models, uma por arquivo)</text>
+<polygon fill="none" stroke="#2a7f86" points="8,-148 8,-274 650,-274 650,-148"/>
 </g>
-
-<g id="edge7" class="edge">
-<title>service-&gt;model</title>
-<path fill="none" stroke="#2a7f86" stroke-width="1.6" stroke-dasharray="5,2" d="M514.03,-493.99C601.48,-457.6 687,-422 687,-422 687,-422 687,-329 687,-329 687,-329 617.67,-306.34 540.03,-280.97"></path>
-<polygon fill="#2a7f86" stroke="#2a7f86" stroke-width="1.6" points="540.55,-277.82 531.02,-278.02 538.59,-283.81 540.55,-277.82"></polygon>
-<text text-anchor="middle" x="726" y="-373" font-family="Inter" font-size="10.00" fill="#2a7f86">  grava (CRUD)  </text>
+<g id="e_service-model">
+<path fill="none" stroke="#2a7f86" stroke-width="1.6" stroke-dasharray="5,2" d="M514.03,-493.99C601.48,-457.6 687,-422 687,-422 687,-422 687,-329 687,-329 687,-329 617.67,-306.34 540.03,-280.97"/>
+<polygon fill="#2a7f86" stroke="#2a7f86" stroke-width="1.6" points="540.55,-277.82 531.02,-278.02 538.59,-283.81"/>
+<text text-anchor="middle" x="726" y="-373" font-size="10" fill="#2a7f86">  grava (CRUD)  </text>
 </g>
-
-<g id="node8" class="node">
-<title>tecnologias</title>
-<polygon fill="#8a8f99" stroke="transparent" points="783,-638 783,-666 954,-666 954,-638 783,-638"></polygon>
-<text text-anchor="start" x="790" y="-649.6" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">Tecnologias</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-618 783,-638 954,-638 954,-618 783,-618"></polygon>
-<text text-anchor="start" x="787" y="-625.2" font-family="Inter" font-size="11.00">Python 3.12 e Flask 3</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-598 783,-618 954,-618 954,-598 783,-598"></polygon>
-<text text-anchor="start" x="787" y="-605.2" font-family="Inter" font-size="11.00">Flask-SQLAlchemy (ORM)</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-578 783,-598 954,-598 954,-578 783,-578"></polygon>
-<text text-anchor="start" x="787" y="-585.2" font-family="Inter" font-size="11.00">PyMySQL e MySQL 8</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-558 783,-578 954,-578 954,-558 783,-558"></polygon>
-<text text-anchor="start" x="787" y="-565.2" font-family="Inter" font-size="11.00">Flask-CORS</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-538 783,-558 954,-558 954,-538 783,-538"></polygon>
-<text text-anchor="start" x="787" y="-545.2" font-family="Inter" font-size="11.00">Token assinado (itsdangerous)</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-518 783,-538 954,-538 954,-518 783,-518"></polygon>
-<text text-anchor="start" x="787" y="-525.2" font-family="Inter" font-size="11.00">gunicorn (produção)</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-498 783,-518 954,-518 954,-498 783,-498"></polygon>
-<text text-anchor="start" x="787" y="-505.2" font-family="Inter" font-size="11.00">HTML, CSS e JavaScript</text>
-<polygon fill="#f4f5f7" stroke="transparent" points="783,-478 783,-498 954,-498 954,-478 783,-478"></polygon>
-<text text-anchor="start" x="787" y="-485.2" font-family="Inter" font-size="11.00">unittest (479 testes)</text>
-<polygon fill="none" stroke="#8a8f99" points="781.5,-477 781.5,-667 954.5,-667 954.5,-477 781.5,-477"></polygon>
+<g id="tecnologias">
+<polygon fill="#8a8f99" points="783,-638 783,-666 954,-666 954,-638"/>
+<text x="790" y="-649.6" font-weight="bold" font-size="13" fill="white">Tecnologias</text>
+<polygon fill="#f4f5f7" points="783,-618 783,-638 954,-638 954,-618"/>
+<text x="787" y="-625.2" font-size="11">Python 3.12 e Flask 3</text>
+<polygon fill="#f4f5f7" points="783,-598 783,-618 954,-618 954,-598"/>
+<text x="787" y="-605.2" font-size="11">Flask-SQLAlchemy (ORM)</text>
+<polygon fill="#f4f5f7" points="783,-578 783,-598 954,-598 954,-578"/>
+<text x="787" y="-585.2" font-size="11">PyMySQL e MySQL 8</text>
+<polygon fill="#f4f5f7" points="783,-558 783,-578 954,-578 954,-558"/>
+<text x="787" y="-565.2" font-size="11">Flask-CORS</text>
+<polygon fill="#f4f5f7" points="783,-538 783,-558 954,-558 954,-538"/>
+<text x="787" y="-545.2" font-size="11">Token assinado (itsdangerous)</text>
+<polygon fill="#f4f5f7" points="783,-518 783,-538 954,-538 954,-518"/>
+<text x="787" y="-525.2" font-size="11">gunicorn (produção)</text>
+<polygon fill="#f4f5f7" points="783,-498 783,-518 954,-518 954,-498"/>
+<text x="787" y="-505.2" font-size="11">HTML, CSS e JavaScript</text>
+<polygon fill="#f4f5f7" points="783,-478 783,-498 954,-498 954,-478"/>
+<text x="787" y="-485.2" font-size="11">unittest (479 testes)</text>
+<polygon fill="none" stroke="#8a8f99" points="781.5,-477 781.5,-667 954.5,-667 954.5,-477"/>
 </g>
-
-
-<g id="edge5" class="edge">
-<title>repository-&gt;model</title>
-<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-328.8C329,-315.94 329,-301.6 329,-287.49"></path>
-<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-287.28 329,-278.28 325.85,-287.28 332.15,-287.28"></polygon>
-<text text-anchor="middle" x="381" y="-301" font-family="Inter" font-size="10.00">  monta as entidades  </text>
+<g id="e_repository-model">
+<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-328.8C329,-315.94 329,-301.6 329,-287.49"/>
+<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-287.28 329,-278.28 325.85,-287.28"/>
+<text text-anchor="middle" x="381" y="-301" font-size="10">  monta as entidades  </text>
 </g>
-
-<g id="node7" class="node">
-<title>banco</title>
-<polygon fill="#4a5160" stroke="transparent" points="9,-59.5 9,-87.5 649,-87.5 649,-59.5 9,-59.5"></polygon>
-<text text-anchor="start" x="16" y="-71.1" font-family="Inter" font-weight="bold" font-size="13.00" fill="white">BANCO DE DADOS — MySQL 8</text>
-<polygon fill="#e4e6ea" stroke="transparent" points="9,-21.5 9,-59.5 649,-59.5 649,-21.5 9,-21.5"></polygon>
-<text text-anchor="start" x="16" y="-43.7" font-family="Inter" font-size="11.00">Tabelas do domínio e as 4 views de ranking: vw_ranking_global, vw_ranking_regional,</text>
-<text text-anchor="start" x="16" y="-31.7" font-family="Inter" font-size="11.00">vw_ranking_exercicio e vw_ranking_grupo.</text>
-<polygon fill="#e4e6ea" stroke="transparent" points="9,-4.5 9,-21.5 649,-21.5 649,-4.5 9,-4.5"></polygon>
-<text text-anchor="start" x="12" y="-10.5" font-family="DejaVu Sans Mono" font-size="10.00" fill="#1f2430">database/create_database.sql   (SQLite apenas nos testes)</text>
-<polygon fill="none" stroke="#4a5160" points="8,-4 8,-89 650,-89 650,-4 8,-4"></polygon>
+<g id="banco">
+<polygon fill="#4a5160" points="9,-59.5 9,-87.5 649,-87.5 649,-59.5"/>
+<text x="16" y="-71.1" font-weight="bold" font-size="13" fill="white">BANCO DE DADOS — MySQL 8</text>
+<polygon fill="#e4e6ea" points="9,-21.5 9,-59.5 649,-59.5 649,-21.5"/>
+<text x="16" y="-43.7" font-size="11">Tabelas do domínio e as 4 views de ranking: vw_ranking_global, vw_ranking_regional,</text>
+<text x="16" y="-31.7" font-size="11">vw_ranking_exercicio e vw_ranking_grupo.</text>
+<polygon fill="#e4e6ea" points="9,-4.5 9,-21.5 649,-21.5 649,-4.5"/>
+<text x="12" y="-10.5" font-family="DejaVu Sans Mono" font-size="10" fill="#1f2430">database/create_database.sql   (SQLite apenas nos testes)</text>
+<polygon fill="none" stroke="#4a5160" points="8,-4 8,-89 650,-89 650,-4"/>
 </g>
-
-<g id="edge6" class="edge">
-<title>model-&gt;banco</title>
-<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-143.91C329,-130.05 329,-115.6 329,-102.21"></path>
-<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-102.14 329,-93.14 325.85,-102.14 332.15,-102.14"></polygon>
-<text text-anchor="middle" x="418" y="-116" font-family="Inter" font-size="10.00">  CRUD (INSERT, UPDATE, DELETE)  </text>
+<g id="e_model-banco">
+<path fill="none" stroke="#4a5160" stroke-width="1.6" d="M329,-143.91C329,-130.05 329,-115.6 329,-102.21"/>
+<polygon fill="#4a5160" stroke="#4a5160" stroke-width="1.6" points="332.15,-102.14 329,-93.14 325.85,-102.14"/>
+<text text-anchor="middle" x="418" y="-116" font-size="10">  CRUD (INSERT, UPDATE, DELETE)  </text>
 </g>
 </g>
 </svg>
